@@ -1,0 +1,138 @@
+@import 'reset';
+@import 'params';
+
+body {
+    font: 15px Helvetica Neue, Helvetica, Arial;
+    background: url(../img/noisy_grid.png) 50% 0;
+    }
+
+// @TODO: Go to reset.scss
+.clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        }
+    &:after {
+        clear: both;
+        }
+    }
+
+// @TODO: Go to reset.scss
+ul {
+    list-style: none inside;
+    }
+
+// Headers
+h1 {font-size: 3em;}
+h2 {font-size: 2em;}
+h3 {font-size: 1.3em;}
+
+// Margins
+#page section,
+nav {
+    margin-bottom: 2em;
+    }
+
+#page {
+    max-width: 750px + 1px;
+    margin: auto;
+
+    // @TODO: Outside #page
+    section p,
+    section ul {
+        margin-top: 1em;
+        }
+    }
+
+.page-title {
+    margin: 30px 0;
+    font-size: 50px;
+    line-height: 41px;
+    text-align: center;
+    // vertical-align: bottom;
+    }
+
+nav {
+    text-align: center;
+    font-size: 1.3em;
+
+    a {
+        margin: 0 .5em;
+        }
+    }
+
+.about {
+    p {
+        line-height: 1.6em;
+        }
+    }
+
+.teammates {}
+    $width-member-avatar: 150px;
+    $separate-member-avatar: 15px;
+
+    .member {
+        @extend .clearfix;
+        margin-bottom: 1.5em;
+
+        h3,
+        p {
+            margin-left: $width-member-avatar + $separate-member-avatar;
+            }
+        }
+
+        .member-avatar {
+            width: $width-member-avatar;
+            height: $width-member-avatar;
+            float: left;
+            }
+
+        .member-accounts {
+            @extend .clearfix;
+            margin-left: $width-member-avatar + $separate-member-avatar;
+
+            li {
+                margin-right: .5em;
+                float: left;
+                }
+            }
+
+#page .about, .team, .work, .contacts, .blog {
+    padding: 20px;
+    background: $sectionBackground;
+}
+
+.page-title {
+    a {
+        color: $textColor;
+        text-decoration: none;
+        &:visited {
+            color: $textColor;
+            }
+        &:hover {
+            color: $textColor;
+            }
+        }
+    }
+
+a {
+    color: $linkColor;
+    &:visited {
+        color: $linkVisitedColor;
+        }
+    &:hover {
+        color: $linkHoverColor;
+        }
+    }
+
+nav {
+    a:visited {
+        color: $linkColor;
+        }
+    a:hover {
+        color: $linkHoverColor;
+        }
+    }
