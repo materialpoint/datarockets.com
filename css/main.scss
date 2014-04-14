@@ -2,137 +2,118 @@
 @import 'params';
 
 body {
-    font: 15px Helvetica Neue, Helvetica, Arial;
-    background: url(../img/noisy_grid.png) 50% 0;
-    }
-
-// @TODO: Go to reset.scss
-.clearfix {
-    zoom:1;
-    &:before, &:after {
-        content: "\0020";
-        display: block;
-        height: 0;
-        overflow: hidden;
-        }
-    &:after {
-        clear: both;
-        }
-    }
-
-// @TODO: Go to reset.scss
-ul {
-    list-style: none inside;
-    }
-
-// Headers
-h1 {font-size: 3em;}
-h2 {font-size: 2em;}
-h3 {font-size: 1.3em;}
-
-// Margins
-#page section,
-nav {
-    margin-bottom: 2em;
-    }
-
-#page {
-    max-width: 750px + 1px;
-    margin: auto;
-
-    // @TODO: Outside #page
-    section p,
-    section ul {
-        margin-top: 1em;
-        }
-    }
-
-.page-title {
-    margin: 30px 0;
-    font-size: 50px;
-    line-height: 41px;
-    text-align: center;
-    // vertical-align: bottom;
-    }
-
-nav {
-    text-align: center;
-    font-size: 1.3em;
-
-    a {
-        margin: 0 .5em;
-        }
-    }
-
-.about {
-    p {
-        line-height: 1.6em;
-        }
-    }
-
-.teammates {}
-    $width-member-avatar: 150px;
-    $separate-member-avatar: 15px;
-
-    .member {
-        @extend .clearfix;
-        margin-bottom: 1.5em;
-
-        h3,
-        p {
-            margin-left: $width-member-avatar + $separate-member-avatar;
-            }
-        }
-
-        .member-avatar {
-            width: $width-member-avatar;
-            height: $width-member-avatar;
-            float: left;
-            }
-
-        .member-accounts {
-            @extend .clearfix;
-            margin-left: $width-member-avatar + $separate-member-avatar;
-
-            li {
-                margin-right: .5em;
-                float: left;
-                }
-            }
-
-#page .about, .team, .work, .contacts, .blog {
-    padding: 20px;
-    background: $sectionBackground;
-}
-
-.page-title {
-    a {
-        color: $textColor;
-        text-decoration: none;
-        &:visited {
-            color: $textColor;
-            }
-        &:hover {
-            color: $textColor;
-            }
-        }
+    font-size: 14px;
+    font-family: $font-main;
+    line-height: $line-height;
+    color: #000;
     }
 
 a {
-    color: $linkColor;
-    &:visited {
-        color: $linkVisitedColor;
-        }
+    color: $color-link;
+
     &:hover {
-        color: $linkHoverColor;
+        color: $color-link-hover;
         }
     }
 
-nav {
-    a:visited {
-        color: $linkColor;
+.page {
+    min-width: $width-page;
+    padding: 0 20px;
+    }
+
+    .page-title {
+        font-weight: bold;
+        text-align: center;
         }
-    a:hover {
-        color: $linkHoverColor;
+
+    h1.page-title {
+        margin: 20px 0;
+        font-size: 75px;
+        line-height: $line-height;
         }
+
+    h2.page-title {
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-transform: uppercase;
+        }
+
+    .page-description {
+        width: $width-page;
+        margin: auto;
+        font-size: 18px;
+        font-family: $font-serif;
+        line-height: $line-height + 0.3;
+        text-align: center;
+        color: #666;
+        -webkit-font-smoothing: antialiased;
+        }
+
+    .page-nav {
+        margin: 40px 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        li {
+            margin: 0 10px;
+            display: inline-block;
+            }
+
+        a {
+            text-decoration: none;
+            border-bottom: 1px solid $color-link;
+            }
+
+        a:hover {
+            border-bottom-color: $color-link-hover;
+            }
+        }
+
+section {
+    margin: 60px auto 20px;
+    }
+
+section._half {
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    span {
+        display: inline-block;
+        }
+    }
+
+.team {}
+
+    .teammates {
+        text-align: center;
+        font-size: 0;
+        line-height: 0;
+        }
+
+        .team-member {
+            margin: $margin-team-member/2 $margin-team-member/2;
+            display: inline-block;
+
+            img {
+                width: $width-team-member-img;
+                border-radius: $width-team-member-img;
+                display: block;
+                border: 3px solid #fff;
+                box-shadow: 0 0 5px rgba(#000, .5);
+                box-sizing: border-box;
+                }
+            }
+
+.works,
+.works .page-title {
+    text-align: right;
+    }
+
+.hireus,
+.hireus .page-title {
+    text-align: left;
     }
