@@ -1,0 +1,7 @@
+# datarockets
+
+## Install
+
+```
+bin/bootstrap
+```
