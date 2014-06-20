@@ -1,0 +1,26 @@
+.people {
+	@extend .inner;
+
+	padding: 0 $margin-window;
+	margin-top: 2 * $margin-block;
+	}
+
+	.people-list {
+		text-align: center;
+
+		img {
+			width: $height-people;
+			margin-top: 8px;
+			display: block;
+			border-radius: 50%;
+			// border: 3px solid #fff;
+			// box-shadow: 0 0 5px rgba(0,0,0,0.5);
+			}
+
+		li {
+			margin: 0 .5em 1em;
+			// margin-right: 1em;
+			// margin-bottom: 1em;
+			display: inline-block;
+			}
+		}

@@ -1,0 +1,46 @@
+.clearfix {
+    zoom:1;
+
+    &:before,
+    &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    	}
+    &:after {
+        clear: both;
+	    }
+	}
+
+@mixin resetInput($color-bg: false) {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    @if $color-bg {
+        background: $color-bg;
+        }
+    }
+
+@mixin calc($property, $value) {
+    #{$property}: -moz-calc(#{$value});
+    #{$property}: -webkit-calc(#{$value});
+    #{$property}: calc(#{$value});
+    }
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+        }
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+        }
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+        }
+    &:-ms-input-placeholder {
+        @content;
+        }
+    }

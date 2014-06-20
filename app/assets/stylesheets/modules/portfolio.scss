@@ -1,0 +1,36 @@
+.portfolio {
+
+	margin-top: $margin-block;
+	text-align: center;
+
+	.btn {
+		// margin-top: 25px;
+		}
+	}
+	.portfolio-list {
+		// text-align: center;
+
+		img {
+			width: $height-portfolio-item;
+			height: $height-portfolio-item;
+			display: block;
+			border-radius: $radius;
+			}
+
+		li {
+			width: $height-portfolio-item;
+			margin: 0 10px 20px;
+			// margin-right: 20px;
+			// margin-bottom: 20px;
+			display: inline-block;
+			vertical-align: top;
+			text-align: center;
+			}
+
+		span {
+			padding: 5px 5px 0;
+			display: inline-block;
+			line-height: 1.6em;
+			color: #2980b9;
+			}
+		}

@@ -1,0 +1,20 @@
+footer {
+	line-height: $height-footer;
+
+	span {
+		margin-left: 20px;
+		font-size: 13px;
+		color: $color-wetasphalt;
+
+		a {
+			border-bottom: 1px solid #fff;
+			text-decoration: none;
+			color: inherit;
+
+			&:hover {
+				border-bottom-color: $color-asbestos;
+				color: $color-asbestos;
+				}
+			}
+		}
+	}
