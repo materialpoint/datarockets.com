@@ -20,3 +20,7 @@ group :development, :test do
   gem 'capybara', '~> 2.1.0'
   gem 'capybara-webkit', '~> 1.1.1'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
