@@ -1,8 +1,6 @@
 deployment:
   production:
     branch: v2
-    heroku:
-      appname: datarockets
       commands:
-        - git push git@heroku.com:datarockets.git v2:master
-        - heroku run rake db:migrate
+        - git push git@heroku.com:datarockets.git $CIRCLE_SHA1:master
+        - heroku run rake db:migrate --app datarockets
