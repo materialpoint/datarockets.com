@@ -5,4 +5,4 @@ deployment:
       appname: datarockets
       commands:
         - git push git@heroku.com:datarockets.git v2:master
-        - heroku run rake db:migrate --app datarockets
+        - heroku run rake db:migrate
