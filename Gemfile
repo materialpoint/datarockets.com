@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.5'
 gem 'pg'
-gem 'jbuilder', '~> 2.0'
-
 gem 'uglifier', '~> 2.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'
@@ -17,12 +15,10 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'capybara', '~> 2.1.0'
-  gem 'capybara-webkit', '~> 1.1.1'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara-webkit', '~> 1.3'
 end
 
 group :production do
   gem 'rails_12factor'
-  gem 'unicorn'
 end
