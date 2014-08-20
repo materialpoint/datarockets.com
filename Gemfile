@@ -10,6 +10,7 @@ gem 'jquery-rails', '~> 2.1'
 
 group :development do
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'quiet_assets'
   gem 'thin'
 end
