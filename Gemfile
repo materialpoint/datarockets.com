@@ -9,6 +9,7 @@ gem 'slim-rails', '~> 2.0'
 gem 'jquery-rails', '~> 2.1'
 
 group :development do
+  gem 'listen', '~> 1.0' # spring depends on listen
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
