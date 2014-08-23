@@ -7,6 +7,9 @@ gem 'uglifier', '~> 2.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'
 gem 'jquery-rails', '~> 2.1'
+gem 'enumerize', '~> 0.8'
+
+gem 'omniauth-google-oauth2', '~> 0.2.5'
 
 group :development do
   gem 'listen', '~> 1.0' # spring depends on listen
@@ -19,6 +22,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara-webkit', '~> 1.3'
+  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :production do
