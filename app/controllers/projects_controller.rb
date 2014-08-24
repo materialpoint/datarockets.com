@@ -34,6 +34,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
+
     respond_with(@project, location: projects_path)
   end
 
