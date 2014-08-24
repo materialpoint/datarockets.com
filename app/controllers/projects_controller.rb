@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to @project, notice: 'Project was successfully created.'
+      respond_with(@project, location: @project)
     else
       render :new
     end
@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to @project, notice: 'Project was successfully updated.'
+      respond_with(@project, location: @project)
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to projects_url, notice: 'Project was successfully destroyed.'
+    respond_with(@project, location: projects_path)
   end
 
   private
