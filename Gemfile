@@ -20,10 +20,15 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
-  gem 'capybara-webkit', '~> 1.3'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.0'
+end
+
+group :test do
+  gem 'capybara-webkit', '~> 1.3'
+  gem 'fabrication', '~> 2.11'
+  gem 'faker', '~> 1.4'
 end
 
 group :production do
