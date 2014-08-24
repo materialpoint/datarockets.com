@@ -18,5 +18,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+end
+
+group :test do
+  gem 'fabrication', '~> 2.11.3'
+  gem 'faker', '~> 1.4'
   gem 'capybara-webkit', '~> 1.3'
 end

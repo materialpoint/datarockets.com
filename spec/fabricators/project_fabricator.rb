@@ -1,4 +1,4 @@
 Fabricator(:project) do
-  name { Faker::Lorem.word }
+  name { Faker::Lorem.sentence }
   description { Faker::Lorem.paragraph }
 end
