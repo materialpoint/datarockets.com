@@ -22,6 +22,12 @@ describe SessionsController do
   end
 
   describe '#destroy' do
-    it 'destroys session'
+    it 'destroys session' do
+      sign_in(Fabricate(:user))
+
+      post :destroy
+
+      expect(session[:remember_token]).to eq(nil)
+    end
   end
 end
