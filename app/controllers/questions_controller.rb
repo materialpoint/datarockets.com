@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   def index
-    @questions = Question.all
+    @questions = Question.all.order(created_at: :desc)
   end
 
   def show
@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to @question, notice: 'Question was successfully created.'
+      respond_with(@question, location: @question)
     else
       render :new
     end
@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to @question, notice: 'Question was successfully updated.'
+      respond_with(@question, location: @question)
     else
       render :edit
     end
@@ -34,7 +34,8 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to questions_url, notice: 'Question was successfully destroyed.'
+
+    respond_with(@question, location: questions_path)
   end
 
   private
