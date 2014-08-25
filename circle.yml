@@ -1,3 +1,7 @@
+dependencies:
+  post:
+    - bin/cisetup
+
 deployment:
   production:
     branch: v2

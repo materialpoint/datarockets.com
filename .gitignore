@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+# And bundled gems.
+/vendor/bundle
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -17,3 +20,4 @@
 
 # Ignore configs which is different on different machines
 /config/database.yml
+/config/app_config.yml
