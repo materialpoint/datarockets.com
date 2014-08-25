@@ -1,0 +1,8 @@
+en:
+  flash:
+    sessions:
+      destroy:
+        successfully_signed_out: 'Successfully signed out.'
+      create:
+        successfully_signed_in: 'Successfully signed in.'
+        user_not_found: 'User not found.'
