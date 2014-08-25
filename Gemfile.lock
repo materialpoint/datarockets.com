@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/datarockets/app_config.git
+  revision: e1b8fbc6e5c4c6d7c09a80154ff97fa8771f726b
+  branch: default-config-for-base-storage
+  specs:
+    app_config (2.5.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -206,6 +213,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  app_config!
   capybara-webkit (~> 1.3)
   enumerize (~> 0.8)
   fabrication (~> 2.11)

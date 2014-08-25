@@ -1,0 +1,4 @@
+omniauth:
+  google_oauth2:
+    key: <%= ENV['OMNIAUTH_GOOGLE_OAUTH2_KEY'] %>
+    secret: <%= ENV['OMNIAUTH_GOOGLE_OAUTH2_SECRET'] %>
