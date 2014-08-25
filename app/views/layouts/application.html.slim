@@ -1,58 +1,62 @@
 doctype html
 html
-	head
-		meta charset='utf-8'
+  head
+    meta charset='utf-8'
 
-		title datarockets
+    title datarockets
 
-		= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato:300,400,700', 'main', media: 'all'
-		= javascript_include_tag 'application'
-		= csrf_meta_tags
-	body
-		.head
-			header
-				h1
-					a href="" datarockets
-				ul
-					li
-						a href="" Process
-					li
-						a href="" Portfolio
-					li
-						a href="" Team
-					li
-						a href="" Blog
-					li
-						a.btn.btn_orange href="mailto:hello@datarockets.com" Write us
-				p We believe in TDD and actively contribute to open source
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Lato:300,400,700', 'main', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    .head
+      header
+        h1
+          a href="" datarockets
+        ul
+          li
+            a href="" Process
+          li
+            a href="" Portfolio
+          li
+            a href="" Team
+          li
+            a href="" Blog
+          li
+            a.btn.btn_orange href="mailto:hello@datarockets.com" Write us
+        p We believe in TDD and actively contribute to open source
 
-		.body
-			#main
-				= yield
+    .body
+      - if alert.present?
+        .alert = alert
+      - if notice.present?
+        .notice = notice
+      #main
+        = yield
 
-		.foot
-			.people
-				ul.people-list
-					li
-						img src="http://datarockets.com/img/team/k.karnitskaya.jpg" alt=""
-					li
-						img src="http://datarockets.com/img/team/p.demeschik.jpg" alt=""
-					li
-						img src="http://datarockets.com/img/team/d.zhlobo.jpg" alt=""
-					li
-						img src="http://datarockets.com/img/team/v.gribanov.jpg" alt=""
-					li
-						img src="http://datarockets.com/img/team/e.zhlobo.jpg" alt=""
-					li
-						img src="https://dl.dropboxusercontent.com/u/23886509/e.traytyak.jpg" alt=""
-					li
-						img src="http://datarockets.com/img/team/mascot.jpg" alt=""
+    .foot
+      .people
+        ul.people-list
+          li
+            img src="http://datarockets.com/img/team/k.karnitskaya.jpg" alt=""
+          li
+            img src="http://datarockets.com/img/team/p.demeschik.jpg" alt=""
+          li
+            img src="http://datarockets.com/img/team/d.zhlobo.jpg" alt=""
+          li
+            img src="http://datarockets.com/img/team/v.gribanov.jpg" alt=""
+          li
+            img src="http://datarockets.com/img/team/e.zhlobo.jpg" alt=""
+          li
+            img src="https://dl.dropboxusercontent.com/u/23886509/e.traytyak.jpg" alt=""
+          li
+            img src="http://datarockets.com/img/team/mascot.jpg" alt=""
 
-			footer
-				.inner
-					a.btn.btn_orange href="mailto:hello@datarockets.com" Write us
-					span
-						'or connect via
-						a href="skype:p.demeshchik" Skype
-						|, +
-						a href="skype:80298615434" 375 (29) 8615434
+      footer
+        .inner
+          a.btn.btn_orange href="mailto:hello@datarockets.com" Write us
+          span
+            'or connect via
+            a href="skype:p.demeshchik" Skype
+            |, +
+            a href="skype:80298615434" 375 (29) 8615434
