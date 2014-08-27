@@ -17,20 +17,15 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
-    if @question.save
-      respond_with(@question, location: @question)
-    else
-      render :new
-    end
+    @question = Question.create(question_params)
+
+    respond_with @question
   end
 
   def update
-    if @question.update(question_params)
-      respond_with(@question, location: @question)
-    else
-      render :edit
-    end
+    @question.update(question_params)
+
+    respond_with(@question, location: @question)
   end
 
   def destroy
