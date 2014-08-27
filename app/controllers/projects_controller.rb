@@ -17,26 +17,21 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
-    if @project.save
-      respond_with(@project, location: @project)
-    else
-      render :new
-    end
+    @project = Project.create(project_params)
+
+    respond_with(@project)
   end
 
   def update
-    if @project.update(project_params)
-      respond_with(@project, location: @project)
-    else
-      render :edit
-    end
+    @project.update(project_params)
+    
+    respond_with(@project)
   end
 
   def destroy
     @project.destroy
 
-    respond_with(@project, location: projects_path)
+    respond_with(@project)
   end
 
   private
