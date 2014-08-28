@@ -6,7 +6,6 @@ gem 'pg'
 gem 'uglifier', '~> 2.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'
-gem 'jquery-rails', '~> 2.1'
 gem 'enumerize', '~> 0.8'
 # See PR for details: https://github.com/Oshuma/app_config/pull/33
 gem 'app_config', github: 'datarockets/app_config', branch: 'default-config-for-base-storage'
