@@ -19,6 +19,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
   gem 'thin'
+  gem 'guard-livereload'
 end
 
 group :development, :test do
