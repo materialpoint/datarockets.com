@@ -9,38 +9,7 @@ html
     /= javascript_include_tag 'main'
     = csrf_meta_tags
   body
-    .section__header
-      .section--inner
-        .company-logo
-          h2 datarockets
-        ul.company-menu
-          li.company-menu__item
-            a.link href="" Portfolio
-          li.company-menu__item
-            a.link href="" Team
-          li.company-menu__item
-            a.link href="" Blog
-          li.company-menu__item
-            a.link.link--blue href="mailto:hello@datarockets.com" Contact us
-        .company-description
-          p We builds solutions for the Web.
-        ul.projects
-          li.projects__item
-            a
-              = image_tag "project1.jpg"
-          li.projects__item
-            a
-              = image_tag "project2.jpg"
-          li.projects__item
-            a
-              = image_tag "project6.png"
-          li.projects__item
-            a
-              = image_tag "project4.jpg"
-
-
-
-/ .section__header
-/ .section__questions
-/ .section__team
-/ .section__footer
+     = render "layouts/section_header"
+     = render "layouts/section_questions"
+     = render "layouts/section_team"
+     = render "layouts/section_footer"
