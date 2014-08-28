@@ -1,73 +1,56 @@
-header {
-	@extend .clearfix;
-	@extend .inner;
+.section__header {
+    // min-height: 500px;
+    background-image: image_url("landing_video_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    }
+    .company-logo {
+        display: inline-block;
+        color: rgba(255,255,255,1);
+        }
+    .company-menu {
+        float: right;
+        }
+        .company-menu__item {
+            display: inline-block;
+            margin-right: 20px;
+            line-height: 34px;
+            &:last-child {
+                margin-right: 0;
+                }
+            }
+    .company-description {
+        margin-top: 70px;
+        p {
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+            }
 
-	height: $height-header - 45;
-	padding-top: 45px;
-	position: relative;
-	// text-align: center;
-
-	h1 {
-		top: 24px;
-		left: $margin-window;
-		position: absolute;
-		font-size: 35px;
-		font-weight: $fw-bold;
-		line-height: 1.3em;
-
-		a {
-			color: $color-midnightblue;
-			text-decoration: none;
-			}
-		}
-
-	ul {
-		bottom: 38px;
-		left: 200px;
-		right: 200px;
-		position: absolute;
-		text-align: center;
-		font-size: 18px;
-		// font-weight: $fw-light;
-		line-height: 34px;
-
-		@media screen and (max-width: $width-max - 350) {
-			right: 0;
-			text-align: right;
-
-			li:last-child {
-				position: static;
-				margin-right: $margin-window;
-				}
-			}
-
-		a:not(.btn) {
-			border-bottom: 1px solid $color-wetasphalt;
-			text-decoration: none;
-			color: $color-wetasphalt;
-
-			&:hover {
-				border-bottom-color: $color-asbestos;
-				color: $color-asbestos;
-				}
-			}
-		}
-
-	li {
-		margin: 0 1em;
-		display: inline-block;
-
-		&:last-child {
-			vertical-align: bottom;
-			right: -200px;
-			top: -5px;
-			position: absolute;
-			}
-		}
-
-	p {
-		margin-top: 20px;
-		font-size: 11px;
-		color: $color-asbestos;
-		}
-	}
+        }
+    .projects {
+        margin-top: 70px;
+        margin-bottom: 30px;
+        }
+        .projects__item {
+                display: inline;
+            img {
+                width: 22%;
+                margin-right: 4%;
+                border-radius: 5px;
+                }
+            &:last-child {
+                img {
+                    margin: 0;
+                    }
+                }
+            }
+    .link {
+        color: white;
+            }
+        .link--blue {
+            padding: 10px 15px;
+            border-radius: $radius;
+            background-color: $red;
+            color: #fff;
+            }

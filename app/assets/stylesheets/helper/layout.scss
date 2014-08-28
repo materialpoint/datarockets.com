@@ -8,29 +8,8 @@ body {
 	display: table;
 	}
 
-	.head {
-		display: table-header-group;
-		}
-
-	.body {
-		display: table-row-group;
-		}
-
-	.foot {
-		display: table-footer-group;
-		}
-
-	header,
-	#main,
-	footer {
-		padding: 0 $margin-window;
-		}
-
-.inner {
+.section--inner {
 	max-width: $width-max;
 	margin: auto;
-	}
-
-#main {
-	@extend .inner;
+    padding: 20px;
 	}
