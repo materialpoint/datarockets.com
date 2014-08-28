@@ -11,6 +11,7 @@ gem 'enumerize', '~> 0.8'
 gem 'app_config', github: 'datarockets/app_config', branch: 'default-config-for-base-storage'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
+gem 'autoprefixer-rails', '3.0.1.20140826'
 
 group :development do
   gem 'listen', '~> 1.0' # spring depends on listen
