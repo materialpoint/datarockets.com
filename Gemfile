@@ -12,6 +12,7 @@ gem 'simple_form', '~> 3.0'
 gem 'enumerize', '~> 0.8'
 gem 'app_config', '~> 2.5'
 gem 'pundit', '~> 0.3'
+gem 'paperclip', '~> 4.2'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 

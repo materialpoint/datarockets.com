@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
 
   enumerize :role, in: [:member, :admin], predicates: true
 
+  has_many :images, as: :imageable, dependent: :destroy
+  has_one :member_information, foreign_key: :member_id
+
   before_create :generate_remember_token
 
   private
