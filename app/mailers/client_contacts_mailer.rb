@@ -6,6 +6,6 @@ class ClientContactsMailer < ActionMailer::Base
 
   def send_contact(contact)
     @contact = contact
-    mail from: @contact.email
+    mail(from: @contact.email)
   end
 end
