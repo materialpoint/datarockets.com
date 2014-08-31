@@ -1,4 +1,4 @@
-class Admin::ProjectsController < ApplicationController
+class Admin::ProjectsController < AdminController
   before_action :set_project, only: [ :edit, :update, :destroy]
   before_action :authorize_project
 
