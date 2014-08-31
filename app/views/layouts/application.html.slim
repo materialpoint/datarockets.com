@@ -3,7 +3,18 @@ html
   head
     = render "layouts/section_head"
   body
-    = render "layouts/section_header"
-    = render "layouts/section_questions"
-    = render "layouts/section_team"
-    = render "layouts/section_footer"
+    section.blog
+      .line--blue
+
+      header
+        hgroup
+          h2.blog__header__title datarockets
+          ul
+            li = link_to 'Portfolio', '', {class: 'link'}
+            li = link_to 'Team', '', {class: 'link'}
+            li = link_to 'Blog', blog_posts_path, {class: 'link'}
+            li = link_to 'FAQ', '', {class: 'link'}
+            li = link_to 'Contact us', '', {class: 'btn btn--blue'}
+
+      section
+        = yield

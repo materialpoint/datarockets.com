@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    = render "layouts/section_head"
+  body
+    = yield
+    = render "layouts/section_header"
+    = render "layouts/section_questions"
+    = render "layouts/section_team"
+    = render "layouts/section_footer"

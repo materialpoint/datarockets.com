@@ -7,3 +7,8 @@
 
         background-color: $red;
         }
+    .line--blue {
+        @extend .line;
+
+        background-color: $blue;
+        }

@@ -1,0 +1,26 @@
+.products {
+
+    }
+    .products__item {
+        @extend .clearfix;
+        margin-bottom: 20px;
+        }
+        .products__item__img {
+            width: 200px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            float: left;
+            overflow: hidden;
+            border-radius: $radius;
+            }
+        .products__item__name {
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: $black;
+            }
+        .products__item__description {
+            line-height: 1.4em;
+            // font-family: Georgia;
+            color: rgba($black, 0.7);
+            }
