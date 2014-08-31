@@ -1,0 +1,27 @@
+.section__team {
+    // min-height: 500px;
+    // background-color: #ccc;
+    }
+.section__title--team {
+    color: $red;
+    }
+    .user {
+        width: 20%;
+        padding: 20px;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        }
+        .user__img {
+            width: 150px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            }
+        .user__name {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: $red;
+            }
+        .user__title {
+            color: $black;
+            }
