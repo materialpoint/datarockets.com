@@ -53,8 +53,12 @@
             position: relative;
             }
 
+            .blog article[role='full'] .blog__article__meta {
+                margin-top: 4rem;
+                }
+
             .blog__article__meta {
-                width: 155px;
+                width: 135px;
                 top: 0;
                 left: 0;
                 position: absolute;
@@ -62,26 +66,73 @@
                 text-align: right;
                 font-size: 0;
 
+                span {
+                    margin-bottom: 1.2rem;
+                    display: inline-block;
+                    font-size: 1rem;
+                    }
+
                 img {
-                    width: 32px;
-                    margin: 0 0 .2rem .2rem;
                     display: inline-block;
 
-                    border-radius: 50px;
+                    border-radius: 100px;
                     }
                 }
+
+                .blog article[role='preview'] .blog__article__meta img {
+                    width: 32px;
+                    margin: 0 0 .2rem .2rem;
+                    }
+
+                .blog article[role='full'] .blog__article__meta img {
+                    width: 85px;
+                    margin-bottom: 1rem;
+                    }
 
             .blog__article__content {
                 font-size: 1.2rem;
                 line-height: 2rem;
 
+                p {
+                    margin-bottom: .85rem;
+
+                    font-family: $font-text;
+
+                    a {
+                        color: darken($red, 15%);
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: $red;
+                            }
+                        }
+                    }
+
+                h2 {
+                    margin: 1.7rem 0 .85rem;
+
+                    font-size: 1.2rem;
+                    font-weight: $fw-bold;
+                    font-family: $font-text;
+                    }
+
                 h3 {
+                    margin: 1.7rem 0 .85rem;
+
+                    font-size: 1rem;
+                    font-weight: $fw-bold;
+                    font-family: $font-text;
+                    }
+                }
+
+                .blog__article__content__title {
                     margin-bottom: .5rem;
 
+                    line-height: 2rem;
                     font-family: $font-main;
                     font-weight: $fw-bold;
                     font-size: 1.4rem;
-                    line-height: 2rem;
+                    color: $black;
 
                     a {
                         color: $black;
@@ -94,9 +145,11 @@
                         }
                     }
 
-                p {
-                    margin-bottom: .85rem;
+                .blog article[role='full'] .blog__article__content__title {
+                    line-height: 3rem;
+                    font-size: 2rem;
 
-                    font-family: $font-text;
+                    a {
+                        border-bottom: 0;
+                        }
                     }
-                }
