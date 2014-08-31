@@ -11,20 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140831101754) do
+ActiveRecord::Schema.define(version: 20140831110802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "questions", force: true do |t|
-    t.string   "title"
-    t.text     "answer"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "projects", force: true do |t|
+  create_table "client_contacts", force: true do |t|
     t.string   "name"
+    t.string   "email"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -54,6 +48,20 @@ ActiveRecord::Schema.define(version: 20140831101754) do
   end
 
   add_index "member_informations", ["member_id"], name: "index_member_informations_on_member_id", using: :btree
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", force: true do |t|
+    t.string   "title"
+    t.text     "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"

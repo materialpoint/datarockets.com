@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     resources :questions, except: [:show]
   end
 
+  resources :client_contacts, only: [:create]
+
   resources :projects, only: [:index, :show]
   resources :questions, only: [:index, :show]
 
