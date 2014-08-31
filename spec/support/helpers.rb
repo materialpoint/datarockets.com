@@ -3,6 +3,6 @@ Dir[Rails.root.join("spec/support/{helpers,controllers}/**/*.rb")].each { |f| re
 RSpec.configure do |config|
   config.include Helpers::OmniauthHelper
   config.include Helpers::SessionsHelper, type: :controller
-  config.extend Controllers::RolesHelper, type: :controller
-  config.extend Controllers::ErrorsHelper, type: :controller
+  config.extend Helpers::RolesHelper, type: :controller
+  config.extend Helpers::ErrorsHelper, type: :controller
 end
