@@ -1,6 +1,6 @@
 .section--team {
     // min-height: 500px;
-    // background-color: #ccc;
+    background-color: $gray;
     }
 .section__title--team {
     color: $red;
@@ -20,8 +20,8 @@
         .user__name {
             margin-bottom: 10px;
             font-size: 18px;
-            color: $red;
+            color: $black;
             }
         .user__title {
-            color: $black;
+            color: $red;
             }

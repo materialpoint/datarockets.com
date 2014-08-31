@@ -14,6 +14,11 @@ body {
     padding: 20px;
 	}
 
+.section--asphalt {
+    height: 100%;
+    background-color: rgba($asphalt, 0.7);
+    }
+
 .section__title {
     font-weight: bold;
     font-size: 40px;
@@ -22,13 +27,13 @@ body {
     }
 
 .btn {
-        color: white;
-        padding: 10px 15px;
-        border-radius: $radius;
-            }
-        .btn--red {
-            background-color: $red;
-            }
-        .btn--blue {
-            background-color: $blue;
-            }
+    color: white;
+    padding: 10px 15px;
+    border-radius: $radius;
+    }
+    .btn--red {
+        background-color: $red;
+        }
+    .btn--blue {
+        background-color: $blue;
+        }
