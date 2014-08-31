@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
+  resource :team, only: [:show]
   resources :questions
 
   get :sign_in, to: 'sessions#new'
