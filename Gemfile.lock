@@ -235,10 +235,10 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.1.5)
   rails_12factor
-  responders (~> 1.1.0)
+  responders (~> 1.1)
   rspec-rails (~> 3.0)
   sass-rails (~> 4.0.3)
-  simple_form (~> 3.0.2)
+  simple_form (~> 3.0)
   slim-rails (~> 2.0)
   spring
   spring-commands-rspec
