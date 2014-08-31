@@ -3,6 +3,9 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  self.responder = AppResponder
+  respond_to :html
+
   before_action :authenticate_user!
 
   private

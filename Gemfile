@@ -7,6 +7,8 @@ gem 'uglifier', '~> 2.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'
 gem 'jquery-rails', '~> 2.1'
+gem 'responders', '~> 1.1.0'
+gem 'simple_form', '~> 3.0.2'
 gem 'enumerize', '~> 0.8'
 gem 'app_config', '~> 2.5'
 
