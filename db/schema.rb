@@ -41,13 +41,6 @@ ActiveRecord::Schema.define(version: 20140831101754) do
 
   add_index "member_informations", ["member_id"], name: "index_member_informations_on_member_id", using: :btree
 
-  create_table "questions", force: true do |t|
-    t.string   "title"
-    t.text     "answer"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "role"
