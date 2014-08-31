@@ -29,8 +29,8 @@ module DatarocketsCom
       g.orm             :active_record
       g.template_engine :slim
       g.test_framework  :rspec, fixture: false
-      g.assets          false
-      g.helper          false
+      g.assets = false
+      g.helper = false
     end
   end
 end
