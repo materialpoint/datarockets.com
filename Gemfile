@@ -9,6 +9,7 @@ gem 'slim-rails', '~> 2.0'
 gem 'jquery-rails', '~> 2.1'
 gem 'enumerize', '~> 0.8'
 gem 'app_config', '~> 2.5'
+gem 'paperclip', '~> 4.2'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 
