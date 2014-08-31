@@ -3,12 +3,13 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  resources :questions
 
   namespace :admin do
     resources :projects, except: [:show]
+    resources :questions, except: [:show]
   end
 
+  resources :questions, only: [:index, :show]
   resources :projects, only: [:index, :show]
 
   get :sign_in, to: 'sessions#new'
