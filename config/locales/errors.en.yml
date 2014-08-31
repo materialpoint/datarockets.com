@@ -1,3 +1,3 @@
 en:
   errors:
-    uauthenticated: 'You are not authenticated for this request.'
+    unauthenticated: 'You are not authenticated for this request.'
