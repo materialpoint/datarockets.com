@@ -11,9 +11,9 @@ class ApplicationPolicy
     @user = user || User.new(role: nil)
     @scope = scope
   end
-    
+
   def index?; false; end
-  
+
   def show?; false; end
 
   def create?; false; end
