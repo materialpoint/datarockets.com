@@ -12,6 +12,7 @@ gem 'simple_form', '~> 3.0.2'
 gem 'enumerize', '~> 0.8'
 # See PR for details: https://github.com/Oshuma/app_config/pull/33
 gem 'app_config', github: 'datarockets/app_config', branch: 'default-config-for-base-storage'
+gem 'pundit', '~> 0.3'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 

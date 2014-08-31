@@ -7,28 +7,38 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    authorize(@project)
   end
 
   def new
     @project = Project.new
+    authorize(@project)
   end
 
   def edit
+    authorize(@project)
   end
 
   def create
-    @project = Project.create(project_params)
+    @project = Project.new(project_params)
+    authorize(@project)
+
+    @project.save
 
     respond_with(@project)
   end
 
   def update
+    authorize(@project)
+
     @project.update(project_params)
     
     respond_with(@project)
   end
 
   def destroy
+    authorize(@project)
+
     @project.destroy
 
     respond_with(@project)

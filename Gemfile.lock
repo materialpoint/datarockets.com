@@ -116,6 +116,8 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    pundit (0.3.0)
+      activesupport (>= 3.0.0)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
@@ -229,6 +231,7 @@ DEPENDENCIES
   pg
   pry-byebug
   pry-rails
+  pundit (~> 0.3)
   quiet_assets
   rails (= 4.1.5)
   rails_12factor
