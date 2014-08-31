@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     resources :questions, except: [:show]
   end
 
-  resources :questions, only: [:index, :show]
   resources :projects, only: [:index, :show]
+  resources :questions, only: [:index, :show]
 
   get :sign_in, to: 'sessions#new'
   post :sign_out, to: 'sessions#destroy'
