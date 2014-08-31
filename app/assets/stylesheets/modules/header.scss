@@ -1,18 +1,18 @@
-.section__header {
+.section--header {
     // min-height: 500px;
     background-image: image_url("landing_video_bg.jpg");
     background-position: center;
     background-size: cover;
     }
-    .company-logo {
+    .company__logo {
         display: inline-block;
         color: rgba(255,255,255,1);
         text-shadow: 0 1px 10px rgba(0,0,0,0.5);
         }
-    .company-menu {
+    .company__menu {
         float: right;
         }
-        .company-menu__item {
+        .company__menu__item {
             display: inline-block;
             margin-right: 20px;
             line-height: 34px;
@@ -20,7 +20,7 @@
                 margin-right: 0;
                 }
             }
-    .company-description {
+    .company__description {
         margin-top: 70px;
         p {
             text-align: center;
@@ -63,12 +63,3 @@
                 }
             }
         }
-    .link {
-        color: white;
-            }
-        .link--red {
-            padding: 10px 15px;
-            border-radius: $radius;
-            background-color: $red;
-            color: #fff;
-            }

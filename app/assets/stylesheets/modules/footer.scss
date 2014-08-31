@@ -1,7 +1,11 @@
-.section__footer {
-    min-height: 400px;
+.section--footer {
     background-color: $asphalt;
     }
-    .section__title--contact {
-        color: $blue;
+    .section--footer__info {
+        display: inline-block;
+        margin-left: 20px;
+        color: #fff;
+        }
+    .btn--contact {
+        display: inline-block;
         }
