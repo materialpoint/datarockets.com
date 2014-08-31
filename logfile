@@ -1,8 +1,0 @@
-LOG:  database system was shut down at 2014-08-28 16:29:54 FET
-LOG:  autovacuum launcher started
-LOG:  database system is ready to accept connections
-FATAL:  database "datarockets_com_development" does not exist
-LOG:  autovacuum launcher shutting down
-LOG:  received smart shutdown request
-LOG:  shutting down
-LOG:  database system is shut down
