@@ -1,0 +1,48 @@
+.blog {
+
+    }
+
+    .blog__inner {
+        width: $width-max;
+        margin: auto;
+        }
+
+    .blog header {
+        @extend .clearfix;
+        @extend .blog__inner;
+        }
+
+        .blog hgroup {
+            line-height: 10rem;
+            }
+
+            .blog__header__title {
+                float: left;
+
+                color: $black;
+                }
+
+            .blog header ul {
+                float: right;
+
+                font-size: 0;
+
+                li {
+                    display: inline-block;
+                    margin: 0 0 0 2rem;
+
+                    font-size: 1rem;
+                    }
+
+                .link {
+                    color: $black;
+                    }
+                }
+
+    .blog section {
+        @extend .blog__inner;
+        }
+
+        .blog article {
+
+            }

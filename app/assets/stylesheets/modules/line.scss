@@ -1,0 +1,9 @@
+.line {
+    height: 4px;
+    }
+
+    .line--red {
+        @extend .line;
+
+        background-color: $red;
+        }

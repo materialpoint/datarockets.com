@@ -2,6 +2,8 @@ class Blog::PostsController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
 
+  layout 'blog'
+
   # GET /blog/posts
   def index
   end
