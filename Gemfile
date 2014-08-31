@@ -10,8 +10,8 @@ gem 'jquery-rails', '~> 2.1'
 gem 'responders', '~> 1.1'
 gem 'simple_form', '~> 3.0'
 gem 'enumerize', '~> 0.8'
-gem 'pundit', '~> 0.3'
 gem 'app_config', '~> 2.5'
+gem 'pundit', '~> 0.3'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 
