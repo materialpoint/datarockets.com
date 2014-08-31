@@ -7,11 +7,12 @@ gem 'uglifier', '~> 2.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'
 gem 'jquery-rails', '~> 2.1'
-gem 'responders', '~> 1.1.0'
-gem 'simple_form', '~> 3.0.2'
+gem 'responders', '~> 1.1'
+gem 'simple_form', '~> 3.0'
 gem 'enumerize', '~> 0.8'
-# See PR for details: https://github.com/Oshuma/app_config/pull/33
-gem 'app_config', github: 'datarockets/app_config', branch: 'default-config-for-base-storage'
+gem 'app_config', '~> 2.5'
+gem 'pundit', '~> 0.3'
+gem 'paperclip', '~> 4.2'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 
