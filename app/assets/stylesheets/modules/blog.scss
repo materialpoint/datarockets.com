@@ -1,0 +1,102 @@
+.blog {
+
+    }
+
+    .blog__inner {
+        width: $width-max;
+        padding: 0 1.5rem;
+        margin: auto;
+        box-sizing: border-box;
+        }
+
+    .blog header {
+        @extend .clearfix;
+        @extend .blog__inner;
+        }
+
+        .blog hgroup {
+            line-height: 15rem;
+            }
+
+            .blog__header__title {
+                float: left;
+
+                color: $black;
+                }
+
+            .blog header ul {
+                float: right;
+
+                font-size: 0;
+
+                li {
+                    display: inline-block;
+                    margin: 0 0 0 2rem;
+
+                    font-size: 1rem;
+                    }
+
+                .link {
+                    color: $black;
+                    }
+                }
+
+    .blog section {
+        @extend .blog__inner;
+        }
+
+        .blog article {
+            @extend .clearfix;
+
+            padding-left: 180px;
+            margin-bottom: 3rem;
+            position: relative;
+            }
+
+            .blog__article__meta {
+                width: 155px;
+                top: 0;
+                left: 0;
+                position: absolute;
+
+                text-align: right;
+                font-size: 0;
+
+                img {
+                    width: 32px;
+                    margin: 0 0 .2rem .2rem;
+                    display: inline-block;
+
+                    border-radius: 50px;
+                    }
+                }
+
+            .blog__article__content {
+                font-size: 1.2rem;
+                line-height: 2rem;
+
+                h3 {
+                    margin-bottom: .5rem;
+
+                    font-family: $font-main;
+                    font-weight: $fw-bold;
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+
+                    a {
+                        color: $black;
+                        border-bottom: 1px solid $black;
+
+                        &:hover {
+                            color: $red;
+                            border-bottom-color: $red;
+                            }
+                        }
+                    }
+
+                p {
+                    margin-bottom: .85rem;
+
+                    font-family: $font-text;
+                    }
+                }
