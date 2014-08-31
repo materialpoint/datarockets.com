@@ -32,6 +32,7 @@ class Admin::QuestionsController < AdminController
   end
 
   private
+
     def set_question
       @question = Question.find(params[:id])
     end
