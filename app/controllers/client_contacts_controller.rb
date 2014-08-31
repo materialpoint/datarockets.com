@@ -3,6 +3,7 @@ class ClientContactsController < ApplicationController
 
   def create
     @client_contact = ClientContact.create(clien_contact_params)
+    ClientContactsMailer.send_contact(@client_contact).deliver
     render nothing: true, status: :ok
   end
 

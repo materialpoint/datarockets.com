@@ -16,6 +16,10 @@ describe ClientContactsController do
       expect(response).to have_http_status(:ok)
     end
 
+    it 'deliver email' do
+      expect { post_create_request }.to change { ActionMailer::Base.deliveries.count }.by(1)
+    end
+
     def check_if_client_contact_was_saved_successfully
       name = client_contact_params[:name]
       email = client_contact_params[:email]

@@ -31,3 +31,8 @@
 			span Can you give us examples of work?
 		li style="font-size:#{max*20/36}px;opacity:#{(maxopa-minopa)*((max*20/36)-min)/(max-min)+minopa};"
 			span Why are you named datarockets?
+= simple_form_for :client_contact, url: client_contacts_path do |f|
+  = f.input :name, label: false
+  = f.input :email, label: false
+  = f.input :description, label: false, as: :text
+  = f.submit :Send
