@@ -18,13 +18,13 @@ class Admin::ProjectsController < AdminController
 
     @project.save
 
-    respond_with(@project)
+    respond_with(@project, location: admin_projects_path)
   end
 
   def update
     @project.update(project_params)
     
-    respond_with(@project)
+    respond_with(@project, location: admin_projects_path)
   end
 
   def destroy
