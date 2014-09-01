@@ -3,11 +3,12 @@ class Admin::ProjectsController < AdminController
   before_action :authorize_project
 
   def index
-    @projects = Project.all.order(created_at: :desc)
+    @projects = Project.reverse_all
   end
 
   def new
     @project = Project.new
+    @project.project_images.build
   end
 
   def edit
@@ -44,6 +45,6 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:name, :description)
+      params.require(:project).permit(:name, :description, project_images_attributes: [:id, :image, :_destroy])
     end
 end

@@ -3,4 +3,6 @@
     = f.input :name
   .field
     = f.input :description
+  = f.simple_fields_for :project_images do |project_image_form|
+    = project_image_form.file_field :image
   .actions = f.submit 'Save'
