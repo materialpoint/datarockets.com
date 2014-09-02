@@ -31,7 +31,7 @@ class Admin::ProjectsController < AdminController
   def destroy
     @project.destroy
 
-    respond_with(@project)
+    respond_with(@project, location: admin_projects_path)
   end
 
   private

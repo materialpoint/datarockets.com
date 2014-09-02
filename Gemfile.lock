@@ -118,8 +118,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    paperclip-rack (0.0.2)
-      paperclip (>= 3.0)
     pg (0.17.1)
     polyglot (0.3.5)
     pry (0.10.1)
@@ -247,7 +245,6 @@ DEPENDENCIES
   listen (~> 1.0)
   omniauth-google-oauth2 (~> 0.2.5)
   paperclip (~> 4.2)
-  paperclip-rack
   pg
   pry-byebug
   pry-rails
