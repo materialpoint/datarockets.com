@@ -3,6 +3,7 @@
     = f.input :name
   .field
     = f.input :description
-  = f.simple_fields_for :project_images do |project_image_form|
-    = project_image_form.file_field :image
   .actions = f.submit 'Save'
+
+= form_for [:admin, ProjectImage.new], html: {multipart: true}, remote: true do |f|
+  = f.file_field :image, multiple: 'multiple', id: 'file_upload'

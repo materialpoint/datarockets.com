@@ -45,6 +45,6 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:name, :description, project_images_attributes: [:id, :image, :_destroy])
+      params.require(:project).permit(:name, :description, project_image_ids: [])
     end
 end

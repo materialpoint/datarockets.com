@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :projects, except: [:show]
     resources :questions, except: [:show]
+    resources :project_images, only: [:create]
   end
 
   resources :projects, only: [:index, :show]
