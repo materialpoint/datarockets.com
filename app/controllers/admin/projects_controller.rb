@@ -8,7 +8,7 @@ class Admin::ProjectsController < AdminController
 
   def new
     @project = Project.new
-    @project.project_images.build
+    @project.project_images.build unless @project.project_images
   end
 
   def edit
