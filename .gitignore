@@ -23,4 +23,8 @@
 /config/app_config.yml
 
 # Ignore images
-*.jpg, *.jpeg, *png, *.gif
+*.jpg
+*.jpeg
+*.png
+*.gif
+public/system
