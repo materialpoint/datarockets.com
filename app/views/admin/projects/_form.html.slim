@@ -3,11 +3,16 @@
     = f.input :name
   .field
     = f.input :description
+    - if @project.project_images
+      - @project.project_images.each do |project_image|
+        = f.hidden_field :project_image, name: 'project[project_image_ids][]', value: project_image.id
   .actions = f.submit 'Save'
-
-- if @project.project_images
-  - @project.project_images.each do |project_image|
-    = image_tag(project_image.image.url)
 
 = form_for [:admin, ProjectImage.new], html: {multipart: true}, remote: true do |f|
   = f.file_field :image, multiple: :multiple, id: 'file_upload'
+
+- if @project.project_images
+  - @project.project_images.each do |project_image|
+    div
+      = image_tag(project_image.image.url(:thumb))
+      = "![place your alt text here](#{project_image.image.url})"
