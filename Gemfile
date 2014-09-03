@@ -3,6 +3,7 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.5'
 gem 'pg'
+gem 'jbuilder', '~> 2.1'
 gem 'uglifier', '~> 2.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'

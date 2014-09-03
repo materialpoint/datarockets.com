@@ -9,10 +9,7 @@ class Admin::ProjectImagesController < AdminController
       respond_to do |format|
         if @project_image.save
           format.html { redirect_to admin_projects_path }
-          format.json { 
-            data = {id: @project_image.id, url: @project_image.image.url(:large)}
-            render json: data
-          }
+          format.json { render :create }
         end
       end
     end
