@@ -53,6 +53,9 @@ ActiveRecord::Schema.define(version: 20140901134152) do
     t.datetime "updated_at"
   end
 
+  add_index "project_images", ["imageable_id", "imageable_type"], name: "index_project_images_on_imageable_id_and_imageable_type", using: :btree
+  add_index "project_images", ["project_id"], name: "index_project_images_on_project_id", using: :btree
+
   create_table "projects", force: true do |t|
     t.string   "name"
     t.text     "description"

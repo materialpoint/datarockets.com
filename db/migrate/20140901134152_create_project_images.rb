@@ -3,8 +3,8 @@ class CreateProjectImages < ActiveRecord::Migration
     create_table :project_images do |t|
       t.has_attached_file :image
       t.string :imageable_type
-      t.integer :imageable_id
-      t.integer :project_id
+      t.references :imageable, polymorphic: true, index: true
+      t.references :project, index: true
 
       t.timestamps
     end
