@@ -1,9 +1,7 @@
 doctype html
 html
   head
-    = render "layouts/section_head"
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
   body
-    = render "layouts/section_header"
-    = render "layouts/section_questions"
-    = render "layouts/section_team"
-    = render "layouts/section_footer"
+    = yield
