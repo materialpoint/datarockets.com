@@ -1,10 +1,20 @@
-h1 Listing projects
+.products
+  - @projects.each do |project|
+    .products__item
+      =image_tag("project6.png", class: "products__item__img")
+      h3.products__item__name
+        a href="/" Bezagenstva.ru
+      .products__item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eveniet, dicta cumque necessitatibus aut reprehenderit accusantium quaerat voluptas eligendi, et illum voluptates suscipit expedita debitis quam
+      .products__tags
+        ul.tags
+          li.tags__item
+            a.tags__item_link href="/" html
+          li.tags__item
+            a.tags__item_link href="/" rails 4
+          li.tags__item
+            a.tags__item_link href="/" slim
+          li.tags__item
+            a.tags__item_link href="/" scss
+          li.tags__item
 
-= link_to 'New Project', new_admin_project_path
-  tbody
-    - @projects.each do |project|
-      .products__item
-        =image_tag("project6.png", class: "products__item__img")
-        .products__item__name Bezagenstva.ru
-        .products__item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eveniet, dicta cumque necessitatibus aut reprehenderit accusantium quaerat voluptas eligendi, et illum voluptates suscipit expedita debitis quam facilis labore aliquam corporis possimus repellendus ad! Magnam enim, nemo
 
