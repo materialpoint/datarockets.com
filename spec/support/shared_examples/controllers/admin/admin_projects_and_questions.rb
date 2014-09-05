@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.shared_examples 'an admin controller' do
-  pluralized_model_name = described_class.to_s.gsub('Admin::','').gsub('Controller','').downcase.to_sym 
-  model_name = pluralized_model_name.to_s.singularize.to_sym
   let(:instance) { Fabricate(model_name) }
 
   describe 'GET #index' do
@@ -26,7 +24,7 @@ RSpec.shared_examples 'an admin controller' do
       it 'loads new project' do
         get :new
 
-        expect(assigns(model_name)).to be_a_new(model_name.to_s.classify.constantize)
+        expect(assigns(model_name)).to be_a_new(model_name_constant)
       end
     end
   end
@@ -44,7 +42,7 @@ RSpec.shared_examples 'an admin controller' do
       end
 
       it 'does not create project with invalid params' do
-        post :create, model_name => invalid_params(model_name)
+        post :create, model_name => invalid_params
 
         expect(assigns(model_name)).not_to be_persisted
       end
@@ -67,26 +65,26 @@ RSpec.shared_examples 'an admin controller' do
 
   describe 'PUT/PATCH #update' do
     it_requires_authentication do
-      patch :update, id: instance.id, model_name => params_to_update(model_name, :valid)
+      patch :update, id: instance.id, model_name => params_to_update(:valid)
     end
 
     for_user :admin do
       it 'loads the requested instance' do
-        patch :update, id: instance.id, model_name => params_to_update(model_name, :valid)
+        patch :update, id: instance.id, model_name => params_to_update(:valid)
         
         expect(assigns(model_name)).to eq(instance)
       end
 
       it 'update instance with valid params' do
-        patch :update, id: instance.id, model_name => params_to_update(model_name, :valid)
+        patch :update, id: instance.id, model_name => params_to_update(:valid)
       
-        expect(instance.reload.send(updated_param_name(model_name))).to eq('updated')
+        expect(instance.reload.send(updated_param_name)).to eq('updated')
       end
 
       it 'does not update instance with invalid params' do
-        patch :update, id: instance.id, model_name => params_to_update(model_name, :invalid)
+        patch :update, id: instance.id, model_name => params_to_update(:invalid)
 
-        expect(instance.reload.send(updated_param_name(model_name))).not_to eq('updated')
+        expect(instance.reload.send(updated_param_name)).not_to eq('updated')
       end
     end
   end
@@ -106,15 +104,15 @@ RSpec.shared_examples 'an admin controller' do
   end
 end
 
-def invalid_params(model_name)
-  Hash[model_name.to_s.classify.constantize.column_names.map {|name| [name, nil]}]
+def invalid_params
+  Hash[model_name_constant.column_names.map {|name| [name, nil]}]
 end
 
-def updated_param_name(model_name)
-  model_name.to_s.classify.constantize.column_names.second
+def updated_param_name
+  model_name_constant.column_names.second
 end
 
-def params_to_update(model_name, validation)
-  return Hash[model_name.to_s.classify.constantize.column_names.second, 'updated'] if validation == :valid
-  return Hash[model_name.to_s.classify.constantize.column_names.second, nil] if validation == :invalid
+def params_to_update(validation)
+  return Hash[updated_param_name, 'updated'] if validation == :valid
+  return Hash[updated_param_name, nil] if validation == :invalid
 end
