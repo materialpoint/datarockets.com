@@ -1,20 +1,10 @@
-.products
-  .products__item
-    =image_tag("project6.png", class: "products__item__img")
-    .products__item__name Bezagenstva.ru
-    .products__item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eveniet, dicta cumque necessitatibus aut reprehenderit accusantium quaerat voluptas eligendi, et illum voluptates suscipit expedita debitis quam facilis labore aliquam corporis possimus repellendus ad! Magnam enim, nemo
-  .products__item
-    =image_tag("project2.jpg", class: "products__item__img")
-    .products__item__name Inteltrix
-    .products__item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eveniet, dicta cumque necessitatibus aut reprehenderit accusantium quaerat voluptas eligendi, et illum voluptates suscipit expedita debitis quam facilis labore aliquam corporis possimus repellendus ad! Magnam enim, nemo, tenetur incidunt distinctio delectus saepe aspernatur, commodi cumque unde obcaecati quo quos doloribus beatae?
-  .products__item
-    =image_tag("project1.jpg", class: "products__item__img")
-    .products__item__name Vkleaner
-    .products__item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum perferendis ab repudiandae obcaecati in odio et veniam eos, quasi quae consequuntur modi earum, reprehenderit repellendus
-    / - @projects.each do |project|
-      / .products__item
-      /   td = project.name
-      /   td = project.description
-      /   td = link_to 'Show', project
-      /   / td = link_to 'Edit', edit_project_path(project)
-      /   td = link_to 'Destroy', project, data: {confirm: 'Are you sure?'}, :method => :delete
+h1 Listing projects
+
+= link_to 'New Project', new_admin_project_path
+  tbody
+    - @projects.each do |project|
+      .products__item
+        =image_tag("project6.png", class: "products__item__img")
+        .products__item__name Bezagenstva.ru
+        .products__item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eveniet, dicta cumque necessitatibus aut reprehenderit accusantium quaerat voluptas eligendi, et illum voluptates suscipit expedita debitis quam facilis labore aliquam corporis possimus repellendus ad! Magnam enim, nemo
+

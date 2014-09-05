@@ -2,11 +2,10 @@ p#notice = notice
 
 p
   strong Name:
-    = @project.name
+  = @project.name
 p
   strong Description:
-    = @project.description
+  = markdown(@project.description)
 
-= link_to 'Edit', edit_project_path(@project)
-'|
+= link_to 'Edit', edit_admin_project_path(@project)
 = link_to 'Back', projects_path
