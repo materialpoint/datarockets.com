@@ -24,7 +24,7 @@ RSpec.shared_examples 'an admin controller' do
       it 'loads new project' do
         get :new
 
-        expect(assigns(model_name)).to be_a_new(model_name_constant)
+        expect(assigns(model_name)).to be_a_new(const_model_name)
       end
     end
   end
@@ -105,11 +105,11 @@ RSpec.shared_examples 'an admin controller' do
 end
 
 def invalid_params
-  Hash[model_name_constant.column_names.map {|name| [name, nil]}]
+  Hash[const_model_name.column_names.map {|name| [name, nil]}]
 end
 
 def updated_param_name
-  model_name_constant.column_names.second
+  const_model_name.column_names.second
 end
 
 def params_to_update(validation)

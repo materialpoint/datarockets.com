@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.shared_examples 'a controller' do
-  let(:instance) { Fabricate(model_name) }  
+  let(:instance) { Fabricate(model_name) }
 
   describe 'GET #index' do
     it 'loads all the instances and sorts them by created_ad in desc order' do
