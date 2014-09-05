@@ -16,7 +16,6 @@ gem 'pundit', '~> 0.3'
 gem 'paperclip', '~> 4.2'
 gem 'redcarpet', '~> 3.1'
 gem 'jquery-fileupload-rails', '~> 0.4'
-gem 'bower-rails', '~> 0.8'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 
