@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
   namespace :admin do
+    resources :post_images, only: [:create]
     resources :posts, except: [:show]
     resources :projects, except: [:show]
   end

@@ -1,5 +1,16 @@
 = simple_form_for [:admin, @post] do |f|
-  = f.input :title
-  = f.input :body
+  .field
+    = f.input :title
+  .field
+    = f.input :body
   .actions
     = f.submit 'Save'
+
+= form_for [:admin, PostImage.new], html: {multipart: true}, remote: true do |f|
+  = f.file_field :image, multiple: :multiple, id: 'file_upload'
+
+- if @post.post_images
+  - @post.post_images.each do |post_image|
+    div
+      = image_tag(post_image.image.url(:thumb))
+      = "![place your alt text here](#{post_image.image.url(:large)})"
