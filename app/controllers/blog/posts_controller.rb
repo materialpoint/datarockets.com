@@ -4,7 +4,7 @@ class Blog::PostsController < ApplicationController
   layout 'blog'
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.reverse_all
   end
 
   def show

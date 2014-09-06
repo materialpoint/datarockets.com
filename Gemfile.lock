@@ -82,6 +82,9 @@ GEM
     hike (1.2.3)
     http_parser.rb (0.6.0)
     i18n (0.6.11)
+    jquery-fileupload-rails (0.4.1)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -248,6 +251,7 @@ DEPENDENCIES
   fabrication (~> 2.11)
   faker (~> 1.4)
   guard-livereload
+  jquery-fileupload-rails (~> 0.4)
   jquery-rails (~> 3.1)
   listen (~> 1.0)
   omniauth-google-oauth2 (~> 0.2.5)

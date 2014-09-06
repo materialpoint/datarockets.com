@@ -6,7 +6,7 @@ describe Blog::PostsController, type: :controller do
   describe 'GET #index' do
     it 'loads all the posts and sorts them by created_at in desc order' do
       first, second = Fabricate(:post), Fabricate(:post)  
-      
+
       get :index
 
       expect(assigns(:posts)).to eq([second, first])

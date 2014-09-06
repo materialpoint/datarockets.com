@@ -3,7 +3,7 @@ class Admin::PostsController < AdminController
   before_action :authorize_post
 
   def index
-    @posts = Post.all.order(created_at: :desc)    
+    @posts = Post.all.reverse_all
   end
 
   def new
@@ -42,7 +42,7 @@ class Admin::PostsController < AdminController
     def authorize_post
       authorize(:post, :manage?)
     end
-    
+
     def post_params
       params.require(:post).permit(:title, :body)
     end

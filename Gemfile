@@ -13,6 +13,7 @@ gem 'enumerize', '~> 0.8'
 gem 'app_config', '~> 2.5'
 gem 'pundit', '~> 0.3'
 gem 'paperclip', '~> 4.2'
+gem 'jquery-fileupload-rails', '~> 0.4'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 gem 'autoprefixer-rails', '3.0.1.20140826'
