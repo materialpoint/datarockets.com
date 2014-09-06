@@ -104,6 +104,7 @@ RSpec.shared_examples 'an admin controller' do
   end
 end
 
+# returns expressions like {"id"=>nil, "name"=>nil, "description"=>nil, "created_at"=>nil, "updated_at"=>nil}
 def invalid_params
   Hash[const_model_name.column_names.map {|name| [name, nil]}]
 end
@@ -112,6 +113,7 @@ def updated_param_name
   const_model_name.column_names.second
 end
 
+# returns expressions like {"name"=>"updated"} or {"name"=>nil} depending on validation option
 def params_to_update(validation)
   return Hash[updated_param_name, 'updated'] if validation == :valid
   return Hash[updated_param_name, nil] if validation == :invalid
