@@ -11,11 +11,13 @@ class Admin::UsersController < AdminController
 
   def new
     @user = User.new
+
     @user.build_member_information
   end
 
   def create
     @user = User.new(user_params)
+
     @user.save
 
     respond_with(@user, location: admin_users_path)
