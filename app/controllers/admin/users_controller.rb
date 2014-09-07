@@ -11,7 +11,7 @@ class Admin::UsersController < AdminController
 
   def new
     @user = User.new
-    @user.build_member_information unless @user.member_information
+    @user.build_member_information
   end
 
   def create
