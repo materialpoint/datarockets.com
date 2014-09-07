@@ -14,6 +14,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore all the .swp files
+*.swp
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
@@ -21,4 +24,6 @@
 # Ignore configs which is different on different machines
 /config/database.yml
 /config/app_config.yml
+
+# Ignore folder with paperclip images
 /public/system/
