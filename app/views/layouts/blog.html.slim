@@ -3,10 +3,11 @@ html
   head
     = render "layouts/section_head"
   body
-    section.blog
-      .line--red
-      .section--inner
+    .line--red
+    .section--inner
+      .header--wrapper
         = render 'layouts/header_menu'
 
+    section.blog
       section
         = yield

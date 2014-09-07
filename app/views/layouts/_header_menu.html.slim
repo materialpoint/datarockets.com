@@ -1,7 +1,7 @@
 div class="header__logo #{class_for_header_logo}"
   h2
     a href="/" datarockets
-ul.header__menu.header__menu--white
+ul class="header__menu #{class_for_header_menu}"
   li.header__menu__item
     = link_to 'Portfolio', projects_path
   li.header__menu__item
@@ -11,4 +11,4 @@ ul.header__menu.header__menu--white
   li.header__menu__item
     = link_to 'FAQ', questions_path
   li.header__menu__item
-    = link_to 'Contact us', questions_path, class: 'btn btn--red'
+    = link_to 'Contact us', questions_path, class: "btn #{class_for_menu_btn}"

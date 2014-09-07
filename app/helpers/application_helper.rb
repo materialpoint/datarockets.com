@@ -29,4 +29,22 @@ module ApplicationHelper
       'header__logo--black'
     end
   end
+
+  def class_for_header_menu
+    case controller.controller_name
+    when 'pages'
+      'header__menu--white'
+    when 'projects', 'posts'
+      'header__menu--black'
+    end
+  end
+
+  def class_for_menu_btn
+    case controller.controller_name
+    when 'pages', 'posts'
+      'btn--red'
+    when 'projects'
+      'btn--blue'
+    end
+  end
 end
