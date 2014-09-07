@@ -16,14 +16,6 @@ ActiveRecord::Schema.define(version: 20140906052613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "client_contacts", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "images", force: true do |t|
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -68,31 +60,9 @@ ActiveRecord::Schema.define(version: 20140906052613) do
     t.datetime "updated_at"
   end
 
-  create_table "project_images", force: true do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "imageable_type"
-    t.integer  "imageable_id"
-    t.integer  "project_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "project_images", ["imageable_id", "imageable_type"], name: "index_project_images_on_imageable_id_and_imageable_type", using: :btree
-  add_index "project_images", ["project_id"], name: "index_project_images_on_project_id", using: :btree
-
   create_table "projects", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "questions", force: true do |t|
-    t.string   "title"
-    t.text     "answer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
