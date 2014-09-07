@@ -1,17 +1,15 @@
 class Admin::ProjectImagesController < AdminController
   def create
-    params[:project_image][:image].each do |image|
-      params = {}
-      params[:image] = image
-      
-      @project_image = ProjectImage.new(params)
+    @project_image = ProjectImage.new(project_image_params)
 
-      respond_to do |format|
-        if @project_image.save
-          format.html { redirect_to admin_projects_path }
-          format.json { render :create }
-        end
-      end
+    unless @project_image.save
+      render nothing: true, status: 500
     end
   end
+
+  private
+
+    def project_image_params
+      params.require(:project_image).permit(:image)
+    end
 end

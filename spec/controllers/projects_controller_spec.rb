@@ -7,9 +7,5 @@ RSpec.describe Admin::ProjectsController do
 end
 
 RSpec.describe ProjectsController do
-  let(:model_name) { :project }
-  let(:pluralized_model_name) { :projects }
-  let(:const_model_name) { Project }
-
-  it_behaves_like 'a controller'
+  it_behaves_like 'public resource'
 end

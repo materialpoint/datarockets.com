@@ -5,8 +5,8 @@
     = f.input :description
   .actions = f.submit 'Save'
 
-= form_for [:admin, ProjectImage.new], html: {multipart: true}, remote: true do |f|
-  = f.file_field :image, multiple: :multiple, id: 'file_upload'
+= form_for [:admin, ProjectImage.new], remote: true do |f|
+  = f.file_field :image, id: 'file_upload'
 
 - if @project.project_images
   - @project.project_images.each do |project_image|
