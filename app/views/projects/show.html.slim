@@ -5,7 +5,8 @@ p
   = @project.name
 p
   strong Description:
-  = markdown(@project.description)
+  .markdown-body
+    = markdown(@project.description)
 
 = link_to 'Edit', edit_admin_project_path(@project)
 = link_to 'Back', projects_path
