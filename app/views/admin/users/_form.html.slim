@@ -1,0 +1,5 @@
+= simple_form_for [:admin, @user] do |f|
+  = f.input :email
+  = f.input :name
+  = f.input :role, default: :member
+  = f.submit :Submit

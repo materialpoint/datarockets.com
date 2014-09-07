@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :projects, except: [:show]
     resources :questions, except: [:show]
+    resources :users
   end
 
   resources :client_contacts, only: [:create]
