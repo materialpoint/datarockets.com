@@ -3,7 +3,7 @@ class Admin::QuestionsController < AdminController
   before_action :authorize_question
 
   def index
-    @questions = Question.all.order(created_at: :desc)
+    @questions = Question.reverse_all
   end
 
   def new
@@ -14,7 +14,9 @@ class Admin::QuestionsController < AdminController
   end
 
   def create
-    @question = Question.create(question_params)
+    @question = Question.new(question_params)
+
+    @question.save
 
     respond_with @question
   end
@@ -22,13 +24,13 @@ class Admin::QuestionsController < AdminController
   def update
     @question.update(question_params)
 
-    respond_with(@question, location: @question)
+    respond_with(@question, location: admin_questions_path)
   end
 
   def destroy
     @question.destroy
 
-    respond_with(@question, location: questions_path)
+    respond_with(@question, location: admin_questions_path)
   end
 
   private

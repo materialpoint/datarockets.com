@@ -3,11 +3,12 @@ class Admin::ProjectsController < AdminController
   before_action :authorize_project
 
   def index
-    @projects = Project.all.order(created_at: :desc)
+    @projects = Project.reverse_all
   end
 
   def new
     @project = Project.new
+    @project.project_images.build unless @project.project_images
   end
 
   def edit
@@ -18,19 +19,19 @@ class Admin::ProjectsController < AdminController
 
     @project.save
 
-    respond_with(@project)
+    respond_with(@project, location: admin_projects_path)
   end
 
   def update
     @project.update(project_params)
     
-    respond_with(@project)
+    respond_with(@project, location: admin_projects_path)
   end
 
   def destroy
     @project.destroy
 
-    respond_with(@project)
+    respond_with(@project, location: admin_projects_path)
   end
 
   private
@@ -44,6 +45,6 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:name, :description)
+      params.require(:project).permit(:name, :description, project_image_ids: [])
     end
 end

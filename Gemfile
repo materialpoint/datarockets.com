@@ -3,6 +3,7 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.5'
 gem 'pg'
+gem 'jbuilder', '~> 2.1'
 gem 'uglifier', '~> 2.5'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'
@@ -14,6 +15,8 @@ gem 'enumerize', '~> 0.8'
 gem 'app_config', '~> 2.5'
 gem 'pundit', '~> 0.3'
 gem 'paperclip', '~> 4.2'
+gem 'redcarpet', '~> 3.1'
+gem 'jquery-fileupload-rails', '~> 0.4'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 

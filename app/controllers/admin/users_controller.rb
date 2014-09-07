@@ -3,7 +3,7 @@ class Admin::UsersController < AdminController
   before_action :authorize_project
 
   def index
-    @users = User.all
+    @users = User.reverse_all
   end
 
   def show
