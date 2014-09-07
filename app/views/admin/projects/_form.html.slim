@@ -1,6 +1,15 @@
-= simple_form_for @project do |f|
+= simple_form_for [:admin, @project] do |f|
   .field
     = f.input :name
   .field
     = f.input :description
   .actions = f.submit 'Save'
+
+= form_for [:admin, ProjectImage.new], remote: true do |f|
+  = f.file_field :image, id: 'file_upload'
+
+- if @project.project_images
+  - @project.project_images.each do |project_image|
+    div
+      = image_tag(project_image.image.url(:thumb))
+      = "![place your alt text here](#{project_image.image.url(:large)})"

@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   skip_before_filter :authenticate_user!
 
   def index
-    @questions = Question.all.order(created_at: :desc)
+    @questions = Question.reverse_all
   end
 
   def show

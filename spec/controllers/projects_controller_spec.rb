@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-describe QuestionsController do
+describe ProjectsController do
   it_behaves_like 'public resource controller'
 end
