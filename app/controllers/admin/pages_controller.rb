@@ -1,5 +1,7 @@
 class Admin::PagesController < ApplicationController
   before_action :set_page, only: [ :edit, :update, :destroy ]
+  before_action :authorize_page
+
 
   def index
     @pages = Page.all.order(created_at: :desc)
@@ -32,6 +34,10 @@ private
 
   def set_page
     @page = Page.find(params[:id])
+  end
+
+  def authorize_page
+    authorize(:page, :manage?)
   end
 
   def page_params
