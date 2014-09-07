@@ -25,7 +25,7 @@ module ApplicationHelper
     case controller.controller_name
     when 'pages'
       'header__logo--white'
-    when 'projects', 'posts'
+    when 'projects', 'posts', 'teams'
       'header__logo--black'
     end
   end
@@ -34,7 +34,7 @@ module ApplicationHelper
     case controller.controller_name
     when 'pages'
       'header__menu--white'
-    when 'projects', 'posts'
+    when 'projects', 'posts', 'teams'
       'header__menu--black'
     end
   end
@@ -45,6 +45,17 @@ module ApplicationHelper
       'btn--red'
     when 'projects'
       'btn--blue'
+    when 'teams'
+      'btn--green'
+    end
+  end
+
+  def class_for_line
+    case controller.controller_name
+    when 'teams'
+      '--green'
+    else
+      '--blue'
     end
   end
 end

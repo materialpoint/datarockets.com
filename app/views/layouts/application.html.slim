@@ -4,7 +4,7 @@ html
     = render "layouts/section_head"
   body
     p#notice = notice
-    .line--blue
+    div class="line#{class_for_line}"
     .section--inner
       .header--wrapper
         = render 'layouts/header_menu'

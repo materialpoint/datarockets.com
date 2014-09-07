@@ -25,3 +25,85 @@
         .user__title {
             color: $red;
             }
+
+.teamlist {
+    max-width: $width-cuted;
+    margin: auto;
+    }
+
+    .teamlist__item {
+        margin-bottom: 40px;
+        position: relative;
+        clear: both;
+        }
+
+        $teamlist-avatarSize: 135px;
+
+        .teamlist__item__avatar {
+            width: $teamlist-avatarSize;
+            height: $teamlist-avatarSize;
+            float: left;
+
+            border-radius: $teamlist-avatarSize;
+            overflow: hidden;
+            }
+
+        .teamlist__item__descr {
+            margin-left: $teamlist-avatarSize + 30px;
+
+            p {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                line-height: 1.5em;
+                }
+            }
+
+            .teamlist__item__name {
+                margin-right: 170px;
+
+                font-size: 28px;
+                font-weight: bold;
+                line-height: 1.5em;
+                }
+
+            .teamlist__item__status {
+                font-weight: normal;
+                font-size: 16px;
+                color: $green;
+                }
+
+            .teamlist__item__descr__social {
+                $width: 30px;
+
+                min-width: ($width + 10) * 4;
+
+                top: ((28 * 1.5) - $width) / 2;
+                right: 0;
+                position: absolute;
+
+                font-size: 0;
+
+                a {
+                    width: $width;
+                    height: $width;
+                    margin-right: 10px;
+                    display: inline-block;
+                    background-image: asset-url('icon-rss.svg');
+                    background-size: 100%;
+
+                    &:hover {
+
+                        }
+
+                    &[href*='github'] {
+                        background-image: asset-url('icon-github.svg');
+                        }
+                    &[href*='twitter'] {
+                        background-image: asset-url('icon-twitter.svg');
+                        }
+                    &[href*='linked'] {
+                        background-image: asset-url('icon-linkedin.svg');
+                        }
+                    }
+                }
