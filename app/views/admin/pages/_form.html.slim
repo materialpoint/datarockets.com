@@ -1,6 +1,6 @@
-= simple_form_for @test do |f|
+= simple_form_for @page, url: admin_pages_path(@page) do |f|
   .field
-    = f.text_field @test.title
-  .feild
-    = f.text @test.body
+    = f.input :title
+  .field
+    = f.input :body
   .actions = f.submit 'Save'

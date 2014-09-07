@@ -15,9 +15,9 @@ table
         td = page.name
         td = page.description
         td = link_to 'Show', page
-        td = link_to 'Edit', edit_page_path(page)
+        td = link_to 'Edit', edit_admin_page_path(page)
         td = link_to 'Destroy', page, data: {confirm: 'Are you sure?'}, :method => :delete
 
 br
 
-= link_to 'New Page', new_page_path
+= link_to 'New Page', new_admin_page_path
