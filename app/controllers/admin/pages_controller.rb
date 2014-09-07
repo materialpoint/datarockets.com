@@ -12,8 +12,9 @@ class Admin::PagesController < ApplicationController
   end
 
   def create
-    Page.create(page_params)
-    respond_with(@page)
+    @page = Page.create(page_params)
+
+    respond_with(@page, location: admin_pages_path)
   end
 
   def edit
@@ -21,13 +22,15 @@ class Admin::PagesController < ApplicationController
   end
 
   def update
-    Page.update(page_params)
-    respond_with(@page)
+    @page.update(page_params)
+
+    respond_with(@page, location: admin_pages_path)
   end
 
   def destroy
-    Page.destroy
-    respond_with(@page)
+    @page.destroy
+
+    respond_with(@page, location: admin_pages_path)
   end
 
 private
