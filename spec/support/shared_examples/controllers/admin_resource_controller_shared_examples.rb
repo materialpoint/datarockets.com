@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.shared_examples 'admin resource controller' do
+  include Helpers::ModelNameControllerHelper
+
   let(:instance) { Fabricate(element_name) }
 
   describe 'GET #index' do
@@ -101,18 +103,6 @@ RSpec.shared_examples 'admin resource controller' do
         expect(assigns(element_name)).not_to be_persisted
       end
     end
-  end
-
-  def model
-    subject.controller_name.classify.constantize
-  end
-
-  def element_name
-    model.model_name.element
-  end
-
-  def collection_name
-    model.model_name.collection
   end
 
   # returns expressions like {"id"=>nil, "name"=>nil, "description"=>nil, "created_at"=>nil, "updated_at"=>nil}
