@@ -21,3 +21,6 @@
 # Ignore configs which is different on different machines
 /config/database.yml
 /config/app_config.yml
+
+# Ignore folder with paperclip images
+/public/system
