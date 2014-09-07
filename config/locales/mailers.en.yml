@@ -1,0 +1,4 @@
+en:
+  mailers:
+    client_contacts:
+      subject: 'New client has written us'

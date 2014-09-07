@@ -16,6 +16,14 @@ ActiveRecord::Schema.define(version: 20140906052613) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "client_contacts", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "images", force: true do |t|
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -53,6 +61,13 @@ ActiveRecord::Schema.define(version: 20140906052613) do
 
   add_index "post_images", ["post_id"], name: "index_post_images_on_post_id", using: :btree
 
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "body"
@@ -60,9 +75,9 @@ ActiveRecord::Schema.define(version: 20140906052613) do
     t.datetime "updated_at"
   end
 
-  create_table "projects", force: true do |t|
-    t.string   "name"
-    t.text     "description"
+  create_table "questions", force: true do |t|
+    t.string   "title"
+    t.text     "answer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
