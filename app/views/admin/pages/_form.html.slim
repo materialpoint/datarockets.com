@@ -1,0 +1,6 @@
+= simple_form_for @test do |f|
+  .field
+    = f.text_field @test.title
+  .feild
+    = f.text @test.body
+  .actions = f.submit 'Save'
