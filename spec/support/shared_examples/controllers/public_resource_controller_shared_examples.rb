@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.shared_examples 'public resource' do
+RSpec.shared_examples 'public resource controller' do
   describe 'GET #index' do
     it 'loads all the instances and sorts them by created_ad in desc order' do
       first, second = Fabricate(element_name), Fabricate(element_name)

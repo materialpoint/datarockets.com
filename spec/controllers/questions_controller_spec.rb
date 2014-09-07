@@ -1,11 +1,7 @@
 RSpec.describe Admin::QuestionsController do
-  let(:model_name) { :question }
-  let(:pluralized_model_name) { :questions }
-  let(:const_model_name) { Question }
-
-  it_behaves_like 'an admin controller'
+  it_behaves_like 'admin resource controller'
 end
 
 RSpec.describe QuestionsController do
-  it_behaves_like 'public resource'
+  it_behaves_like 'public resource controller'
 end
