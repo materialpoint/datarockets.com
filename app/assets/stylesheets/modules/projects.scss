@@ -1,19 +1,20 @@
-.products {
+//A page with a list of all projects
+.projects {
 
     }
-    .products__item {
+    .projects__item {
         @extend .clearfix;
 
         margin-bottom: 20px;
         }
-        .products__item__img {
+        .projects__item__img {
             width: 200px;
             margin-right: 20px;
             margin-bottom: 10px;
             float: left;
             border-radius: $radius;
             }
-        .products__item__name {
+        .projects__item__name {
             margin-bottom: 15px;
             display: block;
             font-weight: $fw-normal;
@@ -27,11 +28,11 @@
                 }
             }
 
-        .products__item__description {
+        .projects__item__description {
             line-height: 1.4em;
             color: $darkgray;
             }
-        .products__tags {
+        .projects__tags {
             @extend .clearfix;
 
             margin: 10px 0;

@@ -1,0 +1,45 @@
+.project {
+    width: 900px;
+    margin: 0 auto;
+    }
+    .project__title {
+        margin-bottom: 50px;
+        font-size: 60px;
+        text-align: center;
+        color: $lynch;
+
+        }
+    .project__description {
+
+        }
+    .project__info {
+        b {
+            margin-right: 20px;
+            font-size: 18px;
+            }
+
+        }
+        .project__authors {
+
+            }
+            .project__authors__item {
+                display: inline-block;
+                line-height: 40px;
+                margin-right: 20px;
+                img {
+                    width: 32px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    border-radius: 50%;
+                    }
+                span {
+                    line-height: 50px;
+                    color: $blue;
+                    }
+                }
+
+        .project__tech {
+            vertical-align: middle;
+            line-height: 40px;
+            }

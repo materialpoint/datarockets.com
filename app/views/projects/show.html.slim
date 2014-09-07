@@ -1,12 +1,26 @@
-p#notice = notice
+.project
+  .project__title = @project.name
 
-p
-  strong Name:
-  = @project.name
-p
-  strong Description:
-  .markdown-body
+  .project__description.markdown-body
     = markdown(@project.description)
 
-= link_to 'Edit', edit_admin_project_path(@project)
-= link_to 'Back', projects_path
+  .project__info
+    ul.project__authors
+      b Developers:
+      li.project__authors__item
+        img src="http://images.thoughtbot.com/team/steven.jpg" alt=""/
+        span Egor Vorobiev
+      li.project__authors__item
+        img src="http://images.thoughtbot.com/team/dan.jpg" alt=""/
+        span Dmitry Zhlobo
+    .project__tech
+      b Technologies:
+      ul.tags
+        li.tags__item
+          a.tags__item_link href="/" html
+        li.tags__item
+          a.tags__item_link href="/" rails 4
+        li.tags__item
+          a.tags__item_link href="/" slim
+        li.tags__item
+          a.tags__item_link href="/" scss

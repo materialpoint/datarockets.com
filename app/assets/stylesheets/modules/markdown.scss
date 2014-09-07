@@ -4,12 +4,12 @@
 }
 
 .markdown-body {
-  font-family: sans-serif;
+  font-family: $font-main;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  color: #333333;
+  color: $black;
   overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
