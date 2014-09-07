@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
 
   scope :members, -> { where(role: :member) }
 
+  accepts_nested_attributes_for :member_information
+
   private
 
     def generate_remember_token

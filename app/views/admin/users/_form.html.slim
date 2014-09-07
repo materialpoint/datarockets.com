@@ -1,5 +1,12 @@
-= simple_form_for [:admin, @user] do |f|
+= simple_nested_form_for [:admin, @user] do |f|
   = f.input :email
   = f.input :name
   = f.input :role, default: :member
-  = f.submit :Submit
+  = f.simple_fields_for :member_information do |mif|
+    = mif.input :title
+    = mif.input :description
+    = mif.input :github_profile
+    = mif.input :own_blog
+    = mif.input :twitter
+    = mif.input :linkedin
+  = f.submit 'Submit'
