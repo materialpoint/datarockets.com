@@ -26,4 +26,4 @@
 /config/app_config.yml
 
 # Ignore folder with paperclip images
-/public/system
+/public/system/
