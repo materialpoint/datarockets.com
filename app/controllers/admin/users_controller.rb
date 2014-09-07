@@ -1,6 +1,6 @@
 class Admin::UsersController < AdminController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_project
+  before_action :authorize_user
 
   def index
     @users = User.reverse_all
@@ -43,7 +43,7 @@ class Admin::UsersController < AdminController
       @user = User.find(params[:id])
     end
 
-    def authorize_project
+    def authorize_user
       authorize(:user, :manage?)
     end
 
