@@ -7,12 +7,17 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :projects, except: [:show]
+    resources :pages, except: [:show]
     resources :questions, except: [:show]
   end
+
+
 
   resources :client_contacts, only: [:create]
 
   resources :projects, only: [:index, :show]
+  resources :pages, only: [:show]
+
   resources :questions, only: [:index, :show]
 
   get :sign_in, to: 'sessions#new'
