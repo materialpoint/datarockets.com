@@ -20,4 +20,13 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(renderer, extensions)
     markdown.render(text).html_safe
   end
+
+  def class_for_header_logo
+    case controller.controller_name
+    when 'pages'
+      'header__logo--white'
+    when 'projects', 'posts'
+      'header__logo--black'
+    end
+  end
 end

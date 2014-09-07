@@ -3,40 +3,22 @@
     background-position: center;
     background-size: cover;
     }
-    .company__logo {
-        display: inline-block;
-        color: rgba(255,255,255,1);
-        text-shadow: 0 1px 10px rgba(0,0,0,0.5);
-        }
-    .company__menu {
-        font-size: 16px;
-        float: right;
-        }
-        .company__menu__item {
-            display: inline-block;
-            margin-right: 20px;
-            line-height: 34px;
-            &:last-child {
-                margin-right: 0;
-                }
-            }
-    .company__description {
+    .header__slogan {
         margin-top: 70px;
         p {
             text-align: center;
             font-size: 36px;
             font-weight: bold;
-            color: #fff;
-            text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+            color: $white;
+            text-shadow: $text-shadow;
             }
-
         }
 
-    .projects {
+    .projects-block {
         margin-top: 70px;
         margin-bottom: 30px;
         }
-        .projects__item {
+        .projects-block__item {
                 display: inline;
             img {
                 width: 22%;
@@ -49,7 +31,7 @@
                     }
                 }
             }
-    .projects__btn {
+    .projects-block__btn {
         text-align: center;
         margin-bottom: 20px;
         a {

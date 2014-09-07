@@ -27,9 +27,11 @@ body {
     }
 
 .btn {
-    color: white;
     padding: 10px 15px;
+    border: 0 !important;
     border-radius: $radius;
+    color: white;
+    text-decoration: none;
     }
     .btn--red {
         background-color: $red;

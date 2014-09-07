@@ -5,16 +5,8 @@ html
   body
     section.blog
       .line--red
-
-      header
-        hgroup
-          h2.blog__header__title datarockets
-          ul
-            li = link_to 'Portfolio', '', {class: 'link'}
-            li = link_to 'Team', '', {class: 'link'}
-            li = link_to 'Blog', blog_posts_path, {class: 'link'}
-            li = link_to 'FAQ', '', {class: 'link'}
-            li = link_to 'Contact us', '', {class: 'btn btn--red'}
+      .section--inner
+        = render 'layouts/header_menu'
 
       section
         = yield

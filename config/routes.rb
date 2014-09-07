@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resource :team, only: [:show]
 
   namespace :admin do
+    root 'admin#index'
     resources :project_images, only: [:create]
     resources :projects, except: [:show]
     resources :questions, except: [:show]
