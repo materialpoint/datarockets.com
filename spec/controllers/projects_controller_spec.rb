@@ -1,7 +1,5 @@
-RSpec.describe Admin::ProjectsController do
-  it_behaves_like 'admin resource controller'
-end
+require 'rails_helper'
 
-RSpec.describe ProjectsController do
+describe ProjectsController do
   it_behaves_like 'public resource controller'
 end

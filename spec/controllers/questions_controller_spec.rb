@@ -1,7 +1,5 @@
-RSpec.describe Admin::QuestionsController do
-  it_behaves_like 'admin resource controller'
-end
+require 'rails_helper'
 
-RSpec.describe QuestionsController do
+describe QuestionsController do
   it_behaves_like 'public resource controller'
 end
