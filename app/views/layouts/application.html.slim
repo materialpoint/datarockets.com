@@ -1,7 +1,8 @@
 doctype html
 html
   head
-    = render "layouts/section_head"
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
   body
     p#notice = notice
     div class="line#{class_for_line}"

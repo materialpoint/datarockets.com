@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901134152) do
+ActiveRecord::Schema.define(version: 20140906052613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,19 +49,35 @@ ActiveRecord::Schema.define(version: 20140901134152) do
 
   add_index "member_informations", ["member_id"], name: "index_member_informations_on_member_id", using: :btree
 
+  create_table "post_images", force: true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "post_images", ["post_id"], name: "index_post_images_on_post_id", using: :btree
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "project_images", force: true do |t|
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.string   "imageable_type"
-    t.integer  "imageable_id"
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "project_images", ["imageable_id", "imageable_type"], name: "index_project_images_on_imageable_id_and_imageable_type", using: :btree
   add_index "project_images", ["project_id"], name: "index_project_images_on_project_id", using: :btree
 
   create_table "projects", force: true do |t|
