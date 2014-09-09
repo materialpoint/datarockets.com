@@ -1,4 +1,5 @@
 class Page < ActiveRecord::Base
   validates :title, :body, presence: true
-end
 
+  scope :reverse_all, -> { all.order(created_at: :desc) }
+end

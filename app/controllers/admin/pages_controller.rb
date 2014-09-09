@@ -2,9 +2,8 @@ class Admin::PagesController < ApplicationController
   before_action :set_page, only: [ :edit, :update, :destroy ]
   before_action :authorize_page
 
-
   def index
-    @pages = Page.all.order(created_at: :desc)
+    @pages = Page.reverse_all
   end
 
   def new
@@ -18,7 +17,6 @@ class Admin::PagesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
@@ -44,10 +42,6 @@ private
   end
 
   def page_params
-    params.require(:page).permit([:title,:body])
+    params.require(:page).permit(:title,:body)
   end
-
-
-
-
 end
