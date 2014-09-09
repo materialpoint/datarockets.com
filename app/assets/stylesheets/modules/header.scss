@@ -1,73 +1,49 @@
-header {
-	@extend .clearfix;
-	@extend .inner;
+.section--header {
+    background-image: image_url("landing_video_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    }
+    .header__slogan {
+        margin-top: 70px;
+        p {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: $white;
+            text-shadow: $text-shadow;
+            }
+        }
 
-	height: $height-header - 45;
-	padding-top: 45px;
-	position: relative;
-	// text-align: center;
-
-	h1 {
-		top: 24px;
-		left: $margin-window;
-		position: absolute;
-		font-size: 35px;
-		font-weight: $fw-bold;
-		line-height: 1.3em;
-
-		a {
-			color: $color-midnightblue;
-			text-decoration: none;
-			}
-		}
-
-	ul {
-		bottom: 38px;
-		left: 200px;
-		right: 200px;
-		position: absolute;
-		text-align: center;
-		font-size: 18px;
-		// font-weight: $fw-light;
-		line-height: 34px;
-
-		@media screen and (max-width: $width-max - 350) {
-			right: 0;
-			text-align: right;
-
-			li:last-child {
-				position: static;
-				margin-right: $margin-window;
-				}
-			}
-
-		a:not(.btn) {
-			border-bottom: 1px solid $color-wetasphalt;
-			text-decoration: none;
-			color: $color-wetasphalt;
-
-			&:hover {
-				border-bottom-color: $color-asbestos;
-				color: $color-asbestos;
-				}
-			}
-		}
-
-	li {
-		margin: 0 1em;
-		display: inline-block;
-
-		&:last-child {
-			vertical-align: bottom;
-			right: -200px;
-			top: -5px;
-			position: absolute;
-			}
-		}
-
-	p {
-		margin-top: 20px;
-		font-size: 11px;
-		color: $color-asbestos;
-		}
-	}
+    .projects-block {
+        margin-top: 70px;
+        margin-bottom: 30px;
+        }
+        .projects-block__item {
+                display: inline;
+            img {
+                width: 22%;
+                margin-right: 4%;
+                border-radius: 5px;
+                }
+            &:last-child {
+                img {
+                    margin: 0;
+                    }
+                }
+            }
+    .projects-block__btn {
+        text-align: center;
+        margin-bottom: 20px;
+        a {
+            padding: 10px 15px;
+            display: inline-block;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            font-size: 20px;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: #140E12;
+                }
+            }
+        }

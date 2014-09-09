@@ -1,0 +1,27 @@
+textarea,
+input[type='email'],
+input[type='text'] {
+    width: 100%;
+    padding: 16px 20px 16px 50px;
+    margin: 0;
+    border: 1px solid $lightlynch;
+    box-sizing: border-box;
+    font-family: $font-main;
+    font-weight: normal;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 20px 0;
+    &:first-child {
+        margin-top: 0;
+        }
+    &:focus {
+        border-color: $lynch;
+        outline: none;
+        box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+        }
+    }
+
+textarea {
+    max-width: 100%;
+    min-height: 150px;
+    }

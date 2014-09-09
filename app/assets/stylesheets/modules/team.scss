@@ -1,26 +1,110 @@
-.people {
-	@extend .inner;
+.section--team {
+    @extend .clearfix;
+    background-color: $lightgray;
+    }
+.section__title--team {
+    color: $red;
+    }
+    .user {
+        width: 20%;
+        padding: 20px;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        }
+        .user__img {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            }
+        .user__name {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: $black;
+            }
+        .user__title {
+            color: $red;
+            }
 
-	padding: 0 $margin-window;
-	margin-top: 2 * $margin-block;
-	}
+.teamlist {
+    max-width: $width-cuted;
+    margin: auto;
+    }
 
-	.people-list {
-		text-align: center;
+    .teamlist__item {
+        margin-bottom: 40px;
+        position: relative;
+        clear: both;
+        }
 
-		img {
-			width: $height-people;
-			margin-top: 8px;
-			display: block;
-			border-radius: 50%;
-			// border: 3px solid #fff;
-			// box-shadow: 0 0 5px rgba(0,0,0,0.5);
-			}
+        $teamlist-avatarSize: 135px;
 
-		li {
-			margin: 0 .5em 1em;
-			// margin-right: 1em;
-			// margin-bottom: 1em;
-			display: inline-block;
-			}
-		}
+        .teamlist__item__avatar {
+            width: $teamlist-avatarSize;
+            height: $teamlist-avatarSize;
+            float: left;
+
+            border-radius: $teamlist-avatarSize;
+            overflow: hidden;
+            }
+
+        .teamlist__item__descr {
+            margin-left: $teamlist-avatarSize + 30px;
+
+            p {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                line-height: 1.5em;
+                }
+            }
+
+            .teamlist__item__name {
+                margin-right: 170px;
+
+                font-size: 28px;
+                font-weight: bold;
+                line-height: 1.5em;
+                }
+
+            .teamlist__item__status {
+                font-weight: normal;
+                font-size: 16px;
+                color: $green;
+                }
+
+            .teamlist__item__descr__social {
+                $width: 30px;
+
+                min-width: ($width + 10) * 4;
+
+                top: ((28 * 1.5) - $width) / 2;
+                right: 0;
+                position: absolute;
+
+                font-size: 0;
+
+                a {
+                    width: $width;
+                    height: $width;
+                    margin-right: 10px;
+                    display: inline-block;
+                    background-image: asset-url('icon-rss.svg');
+                    background-size: 100%;
+
+                    &:hover {
+
+                        }
+
+                    &[href*='github'] {
+                        background-image: asset-url('icon-github.svg');
+                        }
+                    &[href*='twitter'] {
+                        background-image: asset-url('icon-twitter.svg');
+                        }
+                    &[href*='linked'] {
+                        background-image: asset-url('icon-linkedin.svg');
+                        }
+                    }
+                }

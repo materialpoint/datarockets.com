@@ -6,10 +6,17 @@ Rails.application.routes.draw do
   resources :client_contacts, only: [:create]
 
   namespace :admin do
+    root 'admin#index'
     resources :pages, except: [:show]
+    resources :post_images, only: [:create]
+    resources :posts, except: [:show]
     resources :project_images, only: [:create]
     resources :projects, except: [:show]
     resources :questions, except: [:show]
+  end
+
+  namespace :blog do
+    resources :posts
   end
 
   resources :pages, only: [:show]
