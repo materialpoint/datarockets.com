@@ -22,6 +22,8 @@ class Admin::PagesController < AdminController
   def update
     @page.update(page_params)
 
+    expire_page controller: '/pages', action: :show, id: @page
+
     respond_with(@page, location: admin_pages_path)
   end
 
