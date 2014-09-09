@@ -1,5 +1,5 @@
 .section--team {
-    // min-height: 500px;
+    @extend .clearfix;
     background-color: $lightgray;
     }
 .section__title--team {
@@ -8,12 +8,13 @@
     .user {
         width: 20%;
         padding: 20px;
-        display: inline-block;
+        float: left;
         text-align: center;
         box-sizing: border-box;
         }
         .user__img {
-            width: 150px;
+            width: 100%;
+            max-width: 150px;
             margin-bottom: 10px;
             border-radius: 50%;
             }

@@ -26,7 +26,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
   gem 'thin'
-  gem 'guard-livereload'
+  gem 'guard-livereload', require: false
 end
 
 group :development, :test do

@@ -13,6 +13,10 @@
 
         }
     .project__info {
+        background-color: $lightgray;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 4px;
         b {
             margin-right: 20px;
             font-size: 18px;
@@ -42,4 +46,10 @@
         .project__tech {
             vertical-align: middle;
             line-height: 40px;
+            .tags__item {
+                background-color: $lynch;
+                a {
+                    color: $white;
+                    }
+                }
             }
