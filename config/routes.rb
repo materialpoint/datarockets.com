@@ -3,23 +3,20 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  resource :team, only: [:show]
+  resources :client_contacts, only: [:create]
 
   namespace :admin do
-    resources :projects, except: [:show]
     resources :pages, except: [:show]
+    resources :projects, except: [:show]
     resources :questions, except: [:show]
   end
 
-
-
-  resources :client_contacts, only: [:create]
-
-  resources :projects, only: [:index, :show]
   resources :pages, only: [:show]
-
+  resources :projects, only: [:index, :show]
   resources :questions, only: [:index, :show]
 
   get :sign_in, to: 'sessions#new'
   post :sign_out, to: 'sessions#destroy'
+
+  resource :team, only: [:show]
 end
