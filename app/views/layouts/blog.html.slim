@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    = render "layouts/section_head"
+  body
+    p#notice = notice
+    p#alert = alert
+    .line--red
+    .section--inner
+      .header--wrapper
+        = render 'layouts/header_menu'
+
+    section.blog
+      section
+        = yield
+  = render "layouts/popup"

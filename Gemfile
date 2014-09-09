@@ -5,9 +5,9 @@ gem 'rails', '4.1.5'
 gem 'pg'
 gem 'jbuilder', '~> 2.1'
 gem 'uglifier', '~> 2.5'
+gem 'jquery-rails', '~> 3.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'slim-rails', '~> 2.0'
-gem 'jquery-rails', '~> 2.1'
 gem 'responders', '~> 1.1'
 gem 'simple_form', '~> 3.0'
 gem 'enumerize', '~> 0.8'
@@ -18,6 +18,7 @@ gem 'redcarpet', '~> 3.1'
 gem 'jquery-fileupload-rails', '~> 0.4'
 
 gem 'omniauth-google-oauth2', '~> 0.2.5'
+gem 'autoprefixer-rails', '3.0.1.20140826'
 
 group :development do
   gem 'listen', '~> 1.0' # spring depends on listen
@@ -25,6 +26,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
   gem 'thin'
+  gem 'guard-livereload', require: false
 end
 
 group :development, :test do

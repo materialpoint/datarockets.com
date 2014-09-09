@@ -1,0 +1,14 @@
+div class="header__logo #{class_for_header_logo}"
+  h2
+    a href="/" datarockets
+ul class="header__menu #{class_for_header_menu}"
+  li.header__menu__item
+    = link_to 'Portfolio', projects_path
+  li.header__menu__item
+    = link_to 'Team', team_path
+  li.header__menu__item
+    = link_to 'Blog', blog_posts_path
+  li.header__menu__item
+    = link_to 'FAQ', questions_path
+  li.header__menu__item
+    = link_to 'Contact us', '', class: "btn #{class_for_menu_btn} active-btn-js"

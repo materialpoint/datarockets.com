@@ -1,20 +1,17 @@
-h1 Listing projects
-
-table
-  thead
-    tr
-      th Name
-      th Description
-      th
-      th
-      th
-
-  tbody
-    - @projects.each do |project|
-      tr
-        td = project.name
-        td = markdown(project.description)
-
-br
-
-= link_to 'New Project', new_admin_project_path
+.projects
+  - @projects.each do |project|
+    .projects__item
+      =image_tag("project6.png", class: "projects__item__img")
+      h3.projects__item__name
+        a href="/" Bezagenstva.ru
+      .projects__item__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum eveniet, dicta cumque necessitatibus aut reprehenderit accusantium quaerat voluptas eligendi, et illum voluptates suscipit expedita debitis quam
+      .projects__tags
+        ul.tags
+          li.tags__item
+            a.tags__item_link href="/" html
+          li.tags__item
+            a.tags__item_link href="/" rails 4
+          li.tags__item
+            a.tags__item_link href="/" slim
+          li.tags__item
+            a.tags__item_link href="/" scss

@@ -1,20 +1,15 @@
-footer {
-	line-height: $height-footer;
-
-	span {
-		margin-left: 20px;
-		font-size: 13px;
-		color: $color-wetasphalt;
-
-		a {
-			border-bottom: 1px solid #fff;
-			text-decoration: none;
-			color: inherit;
-
-			&:hover {
-				border-bottom-color: $color-asbestos;
-				color: $color-asbestos;
-				}
-			}
-		}
-	}
+.section--footer {
+    background-color: $asphalt;
+    }
+    .section--footer__info {
+        display: inline-block;
+        margin-left: 20px;
+        color: #fff;
+        }
+    .section--footer__info a {
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        }
+    .btn--contact {
+        display: inline-block;
+        }

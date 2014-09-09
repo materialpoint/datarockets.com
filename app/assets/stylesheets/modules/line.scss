@@ -1,0 +1,20 @@
+.line {
+    height: 4px;
+    }
+
+    .line--red {
+        @extend .line;
+
+        background-color: $red;
+        }
+    .line--blue {
+        @extend .line;
+
+        background-color: $blue;
+        }
+
+    .line--green {
+        @extend .line;
+
+        background-color: $green;
+        }

@@ -1,0 +1,22 @@
+.section--header
+  .section--asphalt
+    .section--inner
+      = render 'layouts/header_menu'
+      .header__slogan
+        p 'We builds solutions for the Web.'
+
+      ul.projects-block
+        li.projects-block__item
+          = link_to project_path(1)
+            = image_tag 'project1.jpg'
+        li.projects-block__item
+          = link_to project_path(2)
+            = image_tag 'project2.jpg'
+        li.projects-block__item
+          = link_to project_path(3)
+            = image_tag 'project6.png'
+        li.projects-block__item
+          = link_to project_path(4)
+            = image_tag 'project4.jpg'
+      .projects-block__btn
+         = link_to 'See more projects', projects_path
