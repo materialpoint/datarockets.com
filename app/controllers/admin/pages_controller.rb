@@ -1,4 +1,4 @@
-class Admin::PagesController < ApplicationController
+class Admin::PagesController < AdminController
   before_action :set_page, only: [ :edit, :update, :destroy ]
   before_action :authorize_page
 
@@ -31,17 +31,17 @@ class Admin::PagesController < ApplicationController
     respond_with(@page, location: admin_pages_path)
   end
 
-private
+  private
 
-  def set_page
-    @page = Page.find(params[:id])
-  end
+    def set_page
+      @page = Page.find(params[:id])
+    end
 
-  def authorize_page
-    authorize(:page, :manage?)
-  end
+    def authorize_page
+      authorize(:page, :manage?)
+    end
 
-  def page_params
-    params.require(:page).permit(:title,:body)
-  end
+    def page_params
+      params.require(:page).permit(:title,:body)
+    end
 end
