@@ -21,7 +21,7 @@ gem 'actionpack-action_caching', '~> 1.1'
 
 gem 'omniauth-google-oauth2', '~> 0.2'
 
-gem 'autoprefixer-rails', '3.0'
+gem 'autoprefixer-rails', '3.0.1.20140826'
 
 group :development do
   gem 'listen', '~> 1.0' # spring depends on listen
