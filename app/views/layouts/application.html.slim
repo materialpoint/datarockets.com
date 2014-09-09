@@ -1,10 +1,10 @@
 doctype html
 html
   head
-    = javascript_include_tag 'application'
-    = csrf_meta_tags
+    = render "layouts/section_head"
   body
     p#notice = notice
+    p#alert = alert
     div class="line#{class_for_line}"
     .section--inner
       .header--wrapper
