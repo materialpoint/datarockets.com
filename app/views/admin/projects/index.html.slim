@@ -13,11 +13,9 @@ table
     - @projects.each do |project|
       tr
         td = project.name
-        td = project.description
-        td = link_to 'Show', project
-        td = link_to 'Edit', edit_project_path(project)
-        td = link_to 'Destroy', project, data: {confirm: 'Are you sure?'}, :method => :delete
+        td = markdown(project.description)
+        td = link_to 'Edit', edit_admin_project_path(project)
+        td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, :method => :delete
 
 br
-
-= link_to 'New Project', new_project_path
+= link_to 'New project', new_admin_project_path
