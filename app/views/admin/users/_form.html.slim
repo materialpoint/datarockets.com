@@ -1,3 +1,4 @@
+= image_tag @user.avatar.image.url(:large) if @user.avatar.persisted?
 = simple_form_for [:admin, @user] do |f|
   = f.input :email
   = f.input :name
@@ -9,4 +10,8 @@
     = mif.input :own_blog
     = mif.input :twitter
     = mif.input :linkedin
+  = f.label :avatar
+  div
+    = f.simple_fields_for :avatar do |af|
+      = af.file_field :image
   = f.submit 'Submit'

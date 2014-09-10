@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
 
   enumerize :role, in: [:member, :admin], predicates: true
 
-  has_many :images, as: :imageable, dependent: :destroy
+  has_one :avatar, class_name: 'Image', as: :imageable,
+    dependent: :destroy
   has_one :member_information, foreign_key: :member_id
 
   before_create :generate_remember_token
@@ -14,6 +15,7 @@ class User < ActiveRecord::Base
   scope :reverse_all, -> { all.order(created_at: :desc) }
 
   accepts_nested_attributes_for :member_information
+  accepts_nested_attributes_for :avatar
 
   private
 
