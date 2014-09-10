@@ -4,7 +4,7 @@ describe UserPolicy do
   subject { UserPolicy }
   let(:user_profile) { Fabricate.build(:user) }
 
-  permissions :index?, :show? do
+  permissions :manage? do
     context 'for guest' do
       let(:user) { nil }
 
@@ -24,8 +24,8 @@ describe UserPolicy do
     context 'for admin' do
       let(:user) { Fabricate.build(:user_admin) }
 
-      it 'denies access' do
-        expect(subject).to_not permit(user, user_profile)
+      it 'permit access' do
+        expect(subject).to permit(user, user_profile)
       end
     end
   end
