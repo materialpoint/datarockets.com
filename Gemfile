@@ -18,7 +18,6 @@ gem 'redcarpet', '~> 3.1'
 gem 'jquery-fileupload-rails', '~> 0.4'
 gem 'faker', '~> 1.4'
 
-
 gem 'omniauth-google-oauth2', '~> 0.2.5'
 gem 'autoprefixer-rails', '3.0.1.20140826'
 

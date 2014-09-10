@@ -6,10 +6,10 @@ admin_emails = %w(e.vorobiev@datarockets.com m.abramchuk@datarockets.com
 admin_emails.each do |email|
   name = email.split('@').first
   @user = User.create(email: email, role: :admin, name: name)
-  MemberInformation.create(, description: Faker::Lorem.paragraph,
-    github_profile: "github.com/#{name}", twitter: "twitter.com/#{name}",
-    own_blog: "#{name}.blogspot.com", title: 'Backend developer',
-    linkedin: "linkedin.com/#{name}", member: @user)
+  MemberInformation.create(title: 'Backend developer', description: Faker::Lorem.paragraph,
+    github_profile: "http://github.com/#{name}", twitter: "http://twitter.com/#{name}",
+    own_blog: "http://#{name}.blogspot.com", title: 'Backend developer',
+    linkedin: "http://linkedin.com/#{name}", member: @user)
 end
 
 # Creating questions with answers on them
