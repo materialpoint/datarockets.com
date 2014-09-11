@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root '/admin#index'
+    resources :pages, except: [:show]
     resources :post_images, only: [:create]
     resources :posts, except: [:show]
     resources :project_images, only: [:create]
@@ -14,12 +15,13 @@ Rails.application.routes.draw do
     resources :questions, except: [:show]
   end
 
-  resources :projects, only: [:index, :show]
-  resources :questions, only: [:index, :show]
-
   namespace :blog do
     resources :posts
   end
+
+  resources :pages, only: [:show]
+  resources :projects, only: [:index, :show]
+  resources :questions, only: [:index, :show]
 
   get :sign_in, to: 'sessions#new'
   post :sign_out, to: 'sessions#destroy'

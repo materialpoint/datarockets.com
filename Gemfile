@@ -16,8 +16,11 @@ gem 'pundit', '~> 0.3'
 gem 'paperclip', '~> 4.2'
 gem 'redcarpet', '~> 3.1'
 gem 'jquery-fileupload-rails', '~> 0.4'
+gem 'actionpack-page_caching', '~> 1.0'
+gem 'actionpack-action_caching', '~> 1.1'
 
-gem 'omniauth-google-oauth2', '~> 0.2.5'
+gem 'omniauth-google-oauth2', '~> 0.2'
+
 gem 'autoprefixer-rails', '3.0.1.20140826'
 
 group :development do
