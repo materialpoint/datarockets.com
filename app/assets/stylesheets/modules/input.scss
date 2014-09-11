@@ -25,3 +25,18 @@ textarea {
     max-width: 100%;
     min-height: 150px;
     }
+
+input[type='submit'] {
+    width: 60%;
+    margin: 0 auto;
+    padding: 12px 30px;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    color: $white;
+    background-color: $red;
+    font-family: $font-main;
+    font-size: 18px;
+    cursor: pointer;
+    }
