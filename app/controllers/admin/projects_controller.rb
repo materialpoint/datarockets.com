@@ -24,7 +24,7 @@ class Admin::ProjectsController < AdminController
 
   def update
     @project.update(project_params)
-    
+
     respond_with(@project, location: admin_projects_path)
   end
 

@@ -10,8 +10,6 @@ class User < ActiveRecord::Base
 
   before_create :generate_remember_token
 
-  scope :members, -> { where(role: :member) }
-
   private
 
     def generate_remember_token
