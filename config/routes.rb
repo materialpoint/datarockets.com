@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :project_images, only: [:create]
     resources :projects, except: [:show]
     resources :questions, except: [:show]
+    resources :users
   end
 
   namespace :blog do
