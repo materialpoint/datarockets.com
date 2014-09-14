@@ -27,3 +27,6 @@
 
 # Ignore folder with paperclip images
 /public/system/
+
+# Ignore folders with the cached content
+/public/pages/
