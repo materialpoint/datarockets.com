@@ -1,14 +1,17 @@
 module ApplicationHelper
+  require 'rouge'
+  require 'rouge/plugins/redcarpet'
   class HTML < Redcarpet::Render::HTML
+    include Rouge::Plugins::Redcarpet
     def block_code(code, language)
       Rouge.highlight(code, language || 'text', 'html')
+    rescue RuntimeError
+      Rouge.highlight(code, 'text', 'html')
     end
   end
 
   def markdown(text)
     render_options = {
-      filter_html: true,
-      hard_wrap: true,
       link_attributes: { rel: 'nofollow' }
     }
 

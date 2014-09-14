@@ -1,4 +1,4 @@
-class Image < ActiveRecord::Base
+class PreviewImage < ActiveRecord::Base
   belongs_to :imageable, polymorphic: true
 
   has_attached_file :image, styles: { small: '50x50', large: '150x150' }

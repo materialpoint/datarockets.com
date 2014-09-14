@@ -1,12 +1,21 @@
 = simple_form_for [:admin, @project] do |f|
+  = image_tag(@project.preview_image.image.url) if @project.preview_image.persisted?
+  .field
+    = f.simple_fields_for :preview_image do |af|
+      = f.label :preview_image
+      = af.file_field :image
   .field
     = f.input :name
   .field
     = f.input :description
+  .field
+    = f.input :preview_description
   .actions = f.submit 'Save'
 
-= form_for [:admin, ProjectImage.new], remote: true do |f|
-  = f.file_field :image, id: 'file_upload'
+.field
+  = form_for [:admin, ProjectImage.new], remote: true do |f|
+    = f.label :project_image
+    = f.file_field :image, id: 'file_upload_projects'
 
 - if @project.project_images
   - @project.project_images.each do |project_image|
