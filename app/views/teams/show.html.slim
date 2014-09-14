@@ -1,14 +1,2 @@
 ul.teamlist
-    - @team.each do |member|
-      li.teamlist__item
-        .teamlist__item__avatar
-          = image_tag member.avatar.image.url(:large) if member.avatar
-        .teamlist__item__descr
-          h3.teamlist__item__name = member.name
-          h4.teamlist__item__status = member.member_information.title
-          p = member.member_information.description
-          .teamlist__item__descr__social
-            = link_to 'github', member.member_information.github_profile
-            = link_to 'twitter', member.member_information.twitter
-            = link_to 'linkedin', member.member_information.linkedin
-            = link_to 'blog', member.member_information.own_blog
+  = render partial: 'team', collection: @team, as: :member
