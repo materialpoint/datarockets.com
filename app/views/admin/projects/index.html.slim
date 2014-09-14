@@ -1,21 +1,5 @@
 h1 Listing projects
 
-table
-  thead
-    tr
-      th Name
-      th Description
-      th
-      th
-      th
-
-  tbody
-    - @projects.each do |project|
-      tr
-        td = project.name
-        td = markdown(project.description)
-        td = link_to 'Edit', edit_admin_project_path(project)
-        td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, :method => :delete
-
+= render @projects
 br
 = link_to 'New project', new_admin_project_path

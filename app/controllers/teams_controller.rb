@@ -2,6 +2,6 @@ class TeamsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def show
-    @members = User.members
+    @team = User.all.includes(:member_information, :avatar)
   end
 end

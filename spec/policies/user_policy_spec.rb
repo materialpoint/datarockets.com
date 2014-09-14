@@ -2,30 +2,48 @@ require 'rails_helper'
 
 describe UserPolicy do
   subject { UserPolicy }
-  let(:user_profile) { Fabricate.build(:user) }
 
   permissions :manage? do
-    context 'for guest' do
-      let(:user) { nil }
+    let(:member) { Fabricate(:user) }
+    let(:admin) { Fabricate(:user_admin) }
 
-      it 'denies access' do
-        expect(subject).to_not permit(user, user_profile)
+    context 'for guest' do
+      let(:current_user) { nil }
+
+      it 'denies access to change member' do
+        expect(subject).to_not permit(current_user, member)
+      end
+
+      it 'denies access to change admin' do
+        expect(subject).to_not permit(current_user, admin)
       end
     end
 
     context 'for member' do
-      let(:user) { Fabricate.build(:user_member) }
+      let(:current_user) { Fabricate.build(:user) }
 
-      it 'denies access' do
-        expect(subject).to_not permit(user, user_profile)
+      it 'denies access to change member' do
+        expect(subject).to_not permit(current_user, member)
+      end
+
+      it 'denies access to change admin' do
+        expect(subject).to_not permit(current_user, admin)
       end
     end
 
     context 'for admin' do
-      let(:user) { Fabricate.build(:user_admin) }
+      let(:current_user) { Fabricate.build(:user_admin) }
 
-      it 'permit access' do
-        expect(subject).to permit(user, user_profile)
+      it 'permit access to change member' do
+        expect(subject).to permit(current_user, member)
+      end
+
+      it 'permit access to change himself' do
+        expect(subject).to permit(current_user, current_user)
+      end
+
+      it 'permit access to change admin' do
+        expect(subject).to permit(current_user, admin)
       end
     end
   end
