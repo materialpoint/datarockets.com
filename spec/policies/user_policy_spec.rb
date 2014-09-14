@@ -6,7 +6,7 @@ describe UserPolicy do
 
   permissions :manage? do
     context 'for guest' do
-      let(:current_user) { Fabricate.build(:guest) }
+      let(:current_user) { nil }
 
       it 'denies access' do
         expect(subject).to_not permit(current_user, target_user)

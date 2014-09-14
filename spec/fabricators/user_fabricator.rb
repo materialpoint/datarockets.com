@@ -6,7 +6,3 @@ end
 Fabricator(:user_admin, from: :user) do
   role :admin
 end
-
-Fabricator(:guest, from: :user) do
-  role :nil
-end
