@@ -27,7 +27,6 @@ textarea {
     }
 
 input[type='submit'] {
-    width: 60%;
     margin: 0 auto;
     padding: 12px 30px;
     display: inline-block;
@@ -35,7 +34,6 @@ input[type='submit'] {
     outline: none;
     border-radius: 5px;
     color: $white;
-    background-color: $red;
     font-family: $font-main;
     font-size: 18px;
     cursor: pointer;

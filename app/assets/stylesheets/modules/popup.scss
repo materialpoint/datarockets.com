@@ -63,7 +63,26 @@
                         }
                 .popup__input--submit {
                     text-align: center;
+                    input {
+                        width: 60%;
+                        }
                     }
+                    .popup__input--submit--red {
+                        input {
+                            background-color: $red;
+                            }
+                        }
+                    .popup__input--submit--blue {
+                        input {
+                            background-color: $blue;
+                            }
+                        }
+                    .popup__input--submit--green {
+                        input {
+                            background-color: $green;
+                            }
+                        }
+
 
 
 

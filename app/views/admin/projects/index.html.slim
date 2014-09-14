@@ -1,21 +1,23 @@
-h1 Listing projects
+= render 'admin/admin_menu'
+.admin__view
+  h1 Listing projects
 
-table
-  thead
-    tr
-      th Name
-      th Description
-      th
-      th
-      th
-
-  tbody
-    - @projects.each do |project|
+  table
+    thead
       tr
-        td = project.name
-        td = markdown(project.description)
-        td = link_to 'Edit', edit_admin_project_path(project)
-        td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, :method => :delete
+        th Name
+        th Description
+        th
+        th
+        th
 
-br
-= link_to 'New project', new_admin_project_path
+    tbody
+      - @projects.each do |project|
+        tr
+          td = project.name
+          td = markdown(project.description)
+          td = link_to 'Edit', edit_admin_project_path(project)
+          td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, :method => :delete
+
+  br
+  = link_to 'New project', new_admin_project_path

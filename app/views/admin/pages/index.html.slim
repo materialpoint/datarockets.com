@@ -1,23 +1,26 @@
-h1 Listing pages
+= render 'admin/admin_menu'
+.admin__view
+  h1 Listing pages
 
-table
-  thead
-    tr
-      th Title
-      th Body
-      th
-      th
-      th
-
-  tbody
-    - @pages.each do |page|
+  table
+    thead
       tr
-        td = page.title
-        td = page.body
-        td = link_to 'Show', page
-        td = link_to 'Edit', edit_admin_page_path(page)
-        td = link_to 'Destroy', [:admin, page], data: {confirm: 'Are you sure?'}, :method => :delete
+        th Title
+        th Body
+        th
+        th
+        th
 
-br
+    tbody
+      - @pages.each do |page|
+        tr
+          td = page.title
+          td = page.body
+          td = link_to 'Show', page
+          td = link_to 'Edit', edit_admin_page_path(page)
+          td = link_to 'Destroy', [:admin, page], data: {confirm: 'Are you sure?'}, :method => :delete
 
-= link_to 'New Page', new_admin_page_path
+  br
+
+  = link_to 'New Page', new_admin_page_path
+

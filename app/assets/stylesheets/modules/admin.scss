@@ -1,0 +1,63 @@
+// main admin page
+
+.admin__menu {
+    width: 250px;
+    height: 100%;
+    float: left;
+    }
+    .admin__menu__item {
+        font-size: 16px;
+        a {
+            color: $black;
+            line-height: 1.6em;
+            }
+        }
+.admin__view {
+    width: calc(100% - 250px);
+    float: left;
+    a {
+        color: $black;
+        }
+}
+
+// admin/users page
+.admin__user {
+    @extend .clearfix;
+
+    margin-bottom: 10px;
+    }
+    .admin__user__img {
+        width: 40px;
+        height: 40px;
+        float: left;
+        border-radius: 50%;
+        margin-right: 15px;
+        }
+    .admin__user__name {
+        display: inline-block;
+        line-height: 40px;
+        float: left;
+        margin-right: 20px;
+        a {
+            vertical-align: middle;
+            }
+        }
+    .admin__user__edit,
+    .admin__user__remove {
+        float: right;
+        margin-right: 10px;
+        line-height: 40px;
+        }
+    .admin__user__edit {
+        a {
+        border-bottom: 1px solid $blue;
+            }
+        }
+    .admin__user__remove {
+        a {
+        border-bottom: 1px solid $red;
+            }
+        }
+    .admin__user__new {
+        margin-top: 40px;
+        }

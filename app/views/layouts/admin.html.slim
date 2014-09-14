@@ -5,18 +5,10 @@ html
   body
     p#notice = notice
     p#alert = alert
-    section.blog
-      .line--red
-
-      header
-        hgroup
-          h2.blog__header__title datarockets
-          ul
-            li = link_to 'Portfolio', '', {class: 'link'}
-            li = link_to 'Team', '', {class: 'link'}
-            li = link_to 'Blog', blog_posts_path, {class: 'link'}
-            li = link_to 'FAQ', '', {class: 'link'}
-            li = link_to 'Contact us', '', {class: 'btn btn--red'}
-
+    div class="line line#{class_for_line}"
+    .section--inner
+      .header--wrapper
+        = render 'layouts/header_menu'
       section
         = yield
+  = render "layouts/popup"
