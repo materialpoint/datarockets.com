@@ -1,6 +1,6 @@
 class Admin::PagesController < AdminController
   before_action :set_page, only: [ :edit, :update, :destroy ]
-  before_action :authorize_page
+  before_action :authorize_page!
 
   def index
     @pages = Page.reverse_all
@@ -39,7 +39,7 @@ class Admin::PagesController < AdminController
       @page = Page.find(params[:id])
     end
 
-    def authorize_page
+    def authorize_page!
       authorize(:page, :manage?)
     end
 
