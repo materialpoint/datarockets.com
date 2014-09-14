@@ -13,6 +13,7 @@ class Admin::ProjectsController < AdminController
   end
 
   def edit
+    @project.build_preview_image unless @project.preview_image
   end
 
   def create
