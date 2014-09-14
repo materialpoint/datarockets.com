@@ -1,4 +1,3 @@
-- @post.post_images.each do |post_image|
-  div
-    = image_tag(post_image.image.url(:thumb))
-    = "![place your alt text here](#{post_image.image.url(:large)})"
+div
+  = image_tag(post_image.image.url(:thumb))
+  = "![place your alt text here](#{post_image.image.url(:large)})"

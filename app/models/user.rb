@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true
 
-  enumerize :role, in: [:member, :admin], predicates: true
+  enumerize :role, in: [:member, :admin], default: :member, predicates: true
 
   has_one :member_information, foreign_key: :member_id
   has_one :avatar, dependent: :destroy
