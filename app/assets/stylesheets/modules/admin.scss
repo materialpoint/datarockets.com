@@ -1,3 +1,21 @@
+.admin__edit,
+.admin__remove {
+    float: right;
+    margin-right: 10px;
+    line-height: 40px;
+    }
+.admin__edit {
+    a {
+    border-bottom: 1px solid $blue;
+        }
+    }
+.admin__remove {
+    a {
+    border-bottom: 1px solid $red;
+        }
+    }
+
+
 // main admin page
 
 .admin__menu {
@@ -36,28 +54,65 @@
     .admin__user__name {
         display: inline-block;
         line-height: 40px;
+        font-size: 16px;
         float: left;
         margin-right: 20px;
         a {
             vertical-align: middle;
             }
         }
-    .admin__user__edit,
-    .admin__user__remove {
-        float: right;
-        margin-right: 10px;
-        line-height: 40px;
-        }
-    .admin__user__edit {
-        a {
-        border-bottom: 1px solid $blue;
-            }
-        }
-    .admin__user__remove {
-        a {
-        border-bottom: 1px solid $red;
-            }
-        }
     .admin__user__new {
         margin-top: 40px;
         }
+
+//admin/pages page
+
+.admin__pages {
+
+    }
+    .admin__pages__item {
+        margin-bottom: 20px;
+        }
+        .admin__pages__title {
+            font-size: 36px;
+            font-weight: lighter;
+            margin-bottom: 15px;
+            &:hover {
+                color: $red;
+                border-bottom: 1px solid $red;
+                }
+            }
+        .admin__pages__preview {
+            margin-top: 15px;
+            padding-left: 10px;
+            font-family: Georgia;
+            font-size: 18px;
+            line-height: 1.4em;
+            }
+
+
+
+//admin/questions page
+
+.admin__questions__item {
+    @extend .clearfix;
+    line-height: 40px;
+    }
+    .admin__question__title {
+        font-size: 24px;
+        font-weight: lighter;
+        &:hover {
+            color: $red;
+            border-bottom: 1px solid $red;
+            }
+    }
+    .admin__questions__answer {
+        font-family: Georgia;
+        font-size: 18px;
+        padding-left: 10px;
+        }
+
+
+
+
+

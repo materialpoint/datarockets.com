@@ -25,14 +25,14 @@ module ApplicationHelper
     case params[:controller]
     when 'pages'
       '--white'
-    when 'projects', 'blog/posts', 'teams', 'admin', 'admin/pages', 'admin/posts', 'admin/users'
+    when 'projects', 'blog/posts', 'teams', 'admin', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
       '--black'
     end
   end
 
   def class_for_btn
     case params[:controller]
-    when 'pages', 'blog/posts', 'admin', 'admin/pages', 'admin/posts', 'admin/users'
+    when 'pages', 'blog/posts', 'admin', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
       '--red'
     when 'projects'
       '--blue'
@@ -45,7 +45,7 @@ module ApplicationHelper
     case params[:controller]
     when 'teams'
       '--green'
-    when 'admin', 'blog/posts', 'admin/pages', 'admin/posts', 'admin/users'
+    when 'admin', 'blog/posts', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
       '--red'
     when 'projects'
       '--blue'

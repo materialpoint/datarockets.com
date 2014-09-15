@@ -15,7 +15,7 @@
       - @projects.each do |project|
         tr
           td = project.name
-          td = markdown(project.description)
+          td.markdown-body = markdown(project.description.truncate(1000))
           td = link_to 'Edit', edit_admin_project_path(project)
           td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, :method => :delete
 

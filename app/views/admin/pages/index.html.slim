@@ -1,26 +1,11 @@
 = render 'admin/admin_menu'
 .admin__view
-  h1 Listing pages
-
-  table
-    thead
-      tr
-        th Title
-        th Body
-        th
-        th
-        th
-
-    tbody
-      - @pages.each do |page|
-        tr
-          td = page.title
-          td = page.body
-          td = link_to 'Show', page
-          td = link_to 'Edit', edit_admin_page_path(page)
-          td = link_to 'Destroy', [:admin, page], data: {confirm: 'Are you sure?'}, :method => :delete
-
-  br
-
-  = link_to 'New Page', new_admin_page_path
+  - @pages.each do |page|
+    .admin__pages__item
+      = link_to page.title, page, class: 'admin__pages__title'
+      .admin__remove = link_to 'Destroy', [:admin, page], data: {confirm: 'Are you sure?'}, :method => :delete
+      .admin__edit = link_to 'Edit', edit_admin_page_path(page)
+      .admin__pages__preview
+        p = page.body.truncate(800)
+  = link_to 'New Page', new_admin_page_path, class: 'btn btn--red'
 
