@@ -1,19 +1,5 @@
-h1 Listing questions
+h1 Frequently Asked Questions
 
 table
-  thead
-    tr
-      th Title
-      th Answer
-      th
-      th
-      th
-
   tbody
-    - @questions.each do |question|
-      tr
-        td = question.title
-        td = question.answer
-        td = link_to 'Show', question
-
-br
+    = render @questions
