@@ -3,7 +3,7 @@
     .section--inner
       = render 'layouts/header_menu'
       .header__slogan
-        p 'We builds solutions for the Web.'
+        p 'Solutions for web'
 
       ul.projects-block
         li.projects-block__item
@@ -18,5 +18,5 @@
         li.projects-block__item
           = link_to project_path(4)
             = image_tag 'project4.jpg'
-      .projects-block__btn
+      .btn-line.btn-line--white
          = link_to 'See more projects', projects_path

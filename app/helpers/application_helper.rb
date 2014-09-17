@@ -25,7 +25,7 @@ module ApplicationHelper
     case params[:controller]
     when 'pages'
       '--white'
-    when 'projects', 'blog/posts', 'teams', 'admin', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
+    when 'projects', 'questions', 'blog/posts', 'teams', 'admin', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
       '--black'
     end
   end
@@ -34,7 +34,7 @@ module ApplicationHelper
     case params[:controller]
     when 'pages', 'blog/posts', 'admin', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
       '--red'
-    when 'projects'
+    when 'projects', 'questions'
       '--blue'
     when 'teams'
       '--green'
@@ -47,7 +47,7 @@ module ApplicationHelper
       '--green'
     when 'admin', 'blog/posts', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
       '--red'
-    when 'projects'
+    when 'projects', 'questions'
       '--blue'
     end
   end

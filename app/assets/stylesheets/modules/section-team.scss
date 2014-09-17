@@ -1,0 +1,29 @@
+.section--team {
+    @extend .clearfix;
+    background-color: $lightgray;
+    }
+.section__title--team {
+    color: $red;
+    }
+    .user {
+        width: 20%;
+        padding: 20px;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        }
+        .user__img {
+            width: 100%;
+            max-width: 150px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            }
+        .user__name {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: $black;
+            }
+        .user__title {
+            color: $red;
+            }
+
