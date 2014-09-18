@@ -6,11 +6,11 @@ describe Admin::UsersController do
   describe 'GET #index' do
     for_user :admin do
       it 'loads all the users and sorts them by created_at in desc order' do
-        first, second = Fabricate(:user), Fabricate(:user)
+        first, second = Fabricate(:user), Fabricate(:user_admin)
 
         get :index
 
-        expect(assigns(:users).reject(&:admin?)).to eq([second, first])
+        expect(assigns(:users)).to eq([second, first, user])
       end
     end
   end

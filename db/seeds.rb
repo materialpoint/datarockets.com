@@ -28,14 +28,15 @@ projects_names = %w(hata tau vkleaner)
 projects_names.each do |project|
   project_file_path = File.join(Rails.root, "db/seeds/projects/#{project}.md")
   project_description = File.readlines(project_file_path, 'r').join
-  Project.create(name: project, description: project_description)
+  Project.create(name: project, description: project_description, preview_description: Faker::Lorem.paragraph)
 end
 
-# Creating posts in the blog with the markdown body
-posts_names = %w(asset_pipeline caching_with_rails getting_started)
+# Creating posts in the blog, pages with the markdown body
+names = %w(asset_pipeline caching_with_rails getting_started)
 
-posts_names.each do |post|
-  post_file_path = File.join(Rails.root, "db/seeds/posts/#{post}.md")
-  post_description = File.readlines(post_file_path, 'r').join
-  Post.create(title: post, body: post_description)
+names.each do |name|
+  file_path = File.join(Rails.root, "db/seeds/posts/#{name}.md")
+  body = File.readlines(file_path, 'r').join
+  Post.create(title: name, body: body, preview_body: Faker::Lorem.paragraph)
+  Page.create(title: name, body: body)
 end

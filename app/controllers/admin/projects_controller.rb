@@ -8,10 +8,12 @@ class Admin::ProjectsController < AdminController
 
   def new
     @project = Project.new
-    @project.project_images.build unless @project.project_images
+
+    @project.build_preview_image
   end
 
   def edit
+    @project.build_preview_image unless @project.preview_image
   end
 
   def create
@@ -45,6 +47,7 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:name, :description, project_image_ids: [])
+      params.require(:project).permit(:name, :description, :preview_description, project_image_ids: [],
+        preview_image_attributes: [:image])
     end
 end

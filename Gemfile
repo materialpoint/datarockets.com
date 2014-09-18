@@ -15,9 +15,11 @@ gem 'app_config', '~> 2.5'
 gem 'pundit', '~> 0.3'
 gem 'paperclip', '~> 4.2'
 gem 'redcarpet', '~> 3.1'
+gem 'rouge', '~> 1.6'
 gem 'jquery-fileupload-rails', '~> 0.4'
 gem 'actionpack-page_caching', '~> 1.0'
 gem 'actionpack-action_caching', '~> 1.1'
+gem 'faker', '~> 1.4'
 
 gem 'omniauth-google-oauth2', '~> 0.2'
 
@@ -36,7 +38,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rspec-rails', '~> 3.0'
-  gem 'faker', '~> 1.4'
 end
 
 group :test do
@@ -45,5 +46,5 @@ group :test do
 end
 
 group :production do
-  gem 'rails_12factor'
+  gem 'unicorn', '~> 4.8.3'
 end

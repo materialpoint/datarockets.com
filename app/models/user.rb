@@ -3,15 +3,13 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true
 
-  enumerize :role, in: [:member, :admin], predicates: true
+  enumerize :role, in: [:member, :admin], default: :member, predicates: true
 
-  has_one :avatar, class_name: 'Image', as: :imageable,
-    dependent: :destroy
   has_one :member_information, foreign_key: :member_id
+  has_one :avatar, dependent: :destroy
 
   before_create :generate_remember_token
 
-  scope :members, -> { where(role: :member) }
   scope :reverse_all, -> { all.order(created_at: :desc) }
 
   accepts_nested_attributes_for :member_information

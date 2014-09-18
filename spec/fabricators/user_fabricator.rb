@@ -6,7 +6,3 @@ end
 Fabricator(:user_admin, from: :user) do
   role :admin
 end
-
-Fabricator(:user_member, from: :user) do
-  role :member
-end

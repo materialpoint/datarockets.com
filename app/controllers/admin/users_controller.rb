@@ -1,6 +1,6 @@
 class Admin::UsersController < AdminController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_user
+  before_action :authorize_user!
 
   def index
     @users = User.reverse_all
@@ -25,8 +25,8 @@ class Admin::UsersController < AdminController
   end
 
   def edit
-    @user.build_member_information unless @user.member_information
-    @user.build_avatar unless @user.avatar
+    @user.build_member_information if @user.member_information.blank?
+    @user.build_avatar if @user.avatar.blank?
   end
 
   def update
@@ -47,13 +47,13 @@ class Admin::UsersController < AdminController
       @user = User.find(params[:id])
     end
 
-    def authorize_user
+    def authorize_user!
       authorize(:user, :manage?)
     end
 
     def user_params
       params.require(:user).permit(:email, :name, :role,
         member_information_attributes: [:title, :description, :github_profile,
-          :own_blog, :twitter, :linkedin], avatar_attributes: [:image])
+          :own_blog, :twitter, :linkedin], avatar_attributes: [:image, :id])
     end
 end

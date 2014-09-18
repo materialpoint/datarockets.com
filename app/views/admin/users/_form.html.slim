@@ -1,5 +1,5 @@
-= image_tag @user.avatar.image.url(:large) if @user.avatar.persisted?
-= simple_form_for [:admin, @user] do |f|
+= image_tag user.avatar.image.url(:large) if user.avatar.persisted?
+= simple_form_for [:admin, user] do |f|
   = f.input :email
   = f.input :name
   = f.input :role, default: :member

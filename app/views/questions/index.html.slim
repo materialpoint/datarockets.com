@@ -1,7 +1,3 @@
 .questionslist
   h1 Frequently Asked Questions
-
-  - @questions.each do |question|
-    .questionslist__item
-      .questionslist__item__title = question.title
-      .questionslist__item__answer = question.answer
+  = render @questions
