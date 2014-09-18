@@ -25,40 +25,33 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, extensions).render(text).html_safe
   end
 
-  def class_for_header_logo
-    case controller.controller_name
+  def class_for_header
+    case params[:controller]
     when 'pages'
-      'header__logo--white'
-    when 'projects', 'posts', 'teams'
-      'header__logo--black'
+      '--white'
+    when 'projects', 'questions', 'blog/posts', 'teams', 'admin', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
+      '--black'
     end
   end
 
-  def class_for_header_menu
-    case controller.controller_name
-    when 'pages'
-      'header__menu--white'
-    when 'projects', 'posts', 'teams'
-      'header__menu--black'
-    end
-  end
-
-  def class_for_menu_btn
-    case controller.controller_name
-    when 'pages', 'posts'
-      'btn--red'
-    when 'projects'
-      'btn--blue'
+  def class_for_btn
+    case params[:controller]
+    when 'pages', 'blog/posts', 'admin', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
+      '--red'
+    when 'projects', 'questions'
+      '--blue'
     when 'teams'
-      'btn--green'
+      '--green'
     end
   end
 
   def class_for_line
-    case controller.controller_name
+    case params[:controller]
     when 'teams'
       '--green'
-    else
+    when 'admin', 'blog/posts', 'admin/pages', 'admin/posts', 'admin/users', 'admin/questions', 'admin/projects'
+      '--red'
+    when 'projects', 'questions'
       '--blue'
     end
   end

@@ -29,8 +29,8 @@
             }
 
         .projects__item__description {
-            line-height: 1.4em;
-            color: $darkgray;
+            font-size: 16px;
+            line-height: 1.5em;
             }
         .projects__tags {
             @extend .clearfix;

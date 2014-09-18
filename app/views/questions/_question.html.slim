@@ -1,4 +1,4 @@
-tr
-  td = question.title
-  td = question.answer
-  td = link_to 'Show', question
+- @questions.each do |question|
+  .questionslist__item
+    .questionslist__item__title = question.title
+    .questionslist__item__answer = question.answer

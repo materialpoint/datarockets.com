@@ -7,17 +7,32 @@
     }
 
 .header__logo {
+    position: relative;
     display: inline-block;
+    a:after {
+        display: inline-block;
+        position: absolute;
+        left: calc(50% - 20px);
+        font-size: 12px;
+        font-weight: lighter;
+        content: 'we care';
+        }
     }
     .header__logo--white {
         a {
             color: $white;
             text-shadow: $text-shadow;
+            &:after {
+                bottom: -15px;
+                }
             }
         }
     .header__logo--black {
         a {
             color: $black;
+            &:after {
+                bottom: -20px;
+                }
             }
         }
 .header__menu {

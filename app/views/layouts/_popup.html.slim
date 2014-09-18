@@ -12,5 +12,5 @@
       .popup__input--description
         = image_tag 'icon-paperplane.svg', class: 'popup__input__icon'
         = f.input :description, label: false, as: :text, placeholder: 'What do you want to ask us?', class: ''
-      .popup__input--submit
+      div class="popup__input--submit popup__input--submit#{class_for_btn}"
         = f.submit :Send, class: ''
