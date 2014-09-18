@@ -30,3 +30,4 @@
 
 # Ignore folders with the cached content
 /public/pages/
+/public
