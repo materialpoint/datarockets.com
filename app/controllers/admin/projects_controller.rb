@@ -10,6 +10,7 @@ class Admin::ProjectsController < AdminController
     @project = Project.new
 
     @project.build_preview_image
+    @project.tags.build
   end
 
   def edit
@@ -48,6 +49,6 @@ class Admin::ProjectsController < AdminController
 
     def project_params
       params.require(:project).permit(:name, :description, :preview_description, project_image_ids: [],
-        preview_image_attributes: [:image])
+        preview_image_attributes: [:image], tags_attributes: [:name, :id, :_destroy])
     end
 end

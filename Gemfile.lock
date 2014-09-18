@@ -114,6 +114,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    nested_form (0.3.2)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     oauth2 (1.0.0)
@@ -268,6 +269,7 @@ DEPENDENCIES
   jquery-fileupload-rails (~> 0.4)
   jquery-rails (~> 3.1)
   listen (~> 1.0)
+  nested_form (~> 0.3)
   omniauth-google-oauth2 (~> 0.2)
   paperclip (~> 4.2)
   pg

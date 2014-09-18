@@ -1,4 +1,4 @@
-= simple_form_for [:admin, @project] do |f|
+= simple_nested_form_for [:admin, @project] do |f|
   = image_tag(@project.preview_image.image.url)
   .field
     = f.simple_fields_for :preview_image do |af|
@@ -10,6 +10,12 @@
     = f.input :description
   .field
     = f.input :preview_description
+  .field
+    = f.simple_fields_for :tags do |builder|
+      = builder.label :tag
+      = builder.text_field :name
+      = builder.link_to_remove 'Remove tag'
+    p = f.link_to_add 'Add tag', :tags
   .actions = f.submit 'Save'
 
 .field
