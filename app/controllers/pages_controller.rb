@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   layout 'landing'
 
-  caches_page :show
+  caches_page :show, :home
 
   def show
     @page = Page.find(params[:id])

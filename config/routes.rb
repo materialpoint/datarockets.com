@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  root 'pages#home'
-
   get '/auth/:provider/callback', to: 'sessions#create'
 
   resources :client_contacts, only: [:create]
@@ -28,4 +26,6 @@ Rails.application.routes.draw do
   post :sign_out, to: 'sessions#destroy'
 
   resource :team, only: [:show]
+
+  root 'pages#home'
 end
