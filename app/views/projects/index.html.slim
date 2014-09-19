@@ -8,11 +8,4 @@
         = project.preview_description
       .projects__tags
         ul.tags
-          li.tags__item
-            a.tags__item_link href="/" html
-          li.tags__item
-            a.tags__item_link href="/" rails 4
-          li.tags__item
-            a.tags__item_link href="/" slim
-          li.tags__item
-            a.tags__item_link href="/" scss
+          = render project.tags

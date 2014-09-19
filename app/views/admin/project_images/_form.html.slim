@@ -1,0 +1,6 @@
+br
+= simple_form_for [:admin, ProjectImage.new], remote: true do |f|
+  = f.label 'Upload new project image:'
+  br
+  br
+  = f.file_field :image, id: 'file_upload_projects'
