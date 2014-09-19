@@ -13,8 +13,10 @@ describe ClientContactsMailer do
       expect(mail.subject).to eq(I18n.t('mailers.client_contacts.subject'))
     end
 
-    it 'renders the description in view' do
-      expect(mail.body).to match(client_contact.description)
+    it 'renders the right view' do
+      %i(name email description).each do |field|
+        expect(mail.body).to match(client_contact.send(field))
+      end
     end
   end
 end
