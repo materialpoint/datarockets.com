@@ -40,7 +40,7 @@ class Admin::ProjectsController < AdminController
   private
 
     def set_project
-      @project = Project.includes(:tags).find(params[:id])
+      @project = Project.includes(:tags, :preview_image, :project_images).find(params[:id])
     end
 
     def authorize_project
