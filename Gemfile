@@ -43,6 +43,7 @@ end
 group :test do
   gem 'capybara-webkit', '~> 1.3'
   gem 'fabrication', '~> 2.11'
+  gem 'simplecov', '~> 0.9', require: false
 end
 
 group :production do
