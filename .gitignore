@@ -31,3 +31,6 @@
 # Ignore folders with the cached content
 /public/pages/
 /public
+
+# Ignore code coverage by tests.
+/coverage
