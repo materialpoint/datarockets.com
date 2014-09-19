@@ -14,7 +14,7 @@ class Admin::ProjectsController < AdminController
   end
 
   def edit
-    @project.build_preview_image unless @project.preview_image
+    @project.build_preview_image if @project.preview_image.nil?
   end
 
   def create
@@ -40,7 +40,7 @@ class Admin::ProjectsController < AdminController
   private
 
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.includes(:tags).find(params[:id])
     end
 
     def authorize_project
@@ -49,6 +49,6 @@ class Admin::ProjectsController < AdminController
 
     def project_params
       params.require(:project).permit(:name, :description, :preview_description, project_image_ids: [],
-        preview_image_attributes: [:image], tags_attributes: [:name, :id, :_destroy])
+        preview_image_attributes: [:image], tags_attributes: [:name, :id, :_destroy], tag_ids: [])
     end
 end

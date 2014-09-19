@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
   has_many :tags, through: :marks
 
   accepts_nested_attributes_for :preview_image
-  accepts_nested_attributes_for :tags, allow_destroy: true
+  accepts_nested_attributes_for :tags, reject_if: lambda { |a| a[:name].blank? }, allow_destroy: true
 
   scope :reverse_all, -> { all.order(created_at: :desc) }
 end
