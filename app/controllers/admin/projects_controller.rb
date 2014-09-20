@@ -14,7 +14,7 @@ class Admin::ProjectsController < AdminController
   end
 
   def edit
-    @project.build_preview_image if @project.preview_image.nil?
+    @project.build_preview_image if @project.preview_image.blank?
   end
 
   def create

@@ -16,7 +16,7 @@ br
   = f.label 'Choose from the existing tags:'
   .field
     br
-    = render partial: 'tags/check_box', collection: Tag.all, as: :tag
+    = render partial: 'tags/check_box', collection: Tag.all, as: :tag, locals: { project: project }
     br
   = f.label 'Add a new tag:'
   br
