@@ -1,7 +1,7 @@
 br
-= simple_nested_form_for [:admin, @project] do |f|
+= simple_nested_form_for [:admin, project] do |f|
  br
-  = render_project_preview_image(@project)
+  = render_project_preview_image(project)
   br
   .field
     = render partial: 'preview_image/form', locals: {f: f}
@@ -32,4 +32,4 @@ br
 
 .field
   = render partial: 'admin/project_images/form'
-= render @project.project_images
+= render project.project_images
