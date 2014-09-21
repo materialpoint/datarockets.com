@@ -6,6 +6,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.includes(:tags, :preview_image, :project_images).find(params[:id])
   end
 end

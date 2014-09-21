@@ -5,4 +5,5 @@ RSpec.configure do |config|
   config.include Helpers::SessionsHelper, type: :controller
   config.extend Helpers::RolesHelper, type: :controller
   config.extend Helpers::ErrorsHelper, type: :controller
+  config.extend Helpers::BuildingHelper, type: :controller
 end

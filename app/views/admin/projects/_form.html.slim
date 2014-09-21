@@ -1,20 +1,35 @@
-= simple_form_for [:admin, @project] do |f|
-  = image_tag(@project.preview_image.image.url)
+br
+= simple_nested_form_for [:admin, project] do |f|
+ br
+  = project_preview_image(project)
+  br
   .field
-    = f.simple_fields_for :preview_image do |af|
-      = f.label :preview_image
-      = af.file_field :image
+    = render partial: 'preview_image/form', locals: {f: f}
+    br
   .field
     = f.input :name
   .field
     = f.input :description
   .field
     = f.input :preview_description
-  .actions = f.submit 'Save'
+
+  = f.label 'Choose from the existing tags:'
+  .field
+    br
+    = collection_check_boxes :project, :tag_ids, Tag.all, :id, :name
+    br
+  = f.label 'Add a new tag:'
+  br
+  br
+  .field
+    = render partial: 'tags/form', locals: {f: f}
+    br
+  p
+    = f.link_to_add 'One more tag', :tags
+  br
+  .actions
+    = f.submit 'Save'
 
 .field
-  = form_for [:admin, ProjectImage.new], remote: true do |f|
-    = f.label :project_image
-    = f.file_field :image, id: 'file_upload_projects'
-
-= render @project.project_images
+  = render partial: 'admin/project_images/form'
+= render project.project_images
