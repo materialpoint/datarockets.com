@@ -1,7 +1,7 @@
 module Helpers
   module BuildingHelper
     def it_builds_for(instance, instance_to_build, &block)
-      it "builds a #{instance_to_build.to_s} for #{instance.to_s}" do
+      it "builds a #{instance_to_build} for #{instance}" do
         instance_exec(&block)
 
         expect(assigns(instance).send(instance_to_build)).
