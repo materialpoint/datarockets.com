@@ -1,11 +1,11 @@
 module Helpers
   module BuildingHelper
-    def it_builds(new_instance, existing_instance, &block)
-      it "builds a #{new_instance}" do
+    def it_builds_for(instance, instance_to_build, &block)
+      it "builds a #{instance_to_build.to_s} for #{instance.to_s}" do
         instance_exec(&block)
 
-        expect(assigns(existing_instance).send(new_instance.to_sym)).
-          to be_a_new(new_instance.classify.constantize)
+        expect(assigns(instance).send(instance_to_build)).
+          to be_a_new(instance_to_build.to_s.classify.constantize)
       end
     end
   end
