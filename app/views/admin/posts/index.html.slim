@@ -2,13 +2,4 @@
 .admin__view
   br
     = link_to 'New Post', new_admin_post_path, class: 'btn btn--red'
-  table
-    tbody
-      - @posts.each do |post|
-        h1 = link_to post.title, blog_post_path(post)
-        br
-        = post.body.truncate(1000)
-        br
-        = link_to 'Edit', edit_admin_post_path(post)
-        br
-        = link_to 'Destroy', [:admin, post], data: {confirm: 'Are you sure?'}, method: :delete
+  = render @posts

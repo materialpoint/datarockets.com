@@ -1,0 +1,5 @@
+.admin__questions__item
+  = link_to question.title, question, class: 'admin__question__title'
+  .admin__remove = link_to 'Destroy', [:admin, question], data: {confirm: 'Are you sure?'}, method: :delete
+  .admin__edit = link_to 'Edit', edit_admin_question_path(question)
+  .admin__questions__answer = question.answer
