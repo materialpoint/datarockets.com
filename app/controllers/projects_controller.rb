@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   skip_before_filter :authenticate_user!
 
   def index
-    @projects = Project.all.order(created_at: :desc)
+    @projects = Project.all.includes(:tags, :preview_image, :project_images).order(created_at: :desc)
   end
 
   def show
