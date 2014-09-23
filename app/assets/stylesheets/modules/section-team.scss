@@ -5,25 +5,32 @@
 .section__title--team {
     color: $red;
     }
-    .user {
-        width: 20%;
-        padding: 20px;
-        float: left;
-        text-align: center;
-        box-sizing: border-box;
+    .section--team__users {
+        @extend .clearfix;
         }
-        .user__img {
-            width: 100%;
-            max-width: 150px;
-            margin-bottom: 10px;
-            border-radius: 50%;
+        .section--team__user {
+            width: 20%;
+            padding: 20px;
+            float: left;
+            text-align: center;
+            box-sizing: border-box;
             }
-        .user__name {
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: $black;
-            }
-        .user__title {
-            color: $red;
-            }
+            .section--team__user__img {
+                width: 100%;
+                max-width: 150px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                }
+            .section--team__user__name {
+                margin-bottom: 10px;
+                font-size: 18px;
+                color: $black;
+                }
+            .section--team__user__title {
+                color: $red;
+                }
 
+    .section--team__btn {
+        display: block;
+        width: 100%;
+        }

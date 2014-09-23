@@ -101,11 +101,14 @@ ActiveRecord::Schema.define(version: 20140918122631) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "imageable_type"
+    t.integer  "imageable_id"
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  add_index "project_images", ["imageable_id", "imageable_type"], name: "index_project_images_on_imageable_id_and_imageable_type", using: :btree
   add_index "project_images", ["project_id"], name: "index_project_images_on_project_id", using: :btree
 
   create_table "projects", force: true do |t|
