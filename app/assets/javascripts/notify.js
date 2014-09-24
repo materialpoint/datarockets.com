@@ -10,7 +10,7 @@ $(function() {
         }
         notifier.classList.add('visible');
         notifier_close.addEventListener('click', closeNotifier);
-        setTimeout(closeNotifier, 5000);
+        setTimeout(closeNotifier, 4000);
     }
 
 
