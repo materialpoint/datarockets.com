@@ -3,6 +3,4 @@ article[role='full']
     .blog__article__content__title = @post.title
     = markdown(@post.body)
   .blog__article__meta
-    = image_tag 'http://images.thoughtbot.com/team/gabe.jpg'
-    = image_tag 'http://images.thoughtbot.com/team/gabe.jpg'
-    = image_tag 'http://images.thoughtbot.com/team/gabe.jpg'
+    = render partial: 'users/author', collection: @post.authors

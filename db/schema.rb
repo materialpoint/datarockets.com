@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140918122631) do
+ActiveRecord::Schema.define(version: 20140925105549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -116,6 +116,14 @@ ActiveRecord::Schema.define(version: 20140918122631) do
     t.text     "preview_description"
   end
 
+  create_table "publications", force: true do |t|
+    t.integer "post_id"
+    t.integer "user_id"
+  end
+
+  add_index "publications", ["post_id"], name: "index_publications_on_post_id", using: :btree
+  add_index "publications", ["user_id"], name: "index_publications_on_user_id", using: :btree
+
   create_table "questions", force: true do |t|
     t.string   "title"
     t.text     "answer"
@@ -139,5 +147,13 @@ ActiveRecord::Schema.define(version: 20140918122631) do
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
+
+  create_table "workings", force: true do |t|
+    t.integer "project_id"
+    t.integer "user_id"
+  end
+
+  add_index "workings", ["project_id"], name: "index_workings_on_project_id", using: :btree
+  add_index "workings", ["user_id"], name: "index_workings_on_user_id", using: :btree
 
 end

@@ -5,6 +5,11 @@ class User < ActiveRecord::Base
 
   enumerize :role, in: [:member, :admin], default: :member, predicates: true
 
+  has_many :publications
+  has_many :posts, through: :publications
+  has_many :workings
+  has_many :projects, through: :workings
+
   has_one :member_information, foreign_key: :member_id
   has_one :avatar, dependent: :destroy
 
