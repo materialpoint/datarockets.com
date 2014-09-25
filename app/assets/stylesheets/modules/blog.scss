@@ -3,7 +3,7 @@
     }
 
     .blog__inner {
-        width: $width-max;
+        max-width: $width-max;
         padding: 0 1.5rem;
         margin: auto;
         box-sizing: border-box;
@@ -48,8 +48,9 @@
 
         .blog article {
             @extend .clearfix;
-
-            padding-left: 180px;
+            padding: 0 50px;
+            // padding-left: 180px;
+             width: 100%;
             margin-bottom: 3rem;
             position: relative;
             }
@@ -61,7 +62,7 @@
             .blog__article__meta {
                 width: 135px;
                 top: 0;
-                left: -180px;
+                left: -120px;
                 position: absolute;
 
                 text-align: right;
