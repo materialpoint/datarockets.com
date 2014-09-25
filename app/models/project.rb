@@ -9,6 +9,7 @@ class Project < ActiveRecord::Base
 
   accepts_nested_attributes_for :preview_image
   accepts_nested_attributes_for :tags, reject_if: ->(t) { t[:name].blank? }, allow_destroy: true
+  accepts_nested_attributes_for :developers
 
   scope :reverse_all, -> { all.order(created_at: :desc) }
 end

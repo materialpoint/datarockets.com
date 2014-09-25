@@ -45,6 +45,6 @@ class Admin::PostsController < AdminController
 
     def post_params
       params.require(:post).permit(:title, :body, :preview_body,
-        post_image_ids: [])
+        post_image_ids: [], author_ids: [])
     end
 end
