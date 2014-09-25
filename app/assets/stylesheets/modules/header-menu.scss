@@ -119,6 +119,7 @@
             border-radius: $radius;
             background-color: $asphalt;
             display: none;
+            z-index: 500;
             &.visible {
                 display: block;
                 }
