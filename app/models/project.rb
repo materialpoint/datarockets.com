@@ -9,4 +9,5 @@ class Project < ActiveRecord::Base
   accepts_nested_attributes_for :tags, reject_if: ->(t) { t[:name].blank? }, allow_destroy: true
 
   scope :reverse_all, -> { all.order(created_at: :desc) }
+  scope :includes_all, -> { includes(:tags, :preview_image, :project_images) }
 end

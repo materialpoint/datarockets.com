@@ -2,10 +2,10 @@ class ProjectsController < ApplicationController
   skip_before_filter :authenticate_user!
 
   def index
-    @projects = Project.all.includes(:tags, :preview_image, :project_images).order(created_at: :desc)
+    @projects = Project.includes_all.reverse_all
   end
 
   def show
-    @project = Project.includes(:tags, :preview_image, :project_images).find(params[:id])
+    @project = Project.includes_all.find(params[:id])
   end
 end
