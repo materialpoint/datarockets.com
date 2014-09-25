@@ -118,7 +118,10 @@
             right: 40px;
             border-radius: $radius;
             background-color: $asphalt;
-            // display: none;
+            display: none;
+            &.visible {
+                display: block;
+                }
             }
             .header__menu__item {
                 display: block;

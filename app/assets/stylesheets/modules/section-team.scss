@@ -6,12 +6,14 @@
     color: $red;
     }
     .section--team__users {
-        @extend .clearfix;
+        // @extend .clearfix;
+        text-align: center;
         }
         .section--team__user {
+            min-width: 200px;
             width: 20%;
             padding: 20px;
-            float: left;
+            display: inline-block;
             text-align: center;
             box-sizing: border-box;
             }
