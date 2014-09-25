@@ -1,26 +1,27 @@
 .section--team
   .section--inner
     .section__title.section__title--team Team
-    .user
-      =image_tag("avatar_bg.jpg", class: "user__img")
-      .user__name Pavel Demeschik
-      .user__title CEO datarockets
-    .user
-      =image_tag("avatar_bg2.jpg", class: "user__img")
-      .user__name Dmitry Zhlobo
-      .user__title Ruby on Rails Developer
-    .user
-      =image_tag("avatar_bg.jpg", class: "user__img")
-      .user__name Evgeny Traytyak
-      .user__title Frond-end Developer
-    .user
-      =image_tag("avatar_bg2.jpg", class: "user__img")
-      .user__name Egor Vorobiev
-      .user__title Ruby on Rails Developer
-    .user
-      =image_tag("avatar_bg.jpg", class: "user__img")
-      .user__name Maxim Abramchuk
-      .user__title Ruby on Rails Developer
-
-  .btn-line.btn-line--red
-     = link_to 'Read more', team_path
+    .section--team__users
+      .section--team__user
+        =image_tag("avatar_bg.jpg", class: "section--team__user__img")
+        .section--team__user__name Pavel Demeschik
+        .section--team__user__title CEO datarockets
+      .section--team__user
+        =image_tag("avatar_bg2.jpg", class: "section--team__user__img")
+        .section--team__user__name Dmitry Zhlobo
+        .section--team__user__title Ruby on Rails Developer
+      .section--team__user
+        =image_tag("avatar_bg.jpg", class: "section--team__user__img")
+        .section--team__user__name Evgeny Traytyak
+        .section--team__user__title Frond-end Developer
+      .section--team__user
+        =image_tag("avatar_bg2.jpg", class: "section--team__user__img")
+        .section--team__user__name Egor Vorobiev
+        .section--team__user__title Ruby on Rails Developer
+      .section--team__user
+        =image_tag("avatar_bg.jpg", class: "section--team__user__img")
+        .section--team__user__name Maxim Abramchuk
+        .section--team__user__title Ruby on Rails Developer
+  .section--team__btn
+    .btn-line.btn-line--red
+      = link_to 'Read more', team_path

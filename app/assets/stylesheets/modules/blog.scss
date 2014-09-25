@@ -61,7 +61,7 @@
             .blog__article__meta {
                 width: 135px;
                 top: 0;
-                left: 0;
+                left: -180px;
                 position: absolute;
 
                 text-align: right;
@@ -91,6 +91,7 @@
                     }
 
             .blog__article__content {
+                position: relative;
                 font-size: 1.2rem;
                 line-height: 2rem;
 

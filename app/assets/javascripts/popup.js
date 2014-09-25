@@ -12,7 +12,6 @@ window.Popup = Popup;
 
 window.Popup.prototype = {
     init: function() {
-        console.log(123);
         var that = this;
 
         this.active_btn.addEventListener('click', function(event) {
@@ -76,4 +75,5 @@ window.onload = function() {
         active_btn = document.querySelector('.active-btn-js'),
         popup_window = document.querySelector('.popup__window'),
         popup = new Popup(popup_window, active_btn);
+
 }

@@ -5,30 +5,29 @@
     div class="cloud"
       ul class="cloud__list"
         li.cloud__list__item
-          a.important-3 href="/" Why don’t you have “About” section?
+          = link_to 'Why don’t you have “About” section?', questions_path, class: 'important-3'
+        li.cloud__list__item
+          = link_to 'Why datarockets?', questions_path, class: 'important-4'
 
         li.cloud__list__item
-          a.important-4 href="/" Why datarockets?
+          = link_to 'Are you an outsource company?', questions_path, class: 'important-3'
 
         li.cloud__list__item
-          a.important-3 href="/" Are you an outsource company?
+          = link_to 'Why do you have a cat in your team section?', questions_path, class: 'important-2'
 
         li.cloud__list__item
-          a.important-2 href="/" Why do you have a cat in your team section?
+          = link_to 'What technologies do you use?', questions_path, class: 'important-2'
 
         li.cloud__list__item
-          a.important-2 href="/" What technologies do you use?
+          = link_to 'Please provide some examples of your work.', questions_path, class: 'important-2'
 
         li.cloud__list__item
-          a.important-2 href="/" Please provide some examples of your work.
+          = link_to 'Quality or speed?', questions_path, class: 'important-1'
 
         li.cloud__list__item
-          a.important-1 href="/" Quality or speed?
+          = link_to 'Can I take a look at your code?', questions_path, class: 'important-1'
 
         li.cloud__list__item
-          a.important-1 href="/" Can I take a look at your code?
-
-        li.cloud__list__item
-          a.important-1 href="/" How to ensure that you produce high quality products?
+          = link_to 'How to ensure that you produce high quality products?', questions_path, class: 'important-1'
 
 

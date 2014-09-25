@@ -3,8 +3,6 @@ html
   head
     = render "layouts/section_head"
   body
-    p#notice = notice
-    p#alert = alert
     div class="line line#{class_for_line}"
     .section--inner
       .header--wrapper
@@ -12,3 +10,4 @@ html
       section
         = yield
   = render "layouts/popup"
+  = render "layouts/notification"
