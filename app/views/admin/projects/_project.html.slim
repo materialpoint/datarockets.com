@@ -1,7 +1,5 @@
-h3 Name
-= project.name
-h3 Description
-= markdown(project.description)
-= link_to 'Edit', edit_admin_project_path(project)
-= link_to 'Show', project_path(project)
-= link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, method: :delete
+tr
+  td = project.name
+  td.markdown-body = markdown(project.description.truncate(1000))
+  td = link_to 'Edit', edit_admin_project_path(project)
+  td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, method: :delete

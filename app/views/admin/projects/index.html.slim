@@ -1,12 +1,6 @@
 = render 'admin/admin_menu'
 .admin__view
   h1 Listing projects
-  - @projects.each do |project|
-    tr
-      td = project.name
-      td.markdown-body = markdown(project.description.truncate(1000))
-      td = link_to 'Edit', edit_admin_project_path(project)
-      td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, :method => :delete
-
+  = render @projects
   br
   = link_to 'New project', new_admin_project_path
