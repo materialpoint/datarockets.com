@@ -3,7 +3,7 @@ class Admin::ProjectsController < AdminController
   before_action :authorize_project
 
   def index
-    @projects = Project.reverse_all
+    @projects = Project.includes_all.reverse_all
   end
 
   def new
@@ -40,7 +40,7 @@ class Admin::ProjectsController < AdminController
   private
 
     def set_project
-      @project = Project.includes(:tags, :preview_image, :project_images).find(params[:id])
+      @project = Project.includes_all.find(params[:id])
     end
 
     def authorize_project

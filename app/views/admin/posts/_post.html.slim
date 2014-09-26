@@ -1,7 +1,7 @@
-h3 Title
-= post.title
-h3 Body
+h1 = link_to post.title, blog_post_path(post)
+br
 = markdown(post.body)
-= link_to 'Show', blog_post_path(post)
+br
 = link_to 'Edit', edit_admin_post_path(post)
+br
 = link_to 'Destroy', [:admin, post], data: {confirm: 'Are you sure?'}, method: :delete

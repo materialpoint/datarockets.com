@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   end
 
   namespace :blog do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:show, :index]
+    root 'posts#index'
   end
 
   resources :pages, only: [:show]

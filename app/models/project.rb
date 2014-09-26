@@ -12,4 +12,5 @@ class Project < ActiveRecord::Base
   accepts_nested_attributes_for :developers
 
   scope :reverse_all, -> { all.order(created_at: :desc) }
+  scope :includes_all, -> { includes(:tags, :preview_image, :project_images) }
 end
