@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
+  layout 'landing'
+
   caches_page :show, :home
 
   def show

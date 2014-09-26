@@ -1,6 +1,5 @@
 .project
   .project__title = @project.name
-
   .project__info
     ul.project__authors
       b Developers:
@@ -9,6 +8,5 @@
       b Technologies:
       ul.tags
         = render @project.tags
-
   .project__description.markdown-body
     = markdown(@project.description)

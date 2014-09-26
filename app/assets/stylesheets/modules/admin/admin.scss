@@ -1,0 +1,63 @@
+.admin__edit,
+.admin__remove {
+    float: right;
+    margin-right: 10px;
+    line-height: 40px;
+    }
+.admin__edit {
+    a {
+    border-bottom: 1px solid $blue;
+        }
+    }
+.admin__remove {
+    a {
+    border-bottom: 1px solid $red;
+        }
+    }
+
+.admin__control-panel {
+    float: left;
+    // width: 100%;
+    margin: 30px 0;
+    }
+// Main admin page
+
+.admin__menu {
+    width: 200px;
+    height: 100%;
+    float: left;
+    }
+    .admin__menu__item {
+        margin: 10px 40px 10px 0;
+        padding: 8px 12px;
+        border-radius: $radius;
+        background-color: $lightgray;
+        font-size: 16px;
+        a {
+            color: $black;
+            line-height: 1.6em;
+            }
+        }
+.admin__view {
+    width: calc(100% - 200px);
+    float: left;
+    a {
+        color: $black;
+        }
+}
+
+
+@media only screen and (max-width: 640px) {
+    .admin__menu {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+        }
+        .admin__menu__item {
+            display: inline-block;
+            margin-right: 20px;
+            }
+    .admin__view {
+        width: 100%;
+        }
+    }

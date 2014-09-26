@@ -1,0 +1,16 @@
+.admin__questions__item {
+    @extend .clearfix;
+    line-height: 40px;
+    }
+    .admin__question__title {
+        font-size: 24px;
+        &:hover {
+            color: $red;
+            border-bottom: 1px solid $red;
+            }
+    }
+    .admin__questions__answer {
+        font-family: Georgia;
+        font-size: 18px;
+        padding-left: 10px;
+        }

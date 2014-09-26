@@ -1,5 +1,6 @@
-tr
-  td = project.name
-  td.markdown-body = project.preview_description
-  td = link_to 'Edit', edit_admin_project_path(project)
-  td = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, method: :delete
+.admin__projects__item
+  = link_to project.name, project, class: 'admin__projects__title'
+  .admin__remove = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, method: :delete
+  .admin__edit = link_to 'Edit', edit_admin_project_path(project)
+  .admin__projects__preview
+    p = markdown(project.preview_description)

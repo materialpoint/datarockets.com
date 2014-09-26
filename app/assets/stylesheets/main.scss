@@ -23,7 +23,14 @@
 @import 'modules/questions';
 @import 'modules/projects';
 @import 'modules/project-page';
-@import 'modules/admin';
+
+@import 'modules/admin/admin';
+@import 'modules/admin/admin-pages';
+@import 'modules/admin/admin-posts';
+@import 'modules/admin/admin-projects';
+@import 'modules/admin/admin-users';
+@import 'modules/admin/admin-questions';
+
 @import 'modules/github';
 @import 'modules/notification';
 @import 'rouge';
