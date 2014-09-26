@@ -7,6 +7,8 @@ br
     = render partial: 'preview_image/form', locals: {f: f}
     br
   .field
+    = collection_check_boxes :project, :developer_ids, User.all, :id, :name
+  .field
     = f.input :name
   .field
     = f.input :description

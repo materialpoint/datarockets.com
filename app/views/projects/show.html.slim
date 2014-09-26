@@ -1,19 +1,14 @@
 .project
   .project__title = @project.name
 
-  .project__description.markdown-body
-    = markdown(@project.description)
-
   .project__info
     ul.project__authors
       b Developers:
-      li.project__authors__item
-        img src="http://images.thoughtbot.com/team/steven.jpg" alt=""/
-        span Egor Vorobiev
-      li.project__authors__item
-        img src="http://images.thoughtbot.com/team/dan.jpg" alt=""/
-        span Dmitry Zhlobo
+      = render partial: 'users/developer', collection: @project.developers
     .project__tech
       b Technologies:
       ul.tags
         = render @project.tags
+
+  .project__description.markdown-body
+    = markdown(@project.description)

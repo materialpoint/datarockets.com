@@ -1,5 +1,7 @@
 = simple_form_for [:admin, @post] do |f|
   .field
+    = collection_check_boxes :post, :author_ids, User.all, :id, :name
+  .field
     = f.input :title
   .field
     = f.input :body
