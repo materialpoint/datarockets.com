@@ -2,5 +2,4 @@
   .blog__article__content__title = link_to post.title, blog_post_path(post)
   p = post.preview_body
   .blog__article__meta
-    = image_tag 'http://images.thoughtbot.com/team/dan.jpg'
-    = image_tag 'http://images.thoughtbot.com/team/steven.jpg'
+    = render partial: 'users/author', collection: post.authors
