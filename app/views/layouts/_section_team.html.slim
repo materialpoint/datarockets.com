@@ -2,7 +2,7 @@
   .section--inner
     .section__title.section__title--team Team
     .section--team__users
-      = render_team
+      = render partial: 'teams/landing_team_member', collection: User.includes_all, as: :member
   .section--team__btn
     .btn-line.btn-line--red
       = link_to 'Read more', team_path
