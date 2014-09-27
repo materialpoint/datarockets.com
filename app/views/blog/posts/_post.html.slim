@@ -1,5 +1,5 @@
-.blog__article__content
-  .blog__article__content__title = link_to post.title, blog_post_path(post)
-  p = post.preview_body
-  .blog__article__meta
+.blog__articles__item
+  .blog__articles__item__title = link_to post.title, blog_post_path(post)
+  p.blog__articles__item__text = post.preview_body
+  .blog__articles__item__meta
     = render partial: 'users/author', collection: post.authors

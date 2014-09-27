@@ -7,9 +7,6 @@ html
     .section--inner
       .header--wrapper
         = render 'layouts/header_menu'
-
-    section.blog
-      section
-        = yield
-  = render "layouts/popup"
-  = render "layouts/notification"
+      = yield
+    = render "layouts/popup"
+    = render "layouts/notification"

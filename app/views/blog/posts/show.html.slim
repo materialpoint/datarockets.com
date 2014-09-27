@@ -1,6 +1,6 @@
-article[role='full']
-  .blog__article__content
-    .blog__article__content__title = @post.title
-    = markdown(@post.body)
+.blog__article
+  .blog__article__content__title = @post.title
   .blog__article__meta
     = render partial: 'users/author', collection: @post.authors
+  .blog__article__content
+    = markdown(@post.body)
