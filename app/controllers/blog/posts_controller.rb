@@ -4,7 +4,7 @@ class Blog::PostsController < ApplicationController
   layout 'blog'
 
   def index
-    @posts = Post.reverse_all
+    @posts = Post.includes_all.reverse_all
   end
 
   def show

@@ -1,5 +1,5 @@
 .admin__user
-  = image_tag("avatar_bg.jpg", class: "admin__user__img")
+  = image_tag(user.avatar.image.url, class: "admin__user__img") if user.avatar.present?
   .admin__user__name
     = link_to user.name, admin_user_path(user)
   .admin__remove
