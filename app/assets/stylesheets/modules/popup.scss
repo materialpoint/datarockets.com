@@ -32,7 +32,7 @@
             width: 90%;
             box-sizing: border-box;
             max-width: 600px;
-            background-color: #fff;
+            background-color: $white;
             margin: 4em auto;
             padding: 2em;
             border-radius: 4px;
@@ -64,6 +64,7 @@
                 .popup__input--submit {
                     text-align: center;
                     input {
+                        -webkit-appearance: none;
                         width: 60%;
                         }
                     }

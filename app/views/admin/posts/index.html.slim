@@ -1,5 +1,5 @@
 = render 'admin/admin_menu'
+.admin__control-panel
+  = link_to 'New Post', new_admin_post_path, class: 'btn btn--red'
 .admin__view
-  br
-    = link_to 'New Post', new_admin_post_path, class: 'btn btn--red'
   = render @posts

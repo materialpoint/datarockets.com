@@ -4,6 +4,7 @@
     }
 
     .teamlist__item {
+        @extend .clearfix;
         margin-bottom: 40px;
         position: relative;
         clear: both;
@@ -12,16 +13,19 @@
         $teamlist-avatarSize: 135px;
 
         .teamlist__item__avatar {
-            width: $teamlist-avatarSize;
-            height: $teamlist-avatarSize;
             float: left;
 
             border-radius: $teamlist-avatarSize;
             overflow: hidden;
+            img {
+                width: $teamlist-avatarSize;
+                height: $teamlist-avatarSize;
+                }
             }
 
         .teamlist__item__descr {
             margin-left: $teamlist-avatarSize + 30px;
+            // float: left;
 
             p {
                 margin-top: 15px;
@@ -35,7 +39,7 @@
                 margin-right: 170px;
 
                 font-size: 28px;
-                font-weight: bold;
+                font-weight: $fw-bold;
                 line-height: 1.5em;
                 }
 
@@ -79,3 +83,10 @@
                         }
                     }
                 }
+
+@media only screen and (max-width: 640px) {
+    .teamlist__item__descr {
+        margin-left: 0;
+        float: left;
+        }
+    }

@@ -8,7 +8,7 @@
         p {
             text-align: center;
             font-size: 36px;
-            font-weight: bold;
+            font-weight: $fw-bold;
             color: $white;
             text-shadow: $text-shadow;
             }
@@ -17,11 +17,15 @@
     .projects-block {
         margin-top: 70px;
         margin-bottom: 30px;
+        text-align: center;
         }
         .projects-block__item {
-                display: inline;
-            img {
+                display: inline-block;
+                min-width: 130px;
                 width: 22%;
+                margin: 1% 1%;
+            img {
+                width: 100%;
                 margin-right: 4%;
                 border-radius: 5px;
                 }
@@ -37,12 +41,12 @@
         a {
             padding: 10px 15px;
             display: inline-block;
-            border: 2px solid #fff;
+            border: 2px solid $white;
             border-radius: 5px;
             font-size: 20px;
-            color: #fff;
+            color: $white;
             &:hover {
-                background-color: #fff;
+                background-color: $white;
                 color: #140E12;
                 }
             }

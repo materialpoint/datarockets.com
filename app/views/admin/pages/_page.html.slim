@@ -3,4 +3,4 @@
   .admin__remove = link_to 'Destroy', [:admin, page], data: {confirm: 'Are you sure?'}, method: :delete
   .admin__edit = link_to 'Edit', edit_admin_page_path(page)
   .admin__pages__preview
-    p = markdown(page.body)
+    p = markdown(page.body.truncate(1000))

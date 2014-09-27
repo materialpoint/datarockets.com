@@ -4,11 +4,11 @@
     .section--footer__info {
         display: inline-block;
         margin-left: 20px;
-        color: #fff;
+        color: $white;
         }
     .section--footer__info a {
-        color: #fff;
-        border-bottom: 1px solid #fff;
+        color: $white;
+        border-bottom: 1px solid $white;
         }
     .btn--contact {
         display: inline-block;
