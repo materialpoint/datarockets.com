@@ -3,7 +3,7 @@ class Admin::UsersController < AdminController
   before_action :authorize_user!
 
   def index
-    @users = User.includes(:avatar).reverse_all
+    @users = User.includes_all.reverse_all
   end
 
   def show

@@ -5,4 +5,5 @@ class Post < ActiveRecord::Base
   has_many :authors, through: :publications
 
   scope :reverse_all, -> { all.order(created_at: :desc) }
+  scope :includes_all, -> { all.includes(:authors) }
 end

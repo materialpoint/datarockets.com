@@ -2,4 +2,4 @@
   .blog__articles__item__title = link_to post.title, blog_post_path(post)
   p.blog__articles__item__text = post.preview_body
   .blog__articles__item__meta
-    = render partial: 'users/author', collection: post.authors.includes(:avatar)
+    = render partial: 'users/author', collection: post.authors.includes_all

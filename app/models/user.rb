@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   before_create :generate_remember_token
 
   scope :reverse_all, -> { all.order(created_at: :desc) }
+  scope :includes_all, -> { all.includes(:avatar, :member_information) }
 
   accepts_nested_attributes_for :member_information
   accepts_nested_attributes_for :avatar
