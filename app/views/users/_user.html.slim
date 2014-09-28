@@ -6,7 +6,4 @@ li.teamlist__item
     h4.teamlist__item__status = user.member_information.title
     p = user.member_information.description
     .teamlist__item__descr__social
-      = link_to 'github', user.member_information.github_profile
-      = link_to 'twitter', user.member_information.twitter
-      = link_to 'linkedin', user.member_information.linkedin
-      = link_to 'blog', user.member_information.own_blog
+      = render_social_icons_for(user)
