@@ -43,14 +43,18 @@
             }
 
         .blog__articles__item__meta {
-            top: 0;
-            left: -70px;
+            width: 155px;
+            top: 3px;
+            left: -180px;
             position: absolute;
+            text-align: right;
+            font-size: 0;
 
             img {
                 width: 32px;
-                border-radius: 50%;
                 margin: 0 0 .2rem .2rem;
+                display: inline-block;
+                border-radius: 50%;
                 }
             }
 
