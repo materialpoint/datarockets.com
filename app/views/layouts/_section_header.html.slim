@@ -6,17 +6,8 @@
         p Solutions for web
 
       ul.projects-block
-        li.projects-block__item
-          = link_to project_path(1)
-            = image_tag 'project1.jpg'
-        li.projects-block__item
-          = link_to project_path(2)
-            = image_tag 'project2.jpg'
-        li.projects-block__item
-          = link_to project_path(3)
-            = image_tag 'project6.png'
-        li.projects-block__item
-          = link_to project_path(4)
-            = image_tag 'project4.jpg'
+        = render partial: 'projects/project_landing',
+          collection: Project.all.sort_by_order.limit(4),
+          as: :project
       .btn-line.btn-line--white
          = link_to 'See more projects', projects_path
