@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   validates :name, :description, presence: true
+  validates :order, uniqueness: true
   has_many :project_images
   has_many :marks
   has_many :tags, through: :marks
@@ -13,4 +14,5 @@ class Project < ActiveRecord::Base
 
   scope :reverse_all, -> { all.order(created_at: :desc) }
   scope :includes_all, -> { includes(:tags, :preview_image, :project_images) }
+  scope :sort_by_order, -> { order(order: :asc) }
 end
