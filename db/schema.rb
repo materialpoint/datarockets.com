@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140929140231) do
+ActiveRecord::Schema.define(version: 20140930111544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,13 +36,6 @@ ActiveRecord::Schema.define(version: 20140929140231) do
     t.datetime "updated_at"
   end
 
-  create_table "countries", force: true do |t|
-    t.string   "name",          limit: nil
-    t.string   "currency_code", limit: nil
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-  end
-
   create_table "marks", force: true do |t|
     t.integer "tag_id"
     t.integer "project_id"
@@ -64,63 +57,6 @@ ActiveRecord::Schema.define(version: 20140929140231) do
   end
 
   add_index "member_informations", ["member_id"], name: "index_member_informations_on_member_id", using: :btree
-
-  create_table "order_cart_items_items", force: true do |t|
-    t.string   "name",       limit: nil
-    t.integer  "count"
-    t.decimal  "price",                  precision: 19, scale: 2, default: 0.0
-    t.integer  "cart_id"
-    t.integer  "product_id"
-    t.datetime "created_at",                                                    null: false
-    t.datetime "updated_at",                                                    null: false
-  end
-
-  add_index "order_cart_items_items", ["cart_id"], name: "index_order_cart_items_items_on_cart_id", using: :btree
-  add_index "order_cart_items_items", ["product_id"], name: "index_order_cart_items_items_on_product_id", using: :btree
-
-  create_table "order_cart_items_shippings", force: true do |t|
-    t.decimal  "cost",       precision: 19, scale: 2, default: 0.0
-    t.integer  "cart_id"
-    t.integer  "shop_id"
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
-  end
-
-  add_index "order_cart_items_shippings", ["cart_id"], name: "index_order_cart_items_shippings_on_cart_id", using: :btree
-  add_index "order_cart_items_shippings", ["shop_id"], name: "index_order_cart_items_shippings_on_shop_id", using: :btree
-
-  create_table "order_carts", force: true do |t|
-    t.integer  "order_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "order_carts", ["order_id"], name: "index_order_carts_on_order_id", using: :btree
-
-  create_table "order_clarifications", force: true do |t|
-    t.integer  "call_operator_id"
-    t.integer  "order_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
-  create_table "order_contact_informations", force: true do |t|
-    t.integer  "order_id"
-    t.string   "name",       limit: nil
-    t.integer  "country_id"
-    t.string   "address",    limit: nil
-    t.integer  "zip_code"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "orders", force: true do |t|
-    t.string   "state",      limit: nil
-    t.string   "note",       limit: nil
-    t.integer  "total_cost"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
 
   create_table "pages", force: true do |t|
     t.string   "title"
@@ -160,26 +96,6 @@ ActiveRecord::Schema.define(version: 20140929140231) do
     t.datetime "updated_at"
   end
 
-  create_table "product_shipping_countries", force: true do |t|
-    t.integer  "product_id"
-    t.integer  "country_id"
-    t.decimal  "price",      precision: 19, scale: 2, default: 0.0
-    t.datetime "created_at",                                        null: false
-    t.datetime "updated_at",                                        null: false
-  end
-
-  add_index "product_shipping_countries", ["country_id"], name: "index_product_shipping_countries_on_country_id", using: :btree
-  add_index "product_shipping_countries", ["product_id"], name: "index_product_shipping_countries_on_product_id", using: :btree
-
-  create_table "products", force: true do |t|
-    t.string   "name",       limit: nil
-    t.integer  "shop_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  add_index "products", ["shop_id"], name: "index_products_on_shop_id", using: :btree
-
   create_table "project_images", force: true do |t|
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -198,6 +114,7 @@ ActiveRecord::Schema.define(version: 20140929140231) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "preview_description"
+    t.integer  "order"
   end
 
   create_table "publications", force: true do |t|
@@ -213,24 +130,6 @@ ActiveRecord::Schema.define(version: 20140929140231) do
     t.text     "answer"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "shop_shipping_countries", force: true do |t|
-    t.integer  "shop_id"
-    t.integer  "country_id"
-    t.decimal  "shipping_cost", precision: 19, scale: 2, default: 0.0
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
-  end
-
-  add_index "shop_shipping_countries", ["country_id"], name: "index_shop_shipping_countries_on_country_id", using: :btree
-  add_index "shop_shipping_countries", ["shop_id"], name: "index_shop_shipping_countries_on_shop_id", using: :btree
-
-  create_table "shops", force: true do |t|
-    t.string   "name",       limit: nil
-    t.string   "url",        limit: nil
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
   end
 
   create_table "tags", force: true do |t|

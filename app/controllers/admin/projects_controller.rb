@@ -3,7 +3,7 @@ class Admin::ProjectsController < AdminController
   before_action :authorize_project
 
   def index
-    @projects = Project.includes_all.reverse_all
+    @projects = Project.includes_all.sort_by_order
   end
 
   def new
@@ -40,10 +40,10 @@ class Admin::ProjectsController < AdminController
   def sort
     @projects = Project.all
     @projects.each do |project|
-      binding.pry
       project.order = params[:project].index(project.id.to_s) + 1
       project.save
     end
+    render nothing: true, status: :ok
   end
 
   private
@@ -57,7 +57,7 @@ class Admin::ProjectsController < AdminController
     end
 
     def project_params
-      params.require(:project).permit(:name, :description, :preview_description, project_image_ids: [],
+      params.require(:project).permit(:name, :description, :preview_description, :order, project_image_ids: [],
         preview_image_attributes: [:image, :id], tags_attributes: [:name, :id, :_destroy], tag_ids: [],
                                      developer_ids: [])
     end

@@ -25,10 +25,11 @@ end
 # Creating projects with the markdown description
 projects_names = %w(hata tau vkleaner)
 
-projects_names.each do |project|
+projects_names.each_with_index do |project, index|
   project_file_path = File.join(Rails.root, "db/seeds/projects/#{project}.md")
   project_description = File.readlines(project_file_path, 'r').join
-  Project.create(name: project, description: project_description, preview_description: Faker::Lorem.paragraph)
+  Project.create(name: project, description: project_description,
+    preview_description: Faker::Lorem.paragraph, order: index)
 end
 
 # Creating posts in the blog, pages with the markdown body
