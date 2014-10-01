@@ -8,3 +8,25 @@ jQuery(function() {
         fail: function(e, data) { alert('Upload failed') }
     });
 });
+
+$(document).ready(function(){
+  $('.admin__view').sortable({
+    cursor: 'pointer',
+    opacity: 0.4,
+    scroll: true,
+    axis: 'y',
+    dropOnEmpty: false,
+    update: function(){
+      $.ajax({
+        url: 'projects/sort',
+        type: 'post',
+        dataType: 'script',
+        data: $('.admin__view').sortable('serialize'),
+        success: function(request){
+          $('.admin__view').effect('highlight');
+        },
+        fail: function(e, data) { alert('Failed') }
+      });
+    }
+  });
+});

@@ -1,6 +1,5 @@
 class Project < ActiveRecord::Base
   validates :name, :description, presence: true
-  validates :order, uniqueness: true
   has_many :project_images
   has_many :marks
   has_many :tags, through: :marks
