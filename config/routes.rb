@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :posts, except: [:show]
     resources :project_images, only: [:create]
     resources :projects, except: [:show]
+    post '/projects/sort', to: 'projects#sort'
     resources :questions, except: [:show]
     resources :users
   end

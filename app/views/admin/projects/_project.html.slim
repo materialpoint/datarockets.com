@@ -1,4 +1,4 @@
-.admin__projects__item
+div id="project_#{project.id}" class='admin__projects__item'
   = link_to project.name, project, class: 'admin__projects__title'
   .admin__remove = link_to 'Destroy', [:admin, project], data: {confirm: 'Are you sure?'}, method: :delete
   .admin__edit = link_to 'Edit', edit_admin_project_path(project)

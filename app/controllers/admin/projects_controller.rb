@@ -37,6 +37,15 @@ class Admin::ProjectsController < AdminController
     respond_with(@project, location: admin_projects_path)
   end
 
+  def sort
+    @projects = Project.all
+    @projects.each do |project|
+      binding.pry
+      project.order = params[:project].index(project.id.to_s) + 1
+      project.save
+    end
+  end
+
   private
 
     def set_project
