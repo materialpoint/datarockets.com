@@ -21,7 +21,7 @@ gem 'jquery-fileupload-rails', '~> 0.4'
 gem 'actionpack-page_caching', '~> 1.0'
 gem 'actionpack-action_caching', '~> 1.1'
 gem 'faker', '~> 1.4'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0'
 
 gem 'omniauth-google-oauth2', '~> 0.2'
 
