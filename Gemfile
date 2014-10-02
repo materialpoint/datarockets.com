@@ -22,6 +22,7 @@ gem 'actionpack-page_caching', '~> 1.0'
 gem 'actionpack-action_caching', '~> 1.1'
 gem 'faker', '~> 1.4'
 gem 'jquery-ui-rails', '~> 5.0'
+gem 'friendly_id', '~> 5.0'
 
 gem 'omniauth-google-oauth2', '~> 0.2'
 
