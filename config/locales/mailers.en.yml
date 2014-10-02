@@ -2,3 +2,5 @@ en:
   mailers:
     client_contacts:
       subject: 'New client has written us'
+    messages:
+      success: 'Message has been successfully sent'

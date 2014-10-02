@@ -10,12 +10,6 @@ describe ClientContactsController do
       check_if_client_contact_was_saved_successfully
     end
 
-    it 'has response with status 200' do
-      post_create_request
-
-      expect(response).to have_http_status(:ok)
-    end
-
     it 'deliver email' do
       expect { post_create_request }.to change { ActionMailer::Base.deliveries.count }.by(1)
     end

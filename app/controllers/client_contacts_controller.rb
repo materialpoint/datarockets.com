@@ -1,10 +1,11 @@
 class ClientContactsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:create]
+  protect_from_forgery except: :create
 
   def create
     @client_contact = ClientContact.create(clien_contact_params)
     ClientContactsMailer.send_contact(@client_contact).deliver
-    render nothing: true, status: :ok
+    redirect_to(root_path, notice: st('mailers.messages.success'))
   end
 
   private
