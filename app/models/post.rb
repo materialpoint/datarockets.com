@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+
   validates :title, :body, :preview_body, presence: true
   has_many :post_images
   has_many :publications

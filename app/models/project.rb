@@ -1,4 +1,7 @@
 class Project < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :finders]
+
   validates :name, :description, presence: true
   has_many :project_images
   has_many :marks
