@@ -9,11 +9,12 @@
         }
     }
     .questionslist__item {
+        @extend .clearfix;
+
         margin-bottom: 10px;
         padding: 0 20%;
         font-size: 16px;
         color: $darkgray;
-        // font-family: Georgia;
         }
         .questionslist__item__title,
         .questionslist__item__answer {
@@ -33,7 +34,8 @@
                 }
             }
         .questionslist__item__title {
-            margin: 10px 10% 10px 0;
+            margin-bottom: 10px;
+            margin-right: 10%;
             float: left;
             background-color: rgba($blue, 0.8);
             color: $white;
@@ -43,6 +45,7 @@
                 }
             }
         .questionslist__item__answer {
+            margin-bottom: 10px;
             margin-left: 10%;
             background-color: rgba($darkgray, 0.6);
             float: right;
@@ -52,3 +55,15 @@
                 border-left:10px solid rgba($darkgray, 0.6);
                 }
             }
+
+@media only screen and (max-width: 1000px) {
+    .questionslist__item {
+        padding: 0 10%;
+        }
+    }
+
+@media only screen and (max-width: 700px) {
+    .questionslist__item {
+        padding: 0 5%;
+        }
+    }
