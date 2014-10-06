@@ -14,12 +14,11 @@
 
         .teamlist__item__avatar {
             float: left;
-
-            border-radius: $teamlist-avatarSize;
             overflow: hidden;
             img {
                 width: $teamlist-avatarSize;
                 height: $teamlist-avatarSize;
+                border-radius: 50%;
                 }
             }
 
