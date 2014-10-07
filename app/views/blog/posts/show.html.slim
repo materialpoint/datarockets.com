@@ -1,6 +1,6 @@
 .blog__article
   .blog__article__content__title = @post.title
-  .blog__article__meta
-    = render partial: 'users/author', collection: @post.authors.includes_all
   .blog__article__content
+    .blog__article__meta
+      = render partial: 'users/author', collection: @post.authors.includes_all
     = markdown(@post.body)
