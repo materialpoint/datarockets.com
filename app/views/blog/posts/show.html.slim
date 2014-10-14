@@ -4,3 +4,5 @@
     .blog__article__meta
       = render partial: 'users/author', collection: @post.authors.includes_all
     = markdown(@post.body)
+    = render "layouts/social"
+
