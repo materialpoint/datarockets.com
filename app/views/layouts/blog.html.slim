@@ -3,12 +3,21 @@ html
   head
     = render "layouts/section_head"
   body
+    #fb-root
+    javascript:
+      | (function(d, s, id) {
+        | var js, fjs = d.getElementsByTagName(s)[0];
+        | if (d.getElementById(id)) return;
+        | js = d.createElement(s); js.id = id;
+        | js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
+        | fjs.parentNode.insertBefore(js, fjs);
+      | }(document, 'script', 'facebook-jssdk'));
     div class="line line#{class_for_line}"
     = render "layouts/social"
     .section--inner
       .header--wrapper
         = render 'layouts/header_menu'
       = yield
+    = render "layouts/counters"
     = render "layouts/popup"
     = render "layouts/notification"
-    = render "layouts/counters"
