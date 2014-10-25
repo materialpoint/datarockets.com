@@ -1,8 +1,7 @@
 .blog__article
   .blog__article__content__title = @post.title
+  .addthis_native_toolbox
   .blog__article__content
     .blog__article__meta
       = render partial: 'users/author', collection: @post.authors.includes_all
     = markdown(@post.body)
-    = render "layouts/social"
-
