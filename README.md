@@ -1,4 +1,7 @@
-# datarockets
+# datarockets.com
+
+![](http://issuestats.com/github/datarockets/datarockets.com/badge/pr?style=flat)
+![](http://issuestats.com/github/datarockets/datarockets.com/badge/issue?style=flat)
 
 ## Install
 
