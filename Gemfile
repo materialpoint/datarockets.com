@@ -50,5 +50,10 @@ group :test do
 end
 
 group :production do
-  gem 'unicorn', '~> 4.8.3'
+  gem 'unicorn', '~> 4.8'
+  gem 'capistrano', '~> 3.3'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rails-console', '~> 0.2'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano3-unicorn', '~> 0.2'
 end
