@@ -4,7 +4,7 @@ set :rbenv_type, :user
 set :rbenv_ruby, '2.1.2'
 
 set :application, 'datarockets.com'
-set :deploy_to, '/home/maximabramchuk/apps/datarockets.com/'
+set :deploy_to, '/home/datarockets/apps/datarockets.com/'
 set :deploy_via, :remote_cache
 set :use_sudo, :true
 
