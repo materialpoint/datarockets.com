@@ -1,5 +1,5 @@
 # Set the working application directory
-PATH_TO_APP = "/home/datarockets/datarockets.com"
+PATH_TO_APP = "/home/datarockets/apps/datarockets.com/current"
 
 working_directory PATH_TO_APP
 
