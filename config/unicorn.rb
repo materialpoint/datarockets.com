@@ -5,7 +5,7 @@ pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/unicorn.log"
 
-listen "#{root}/tmp/sockets/upnetwork.sock"
+listen "#{root}/tmp/sockets/datarockets.com.sock"
 worker_processes 1
 timeout 30
 
