@@ -1,20 +1,16 @@
-# Set the working application directory
-PATH_TO_APP = "/home/datarockets/apps/datarockets.com/current"
+root = "/home/datarockets/apps/datarockets.com/current"
 
-working_directory PATH_TO_APP
+working_directory root
+pid "#{root}/tmp/pids/unicorn.pid"
+stderr_path "#{root}/log/unicorn.log"
+stdout_path "#{root}/log/unicorn.log"
 
-# Unicorn PID file location
-pid "#{PATH_TO_APP}/tmp/pids/unicorn.pid"
-
-# Path to logs
-stderr_path "#{PATH_TO_APP}/log/unicorn.log"
-stdout_path "#{PATH_TO_APP}/log/unicorn.log"
-
-# Unicorn socket
-listen "#{PATH_TO_APP}/tmp/sockets/unicorn.datarockets.sock"
-
-# Number of processes
-worker_processes 3
-
-# Time-out
+listen "#{root}/tmp/sockets/upnetwork.sock"
+worker_processes 1
 timeout 30
+
+# Force the bundler gemfile environment variable to
+# reference the capistrano "current" symlink
+before_exec do |_|
+  ENV['BUNDLE_GEMFILE'] = File.join(root, 'Gemfile')
+end
