@@ -1,0 +1,57 @@
+.about {
+	float: left;
+	width: 615px;
+	h2 {
+		@include heading();
+		font-size: 40px;
+	}
+	hr {
+		height: 3px;
+		background: $m1-color;
+		border: 0;
+		margin: 40px 0;
+	}
+	.we-care {
+		@include clearfix();
+		margin: 40px 0;
+		.heading {
+			float: left;
+			text-align: center;
+			padding-right: 20px;
+			border-right: 3px solid $m1-color;
+			.we {
+				text-transform: uppercase;
+				font-size: 70px;
+				font-weight: bold;
+				font-family: $h-ff;
+				line-height: 65px;
+			}
+			.care {
+				text-transform: uppercase;
+				font-size: 36px;
+				line-height: 32px;
+				font-weight: bold;
+				font-family: $h-ff;
+			}
+		}
+		.desc {
+			float: left;
+			margin-top: -10px;
+			width: 480px;
+			padding-left: 20px;
+			p {
+
+			}
+		}
+	}
+	.work {
+		@include clearfix();
+		&-item {
+			float: left;
+			width: 30%;
+			margin-right: 20px;
+			height: 200px;
+			background: #000;
+		}
+	}
+}

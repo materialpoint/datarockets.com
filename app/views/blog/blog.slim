@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+html lang="en"
+	head
+		meta charset="UTF-8"/
+		meta name="viewport" content="width=device-width, initial-scale=1"/
+		link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700"/
+		link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,900"/
+		link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700"/
+		link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"/
+		link rel="stylesheet" href="../vendor/normalize.css/normalize.css"/
+		link rel="stylesheet" href="../assets/css/app.css"/
+		title Blog
+	body.blog-body
+		section.main
+			.container
+				header
+					.logotype
+						.company
+							| datarockets
+					.navigation
+						.contact
+							nav
+								ul
+									li
+										.title Contact Us
+										a href="#" datarockets@gmail.com
+
+									li
+										.title Follow Us
+										a href="#" twitter.com/datarockets
+									li
+										.title Sunscribe Us
+										a href="#" youtube.com/datarockets
+						.menu
+							nav
+								ul
+									li
+										a href="index.html" Main
+									li
+										a href="work.html" Work
+									li.active
+										a href="blog.html" Blog
+									li
+										a href="contact.html" Contact
+									li
+										a href="team.html" Team
+		section.blog
+			.container
+				.post-link
+					.post-author
+						.post-author-image
+							img src="../images/Team/2.png" alt=""/
+						.post-info-triangle-and-author
+							.post-info-triangle
+							.post-info-author
+								| Dmitry Zhlobo
+					.post-info
+						a.post-info-title href="post.html"
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						.post-content
+						.post-info-date
+							| 22:30:23 Feb, 15, 2015
+				.post-link
+					.post-author
+						.post-author-image
+							img src="../images/Team/2.png" alt=""/
+						.post-info-triangle-and-author
+							.post-info-triangle
+							.post-info-author
+								| Egor Vorobiev
+					.post-info
+						a.post-info-title href="#"
+							| Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						.post-info-date
+							| 22:30:23 Feb, 15, 2015
+
+
+		footer
+			.social-container
+				.social
+					.item FACEBOOK
+					.item TWITTER
+					.item GITHUB
+			.location
+				.item  Street 20, Minsk, Belarus
+				.item  datarockets@datarockets.com
+				.item  +375 (29) 123 456 7
+		script src="../vendor/jquery/dist/jquery.min.js"
+		script src="../js/app.js"
+		javascript:
+			$(function(){
+				var content = $('.post-content');
+				content.hide();
+				$('.post-read-button').on('click', function(e){
+					e.preventDefault();
+					content.show();
+				});
+			});
