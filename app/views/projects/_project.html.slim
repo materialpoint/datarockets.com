@@ -1,9 +1,0 @@
-.projects__item
-  = image_tag(project.preview_image.image.url, class: "projects__item__img") if project.preview_image.present?
-  h3.projects__item__name
-    = link_to project.name, project
-  .projects__item__description
-    = project.preview_description
-  .projects__tags
-    ul.tags
-      = render project.tags

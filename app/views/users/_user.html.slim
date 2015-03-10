@@ -1,9 +1,0 @@
-li.teamlist__item
-  .teamlist__item__avatar
-    = image_tag user.avatar.image.url(:large) if user.avatar
-  .teamlist__item__descr
-    h3.teamlist__item__name = user.name
-    h4.teamlist__item__status = user.member_information.title
-    p = user.member_information.description
-    .teamlist__item__descr__social
-      = render_social_icons_for(user)

@@ -1,8 +1,0 @@
-.section--team
-  .section--inner
-    .section__title.section__title--team Team
-    .section--team__users
-      = render partial: 'teams/landing_team_member', collection: User.includes_all, as: :member
-  .section--team__btn
-    .btn-line.btn-line--red
-      = link_to 'Chat with us', "skype:?chat&blob=lkmJnvyHYJhFMSAfroQzCdA6KCInukJ3ZSDua53Pxz0G4yacbHye2G9DuDkxtq5tBQnV6yJzPL4BNJg"
