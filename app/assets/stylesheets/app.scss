@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import '../vendor/socicon/socicon';
 @import '../vendor/icomoon/dist/css/icomoon';
 body {
@@ -47,19 +48,12 @@ body {
 		width: 1024px;
 		margin: 0 auto;
 	}
-	header {
-		@include clearfix();
-		@import 'logotype';
-		.navigation {
-			@import 'contact';
-			@import 'menu';
-		}
-	}
+	@import "components/header";
 	@import "team/team";
 	@import "team/developer";
 	@import "contact/contact";
 	@import "work/work";
-	@import "main";
+	@import "main/main";
 	@import "blog/blog";
-	@import "footer";
+	@import "components/footer";
 }

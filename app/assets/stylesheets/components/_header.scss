@@ -1,0 +1,81 @@
+header {
+	@include clearfix();
+	.logotype {
+		border-bottom: 3px solid lighten($m1-color, 20%);
+		font-family: $h-ff;
+		.company {
+			font-size: 24px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		.slogan {
+			font-size: 20px;
+			margin-bottom: 10px;
+			margin-left: 20px;
+		}
+	}
+	.navigation {
+		.contact {
+			float: left;
+			nav {
+				ul {
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					@include clearfix();
+					li {
+						font-size: 13px;
+						margin-right: 20px;
+						float: left;
+						padding: 10px 0;
+						padding-right: 20px;
+						.title {
+							margin-bottom: 5px;
+						}
+						a {
+							text-decoration: none;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		.menu {
+			@include clearfix();
+			nav {
+				font-family: $h-ff;
+				float: right;
+				ul {
+					@include clearfix();
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					li {
+						float: left;
+						border-top: 4px solid $m1-color;
+						&.active {
+							border-top: 4px solid $m2-color;
+						}
+						a {
+							font-weight: normal;
+							font-size: 16px;
+							display: block;
+							padding: 10px 25px;
+							// color: $m2-color;
+							color: #333;
+							text-transform: uppercase;
+							text-decoration: none;
+							background: $m1-color;
+							transition: all .2s ease;
+
+							&:hover {
+								color: #fff;
+								background: $m2-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

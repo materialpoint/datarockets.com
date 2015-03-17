@@ -1,5 +1,19 @@
 .team {
 	margin-top: 40px;
+	.socicons {
+		margin-top: 15px;
+		margin-left: 30px;
+		.socicon {
+			text-decoration: none;
+			margin-right: 15px;
+			margin-bottom: 10px;
+			font-size: 20px;
+			color: $m2-color;
+			&:hover {
+				color: $m1-color;
+			}
+		}
+	}
 	.heading-seo {
 		@include clearfix();
 		.heading {
@@ -74,6 +88,11 @@
 		.developer {
 			&.join-us {
 				@include clearfix();
+				.about {
+					margin-top: 10px;
+					border-top: 3px solid $m1-color;
+					padding-top: 10px;
+				}
 				.question-container {
 					background: url('http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/magic-marker-icons-alphanumeric/114653-magic-marker-icon-alphanumeric-question-mark1-ps.png'), $m1-color;
 					background-repeat: no-repeat, repeat;
@@ -83,6 +102,15 @@
 					height: 200px;
 					border-radius: 50%;
 					margin: 0 auto 10px auto;
+				}
+				.join-us-button {
+					@include btn();
+					display: block;
+					text-align: center;
+					margin-top: 34px;
+				}
+				#joinUsModal {
+					@include hidden();
 				}
 			}
 			margin-bottom: 40px;
@@ -133,3 +161,4 @@
 		}
 	}
 }
+@import 'modal-team';
