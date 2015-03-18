@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
-  layout 'landing'
+  layout 'application'
 
   def show
     @page = Page.find(params[:id])

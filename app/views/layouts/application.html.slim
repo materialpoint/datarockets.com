@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+doctype html
 html lang="en"
 	head
 		meta charset="UTF-8"/
@@ -7,10 +7,9 @@ html lang="en"
 		link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,900"/
 		link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700"/
 		link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"/
-		link rel="stylesheet" href="../vendor/normalize.css/normalize.css"/
-		link rel="stylesheet" href="../vendor/icomoon/dist/css/style.css"/
-		link rel="stylesheet" href="../assets/css/app.css"/
-		title Blog
+		link rel="stylesheet" href="vendor/normalize.css/normalize.css"/
+		link rel="stylesheet" href="assets/css/app.css"/
+		title Main
 	body
 		section.main
 			.container
@@ -35,33 +34,17 @@ html lang="en"
 						.menu
 							nav
 								ul
-									li
-										a href="index.html" Main
+									li.active
+										a href="main.html" Main
 									li
 										a href="work.html" Work
 									li
 										a href="blog.html" Blog
 									li
 										a href="contact.html" Contact
-									li.active
+									li
 										a href="team.html" Team
-		section.developer-page
-			.container
-				.inner-container
-					.developer-page-name
-						| Dmitry Zhlobo
-					.developer-page-status
-						| CTO
-					.developer-page-description
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis culpa, iste atque! Iure cumque voluptatem a magni, in nemo animi ad ipsum vitae, laborum nesciunt. Dicta pariatur harum obcaecati minima at voluptatem ut vero. Odio unde tenetur eum repellendus autem tempore facere harum repellat libero? Quaerat nostrum aliquam reprehenderit eum?
-					.developer-page-contacts
-						ul
-							li
-								i.icon-github-3
-							li
-								i.icon-facebook
-							li
-								i.icon-youtube
+= yield 
 		footer
 			.social-container
 				.social
@@ -74,12 +57,3 @@ html lang="en"
 				.item  +375 (29) 123 456 7
 		script src="../vendor/jquery/dist/jquery.min.js"
 		script src="../js/app.js"
-		javascript:
-			$(function(){
-				var content = $('.post-content');
-				content.hide();
-				$('.post-read-button').on('click', function(e){
-					e.preventDefault();
-					content.show();
-				});
-			});
