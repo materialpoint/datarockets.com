@@ -1,43 +1,27 @@
-.blog__articles {
+.blog {
 	margin-top: 50px;
-	.blog__articles__item {
+	.post-link {
 		@include clearfix();
 		margin-bottom: 80px;
-		.blog__articles__item__author {
+		.post-author {
 			float: left;
 			width: 140px;
 			padding-left: 40px;
-			.blog__articles__item__author__image {
+			&-image {
 				margin-top: 10px;
 				img {
 					max-width: 100%;
 					border-radius: 50%;
 				}
 			}
-			.blog__articles__item__author__name {
-				@include clearfix();
-				.blog__articles__item__author__name__triangle {
-					float: left;
-					margin-top: 9px;
-					margin-right: 10px;
-					@include r-triangle(8px, 8px);
-				}
-				.blog__articles__item__author__name__title {
-					float: left;
-					font-weight: bold;
-					text-transform: uppercase;
-					margin-top: 10px;
-					font-size: 12px;
-				}
-			}
 		}
-		.blog__articles__item__information {
+		.post-info {
 			float: right;
 			width: 760px;
 			border-left: 10px solid $m1-color;
 			padding-left: 35px;
 			padding-bottom: 15px;
-			.blog__articles__item__information__link {
+			&-title {
 				font-size: 45px;
 				font-weight: bold;
 				font-family: $h-ff;
@@ -48,19 +32,46 @@
 					color: $m1-color;
 				}
 			}
-			.blog__articles__item__information__content {
+			.post-content {
 				img {
 					@extend .img-responsive;
 					margin: 15px 0;
 				}
 			}
-			.blog__articles__item__information__date {
+			.post-read {
+				margin: 20px 0 25px 0;
+				&-button {
+					@include btn();
+					font-size: 16px;
+					font-family: $h-ff;
+					font-weight: normal;
+				}
+			}
+			&-date {
 				margin-top: 10px;
 				margin-bottom: 5px;
 				text-transform: uppercase;
 				font-weight: bold;
 				font-size: 12px;
 			}
+			&-triangle-and-author {
+				@include clearfix();
+				.post-info-triangle {
+					float: left;
+					margin-top: 9px;
+					margin-right: 10px;
+					@include r-triangle(8px, 8px);
+				}
+				.post-info-author {
+					float: left;
+					font-weight: bold;
+					text-transform: uppercase;
+					margin-top: 10px;
+					font-size: 12px;
+				}
+			}
 		}
 	}
+	@import 'comment-add.scss';
+	@import 'comment.scss';
 }
