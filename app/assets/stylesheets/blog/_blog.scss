@@ -47,14 +47,14 @@
 					font-weight: normal;
 				}
 			}
-			&-date {
+			&.post-info-date {
 				margin-top: 10px;
 				margin-bottom: 5px;
 				text-transform: uppercase;
 				font-weight: bold;
 				font-size: 12px;
 			}
-			&-triangle-and-author {
+			&.post-info-triangle-and-author {
 				@include clearfix();
 				.post-info-triangle {
 					float: left;
