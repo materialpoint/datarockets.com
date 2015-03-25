@@ -35,15 +35,15 @@ html lang="en"
             nav
               ul
                 li.active
-                  a href="main.html" Main
+                  = link_to 'Main', root_path
                 li
-                  a href="work.html" Work
+                  = link_to 'Work', projects_path
                 li
-                  a href="blog.html" Blog
+                  = link_to 'Blog', blog_root_path
                 li
-                  a href="contact.html" Contact
+                  = link_to 'Contact', new_client_contact_path
                 li
-                  a href="team.html" Team
+                  = link_to 'Team', team_path
     = yield
     footer
       .social-container
