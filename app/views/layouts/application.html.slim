@@ -1,14 +1,59 @@
 doctype html
-html
+html lang="en"
   head
-    = render "layouts/section_head"
+    meta charset="UTF-8"/
+    meta name="viewport" content="width=device-width, initial-scale=1"/
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700"/
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,900"/
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700"/
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"/
+    link rel="stylesheet" href="vendor/normalize.css/normalize.css"/
+    link rel="stylesheet" href="assets/css/app.css"/
+    = stylesheet_link_tag 'app'
+    title Main
   body
-    div class="line line#{class_for_line}"
-    .section--inner
-      .header--wrapper
-        = render 'layouts/header_menu'
-      section
-        = yield
-    = render "layouts/popup"
-    = render "layouts/notification"
-    = render "layouts/counters"
+    .container
+      header
+        .logotype
+          .company
+            | datarockets
+        .navigation
+          .contact
+            nav
+              ul
+                li
+                  .title Contact Us
+                  a href="#" datarockets@gmail.com
+
+                li
+                  .title Follow Us
+                  a href="#" twitter.com/datarockets
+                li
+                  .title Sunscribe Us
+                  a href="#" youtube.com/datarockets
+          .menu
+            nav
+              ul
+                li.active
+                  a href="main.html" Main
+                li
+                  a href="work.html" Work
+                li
+                  a href="blog.html" Blog
+                li
+                  a href="contact.html" Contact
+                li
+                  a href="team.html" Team
+    = yield
+    footer
+      .social-container
+        .social
+          .item FACEBOOK
+          .item TWITTER
+          .item GITHUB
+      .location
+        .item  Street 20, Minsk, Belarus
+        .item  datarockets@datarockets.com
+        .item  +375 (29) 123 456 7
+    script src="../vendor/jquery/dist/jquery.min.js"
+    script src="../js/app.js"
