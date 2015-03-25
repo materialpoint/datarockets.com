@@ -1,0 +1,56 @@
+// Mixins
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Hidden
+@mixin hidden(){
+    display: none;
+    visibility: hidden;
+}
+
+// Heading
+@mixin heading(){
+	font-family: $h-ff;
+	font-weight: 900;
+	margin: 0 0 10px 0;
+	padding: 0;
+	font-size: 120px;
+	text-transform: uppercase;
+}
+
+// Right Triangle
+@mixin r-triangle($border-width, $border-height){
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $border-height 0 $border-height $border-width;
+    border-color: transparent transparent transparent #f3d885;
+}
+
+// Button
+@mixin btn(){
+    padding: 5px 10px;
+    background: $m1-color;
+    display: inline-block;
+    text-decoration: none;
+    color: $m2-color;
+    font-weight: bold;
+    &:hover {
+        cursor: pointer;
+    }
+}
+// Placeholder
+@mixin placeholder() {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

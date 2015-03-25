@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
 
-  resources :client_contacts, only: [:create]
+  resources :client_contacts, only: [:new, :create]
 
   namespace :admin do
     root '/admin#index'

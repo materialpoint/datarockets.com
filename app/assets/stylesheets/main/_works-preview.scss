@@ -1,0 +1,29 @@
+.works-preview {
+	margin-bottom: 30px;
+	h2 {
+		@include heading();
+		font-size: 65px;
+		margin: 10px 0 0;
+	}
+	.works {
+		@include clearfix();
+		.work {
+			float: left;
+			width: 23%;
+			overflow: hidden;
+			box-sizing: border-box;
+			margin-right: 27px;
+			margin-bottom: 20px;
+			img {
+				max-width: 100%;
+			}
+			&:nth-child(4n) {
+				margin-right: 0;
+				float: right;
+			}
+		}
+	}
+	.watch-all-button {
+		@include btn();
+	}
+}

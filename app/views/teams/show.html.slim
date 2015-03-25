@@ -1,2 +1,10 @@
-ul.teamlist
-  = render @team
+section.team
+    .container
+        .heading-seo
+            .heading
+                h2 Team
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores et at quos repudiandae excepturi ratione, nostrum eligendi placeat nobis nihil.
+            .seos
+              = render partial: 'users/seo', collection: @seo
+        .developers
+          = render partial: 'users/developer', collection: @developers

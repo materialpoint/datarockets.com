@@ -1,7 +1,7 @@
 class Blog::PostsController < ApplicationController
-  skip_before_action :authenticate_user! 
+  skip_before_action :authenticate_user!
 
-  layout 'blog'
+  layout 'application'
 
   def index
     @posts = Post.includes_all.reverse_all

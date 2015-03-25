@@ -1,0 +1,9 @@
+.main {
+	.content {
+		margin-top: 30px;
+		@include clearfix();
+		@import 'about';
+		@import 'aside/aside';
+	}
+	@import 'works-preview';
+}

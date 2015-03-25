@@ -1,6 +1,10 @@
 class ClientContactsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:create]
+  skip_before_action :authenticate_user!, only: [:new, :create]
   protect_from_forgery except: :create
+
+  def new
+    @client_contact=ClientContact.new
+  end
 
   def create
     @client_contact = ClientContact.create(clien_contact_params)

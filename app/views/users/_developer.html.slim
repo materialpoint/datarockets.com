@@ -1,3 +1,11 @@
-li.project__authors__item
-  = image_tag developer.avatar.image.url
-  span = developer.name
+.developer
+  img class="image img-responsive" src="../images/Team/1.png" alt=""/
+  .triangle-name-status
+    .triangle
+    .name-status
+      .name
+         = developer.name
+      .status
+         = developer.member_information.title
+  .about
+     = developer.member_information.description

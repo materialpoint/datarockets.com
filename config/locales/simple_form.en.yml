@@ -1,7 +1,7 @@
 en:
   simple_form:
-    placeholders:
+    labels:
       client_contact:
-        name: 'What is your name?'
-        email: 'your@email.com'
-        description: 'What do you want to ask us?'
+        name: 'Name:'
+        email: 'Email:'
+        description: 'Question?!'

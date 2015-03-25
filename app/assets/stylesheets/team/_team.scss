@@ -1,0 +1,164 @@
+.team {
+	margin-top: 40px;
+	.socicons {
+		margin-top: 15px;
+		margin-left: 30px;
+		.socicon {
+			text-decoration: none;
+			margin-right: 15px;
+			margin-bottom: 10px;
+			font-size: 20px;
+			color: $m2-color;
+			&:hover {
+				color: $m1-color;
+			}
+		}
+	}
+	.heading-seo {
+		@include clearfix();
+		.heading {
+			float: left;
+			width: 320px;
+			h2 {
+				@include heading();
+				font-size: 150px;
+				line-height: 130px;
+				margin: 0;
+				letter-spacing: 2px;
+				margin-bottom: 50px;
+			}
+			p {
+				margin: 0;
+				font-size: 18px;
+			}
+		}
+		.seos {
+			float: right;
+			padding-left: 33px;
+			border-left: 10px solid $m1-color;
+			.seo {
+				width: 270px;
+				float: left;
+				margin-right: 40px;
+				padding-right: 40px;
+				border-right: 1px solid #ccc;
+				&:nth-child(2n){
+					margin-right: 0;
+					border-right: 0;
+					padding-right: 0;
+				}
+				.image {
+					border-radius: 50%;
+					width:200px;
+					margin: 0 auto;
+				}
+				.triangle-name-status {
+					margin-top: 10px;
+					border-top: 3px solid $m1-color;
+					padding-top: 10px;
+					@include clearfix();
+					.triangle {
+						float: left;
+						@include r-triangle(15px, 10px);
+					}
+					.name-status {
+						width: 90%;
+						float: right;
+						.name {
+							font-size: 20px;
+							font-weight: 900;
+						}
+						.status {
+							font-size: 18px;
+							font-weight: 700;
+							margin-bottom: 5px;
+						}
+					}
+				}
+				.about {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+	.developers {
+		@include clearfix();
+		margin: 50px auto;
+		margin-left: 50px;
+		.developer {
+			&.join-us {
+				@include clearfix();
+				.about {
+					margin-top: 10px;
+					border-top: 3px solid $m1-color;
+					padding-top: 10px;
+				}
+				.question-container {
+					background: url('http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/magic-marker-icons-alphanumeric/114653-magic-marker-icon-alphanumeric-question-mark1-ps.png'), $m1-color;
+					background-repeat: no-repeat, repeat;
+					background-position: center center;
+					background-size: 50% auto;
+					width: 200px;
+					height: 200px;
+					border-radius: 50%;
+					margin: 0 auto 10px auto;
+				}
+				.join-us-button {
+					@include btn();
+					display: block;
+					text-align: center;
+					margin-top: 34px;
+				}
+				#joinUsModal {
+					@include hidden();
+				}
+			}
+			margin-bottom: 40px;
+			width: 270px;
+			float: left;
+			padding-right: 40px;
+			margin-right: 40px;
+			border-right: 1px solid #ccc;
+			&:nth-child(3n) {
+				border-right: 0;
+				margin-right: 0;
+				padding-right: 0;
+			}
+			.image {
+				border-radius: 50%;
+				width: 200px;
+				margin: 0 auto;
+			}
+			.triangle-name-status {
+				margin-top: 10px;
+				border-top: 3px solid $m1-color;
+				padding-top: 10px;
+				@include clearfix();
+				.triangle {
+					float: left;
+					@include r-triangle(15px, 10px);
+				}
+				.name-status {
+					width: 90%;
+					float: right;
+					.name {
+						font-size: 20px;
+						font-weight: 900;
+					}
+					.status {
+						font-size: 18px;
+						font-weight: 700;
+						margin-bottom: 5px;
+					}
+				}
+			}
+			.about {
+				font-size: 13px;
+				background: url(../../images/Team/developer-dotted.png) repeat-x;
+				background-position: bottom center;
+				padding-bottom: 80px;
+			}
+		}
+	}
+}
+@import 'modal-team';

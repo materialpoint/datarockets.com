@@ -1,0 +1,36 @@
+form {
+	width: 400px;
+	textarea {
+		display: block;
+		border-radius: 2px;
+		border: 1px solid #888;
+		font-size: 16px;
+		width: 100%;
+		box-sizing: border-box;
+		outline-color: $m1-color;
+		padding: 2px 5px;
+		color: #333;
+		&.incorrect {
+			border-color: lighten(red, 20%);
+		}
+		&.correct {
+			border-color: lighten(green, 20%);
+		}
+		@include placeholder {
+			color: #888;
+		}
+		& + span {
+			visibility: hidden;
+		}
+	}
+	textarea {
+		resize: vertical;
+	}
+	input[type="submit"] {
+		@include btn();
+		color: #333;
+		display: block;
+		text-transform: uppercase;
+		border: none;
+	}
+}
