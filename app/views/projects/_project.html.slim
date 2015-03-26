@@ -3,5 +3,4 @@
     .work-image
       = image_tag("") if project.preview_image.present?
     .work-description-container
-        .work-view-link
-          = link_to 'View project', project_path(project)
+      = link_to 'View project', project_path(project), class: "work-view-link"
