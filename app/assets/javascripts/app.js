@@ -1,12 +1,13 @@
 $(function(){
 	// PGW MODAL
-	var joinUsButton = $('.team-body').find('.join-us-button');
-	console.log(joinUsButton);
-	joinUsButton.on('click', function(){
-		$.pgwModal({
-			target: '#joinUsModal'
-		});
-	})
+	// var joinUsButton = $('.team-body').find('.join-us-button');
+	// console.log(joinUsButton);
+	// joinUsButton.on('click', function(){
+	// 	$.pgwModal({
+	// 		target: '#joinUsModal'
+	// 	});
+	// });
+
 
 
 	//Sticky Menu
@@ -66,4 +67,12 @@ $(function(){
 	// 	sign.show(500);
 	// 	$(this).height(270);
 	// });
+});
+
+
+
+$(document).ready(function() {
+	$('pre code').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
 });

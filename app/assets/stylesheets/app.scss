@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
-@import '../vendor/socicon/socicon';
-@import '../vendor/icomoon/dist/css/icomoon';
+// @import '../vendor/socicon/socicon';
+// @import '../vendor/icomoon/dist/css/icomoon';
 body {
 	background: $bg-color;
 	-webkit-font-smoothing: antialiased;
@@ -9,7 +9,7 @@ body {
 	font-family: $p-ff;
 	color: $m2-color;
 	img {
-		image-rendering: -webkit-optimize-contrast;
+		// image-rendering: -webkit-optimize-contrast;
 		&.img-responsive {
 			display: block;
 			max-width: 100%;
@@ -49,11 +49,12 @@ body {
 		margin: 0 auto;
 	}
 	@import "components/header";
-	@import "team/team";
-	@import "team/developer";
-	@import "contact/contact";
-	@import "work/work";
-	@import "main/main";
+	// @import "team/team";
+	// @import "team/developer";
+	// @import "contact/contact";
+	@import "work/index";
+	@import "work/show";
+	// @import "main/main";
 	@import "blog/blog";
 	@import "components/footer";
 }
