@@ -116,6 +116,7 @@
 					font-weight: normal;
 				}
 			}
+<<<<<<< HEAD
 			.post-date--tags__container {
 				
 				font-size: 14px;
@@ -153,6 +154,16 @@
 			}
 
 			&-triangle-and-author {
+=======
+			&.post-info-date {
+				margin-top: 10px;
+				margin-bottom: 5px;
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 12px;
+			}
+			&.post-info-triangle-and-author {
+>>>>>>> 55832abd54469cd8d4ddc895b9131edbb09f61cf
 				@include clearfix();
 				.post-info-triangle {
 					float: left;
