@@ -2,25 +2,94 @@
 	margin-top: 50px;
 	.post-link {
 		@include clearfix();
-		margin-bottom: 80px;
-		.post-author {
-			float: left;
-			width: 140px;
-			padding-left: 40px;
-			&-image {
-				margin-top: 10px;
-				img {
-					max-width: 100%;
-					border-radius: 50%;
-				}
-			}
-		}
+		margin-bottom: 50px;
+		// .post-author--container {
+		// 	float: left;
+		// 	width: 140px;
+		// 	padding-left: 40px;
+		// 	.post-author {
+		// 		&-image {
+		// 			margin-top: 10px;
+		// 			img {
+		// 				max-width: 100%;
+		// 				border-radius: 50%;
+		// 			}
+		// 		}
+		// 	}
+		// 	// ===============
+		// 	// Several Authors
+		// 	// ===============
+		// 	// &.several-authors {
+		// 	// 	width: 205px;
+		// 	// 	padding-left: 0;
+		// 	// 	.post-author {
+		// 	// 		@include clearfix();
+		// 	// 		margin-bottom: 10px;
+		// 	// 		.post-author-image {
+		// 	// 			width: 30%;
+		// 	// 			height: auto;
+		// 	// 			float: left;
+		// 	// 		}
+		// 	// 		.post-info-triangle-and-author {
+		// 	// 			float: right;
+		// 	// 			width: 60%;
+		// 	// 			margin-top: 23px;
+		// 	// 			margin-right: 10px;
+		// 	// 			margin-left: 10px;
+		// 	// 			@include clearfix();
+		// 	// 			.post-info-triangle {
+		// 	// 				float: left;
+		// 	// 			}
+		// 	// 			.post-info-author {
+		// 	// 				float: left;
+		// 	// 				font-size: 11px;
+		// 	// 				padding-top: 2px;
+		// 	// 				max-width: 85%;
+		// 	// 				word-break: break-all;
+		// 	// 			}
+		// 	// 		}
+		// 	// 		// ==============
+		// 	// 		// 
+		// 	// 		// ==============
+		// 	// 		// &:nth-child(2n) {
+		// 	// 		// 	.post-author-image {
+		// 	// 		// 		float: right;
+		// 	// 		// 	}
+		// 	// 		// 	.post-info-triangle-and-author {
+		// 	// 		// 		float: left;
+		// 	// 		// 		margin-left: 0;
+		// 	// 		// 		margin-right: 0;
+		// 	// 		// 	}
+		// 	// 		// }
+		// 	// 	}
+		// 	// }
+		// }
 		.post-info {
-			float: right;
-			width: 760px;
+			// float: right;
+			// width: 760px;
 			border-left: 10px solid $m1-color;
 			padding-left: 35px;
 			padding-bottom: 15px;
+			.post-author__container {
+				@include clearfix();
+				margin-top: 20px;
+				.post-author--item {
+					margin-right: 20px;
+					margin-bottom: 10px;
+					.post-triangle {
+						@include r-triangle(10px, 9px);
+						float: left;
+						margin-right: 5px;
+					}
+					float: left;
+					// margin-right: 20px;
+					font-weight: bold;
+					// font-size: 16px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
 			&-title {
 				font-size: 45px;
 				font-weight: bold;
@@ -47,13 +116,42 @@
 					font-weight: normal;
 				}
 			}
-			&-date {
-				margin-top: 10px;
-				margin-bottom: 5px;
-				text-transform: uppercase;
-				font-weight: bold;
-				font-size: 12px;
+			.post-date--tags__container {
+				
+				font-size: 14px;
+				margin: 10px 0;
+
+				@include clearfix();
+
+				.post-date {
+					float: left;
+					margin-right: 10px;
+					// margin-top: 10px;
+					// margin-bottom: 5px;
+					text-transform: uppercase;
+					font-weight: bold;
+
+				}
+
+				.post-tags {
+					float: left;
+						
+					background:$m1-color;
+					padding: 0 5px;
+					font-weight: bold;
+					@include clearfix();
+					.post-tags--item {
+						float: left;
+						margin-right: 10px;
+						&:last-child {
+							margin-right: 0;
+						}
+
+					}
+
+				}
 			}
+
 			&-triangle-and-author {
 				@include clearfix();
 				.post-info-triangle {
