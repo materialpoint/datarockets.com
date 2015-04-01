@@ -5,6 +5,7 @@ section.team
                 h2 Team
                 p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores et at quos repudiandae excepturi ratione, nostrum eligendi placeat nobis nihil.
             .seos
-              = render partial: 'users/seo', collection: @seo
+              = render partial: 'users/seo', collection: @team.seos
         .developers
-          = render partial: 'users/developer', collection: @developers
+          = render partial: 'users/developer', collection: @team.developers
+
