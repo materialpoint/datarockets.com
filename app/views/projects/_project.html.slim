@@ -1,6 +1,5 @@
 .work-item
     .work-image-container
-    .work-image
-      = image_tag("") if project.preview_image.present?
+      = image_tag("https://s3.eu-central-1.amazonaws.com/datarockets/preview_images/original/#{project.preview_image.image_file_name}", class: "work-image") if project.preview_image.present?
     .work-description-container
       = link_to 'View project', project_path(project), class: "work-view-link"
