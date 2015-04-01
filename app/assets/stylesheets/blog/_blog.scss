@@ -49,7 +49,7 @@
 		// 	// 			}
 		// 	// 		}
 		// 	// 		// ==============
-		// 	// 		// 
+		// 	// 		//
 		// 	// 		// ==============
 		// 	// 		// &:nth-child(2n) {
 		// 	// 		// 	.post-author-image {
@@ -116,9 +116,8 @@
 					font-weight: normal;
 				}
 			}
-<<<<<<< HEAD
 			.post-date--tags__container {
-				
+
 				font-size: 14px;
 				margin: 10px 0;
 
@@ -136,7 +135,7 @@
 
 				.post-tags {
 					float: left;
-						
+
 					background:$m1-color;
 					padding: 0 5px;
 					font-weight: bold;
@@ -154,7 +153,6 @@
 			}
 
 			&-triangle-and-author {
-=======
 			&.post-info-date {
 				margin-top: 10px;
 				margin-bottom: 5px;
@@ -163,7 +161,6 @@
 				font-size: 12px;
 			}
 			&.post-info-triangle-and-author {
->>>>>>> 55832abd54469cd8d4ddc895b9131edbb09f61cf
 				@include clearfix();
 				.post-info-triangle {
 					float: left;
