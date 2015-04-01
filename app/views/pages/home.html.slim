@@ -1,64 +1,64 @@
 section.main
-	.container
-		.content
-			.about
-				h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, facilis.
-				hr/
-				img.img-responsive src="http://www.whiltonlocks.co.uk/images/commercial-pic2.jpg" alt=""/
-				.we-care
-					.heading
-						.we We
-						.care care
-					.desc
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos pariatur fugiat quas itaque veniam magnam voluptate, provident labore! Incidunt ea et porro consectetur delectus facilis nemo exercitationem quos, error. Distinctio repellat dignissimos itaque voluptas, delectus dolorem excepturi qui maiores autem? Optio veniam deleniti corrupti possimus quibusdam, fugiat cumque ad obcaecati.
-			aside
-				.aside-services
-					.services-title
-						| Services
-					.services-content
-						ul
-							li
-								| Lorem ipsum dolor sit amet.
-							li
-								| Lorem ipsum dolor sit amet.
-							li
-								| Lorem ipsum dolor sit amet.
-							li
-								| Lorem ipsum dolor sit amet.
+  .container
+    .content
+      .about
+        h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, facilis.
+        hr/
+        img.img-responsive src="http://www.whiltonlocks.co.uk/images/commercial-pic2.jpg" alt=""/
+        .we-care
+          .heading
+            .we We
+            .care care
+          .desc
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos pariatur fugiat quas itaque veniam magnam voluptate, provident labore! Incidunt ea et porro consectetur delectus facilis nemo exercitationem quos, error. Distinctio repellat dignissimos itaque voluptas, delectus dolorem excepturi qui maiores autem? Optio veniam deleniti corrupti possimus quibusdam, fugiat cumque ad obcaecati.
+      aside
+        .aside-services
+          .services-title
+            | Services
+          .services-content
+            ul
+              li
+                | Lorem ipsum dolor sit amet.
+              li
+                | Lorem ipsum dolor sit amet.
+              li
+                | Lorem ipsum dolor sit amet.
+              li
+                | Lorem ipsum dolor sit amet.
 
-				.aside-quality
-					.quality-title
-						| Quality
-					.quality-content
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam molestiae quia quam assumenda, sint dignissimos maxime quaerat error vero laboriosam aperiam cumque autem cum amet ut et consectetur, accusamus minima. Excepturi quaerat, asperiores quidem laborum soluta, officia consequatur consequuntur! At similique quibusdam quod deserunt architecto dolorum autem incidunt, molestiae voluptatem!
-			        .aside-blog
-					.blog-title
-						| Blog
-					.blog-subtitle
-						| Latest Post:
-					.post
-						.post-header
-							.triangle
-							.post-title
-								 = Post.last.title
-						.post-content
-							= Post.last.preview_body
-						.post-datetime
-							span Date:
-							= Post.last.created_at
-						.post-author-container
-							.author
-								span Author:
-								- Post.last.authors.each do |author|
-								  = author.name
-						.post-link
-							= link_to 'Read more', blog_post_path(Post.last)
-
-			.works-preview
-				h2 Works
-				.works
-					= render partial: 'projects/project_landing',
-					  collection: Project.all.sort_by_order.limit(4),
-					  as: :project
-				.watch-all-button
-					= link_to 'Watch all', projects_path
+        .aside-quality
+          .quality-title
+            | Quality
+          .quality-content
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam molestiae quia quam assumenda, sint dignissimos maxime quaerat error vero laboriosam aperiam cumque autem cum amet ut et consectetur, accusamus minima. Excepturi quaerat, asperiores quidem laborum soluta, officia consequatur consequuntur! At similique quibusdam quod deserunt architecto dolorum autem incidunt, molestiae voluptatem!
+              .aside-blog
+          .blog-title
+            | Blog
+          .blog-subtitle
+            | Latest Post:
+          .post
+            .post-header
+              .triangle
+              .post-title
+                 = Post.last.title
+            .post-content
+              = Post.last.preview_body
+            .post-datetime
+              span Date:
+              = Post.last.created_at
+            .post-author-container
+              .author
+                span Author:
+                - Post.last.authors.each do |author|
+                  = author.name
+            .post-link
+              = link_to 'Read more', blog_post_path(Post.last)
+      div style="clear: both"
+      .works-preview
+        h2 Works
+        .works
+          = render partial: 'projects/project_landing',
+            collection: Project.all.sort_by_order.limit(4),
+            as: :project
+        .watch-all-button
+          = link_to 'Watch all', projects_path
