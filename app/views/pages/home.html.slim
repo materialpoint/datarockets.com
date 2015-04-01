@@ -40,28 +40,25 @@ section.main
 						.post-header
 							.triangle
 							.post-title
-								|   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro omnis, nisi cum ipsa atque repellendus. Reiciendis culpa quod ullam aut!
+								 = Post.last.title
 						.post-content
-							|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident iure aspernatur beatae magni vitae tenetur accusantium, nobis aliquid molestias doloremque!
+							= Post.last.preview_body
 						.post-datetime
 							span Date:
-							| 24-Feb-2015 12:20:15
+							= Post.last.created_at
 						.post-author-container
 							.author
 								span Author:
-								a href="#" Dmitry Zhlobo
+								- Post.last.authors.each do |author|
+								  = author.name
 						.post-link
-							a href="#" Read more...
+							= link_to 'Read more', blog_post_path(Post.last)
 
 			.works-preview
-			h2 Works
-			.works
-				.work
-					img src="http://datarockets.com/system/preview_images/images/000/000/006/original/bezagenstva3.png?1412192567" alt=""/
-				.work
-					img src="http://datarockets.com/system/preview_images/images/000/000/005/original/inteltrix2.png?1412190613" alt=""/
-				.work
-					img src="http://datarockets.com/system/preview_images/images/000/000/002/original/salesforce.png?1412193216" alt=""/
-				.work
-					img src="http://datarockets.com/system/preview_images/images/000/000/003/original/gpyWwiGMwUA.jpg?1411901285" alt=""/
-			a.watch-all-button href="work.html" Watch All
+				h2 Works
+				.works
+					= render partial: 'projects/project_landing',
+					  collection: Project.all.sort_by_order.limit(4),
+					  as: :project
+				.watch-all-button
+					= link_to 'Watch all', projects_path
