@@ -35,6 +35,7 @@ group :development do
   gem 'quiet_assets'
   gem 'thin'
   gem 'guard-livereload', require: false
+  gem 'capistrano-db-tasks', require: false
 end
 
 group :development, :test do

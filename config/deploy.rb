@@ -1,3 +1,5 @@
+require 'capistrano-db-tasks'
+
 lock '3.3.5'
 
 set :rbenv_type, :user
