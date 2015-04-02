@@ -9,6 +9,7 @@ body {
 	text-rendering: optimizeSpeed;
 	font-family: $p-ff;
 	color: $m2-color;
+    margin: 0 auto;
 	img {
 		image-rendering: -webkit-optimize-contrast;
 		&.img-responsive {
