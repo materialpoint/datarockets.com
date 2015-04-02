@@ -31,7 +31,7 @@ section.main
             | Quality
           .quality-content
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam molestiae quia quam assumenda, sint dignissimos maxime quaerat error vero laboriosam aperiam cumque autem cum amet ut et consectetur, accusamus minima. Excepturi quaerat, asperiores quidem laborum soluta, officia consequatur consequuntur! At similique quibusdam quod deserunt architecto dolorum autem incidunt, molestiae voluptatem!
-              .aside-blog
+        .aside-blog
           .blog-title
             | Blog
           .blog-subtitle
@@ -60,5 +60,4 @@ section.main
           = render partial: 'projects/project_landing',
             collection: Project.all.sort_by_order.limit(4),
             as: :project
-        .watch-all-button
-          = link_to 'Watch all', projects_path
+        = link_to 'Watch all', projects_path, class: "watch-all-button"
