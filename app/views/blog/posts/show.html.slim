@@ -1,0 +1,16 @@
+body.blog-body
+        section.blog
+            .container
+                .post-link
+                    .post-info
+                        .post-info-title
+                            = @post.title
+                        .post-content
+                            = @post.body
+                                .post-date
+                                    = @post.created_at
+                                .post-tags
+                                    .post-tags--item
+                                        | HTML5
+                            .post-author__container
+                              = render partial: 'users/author', collection: @post.authors
