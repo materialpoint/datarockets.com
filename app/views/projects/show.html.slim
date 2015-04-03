@@ -1,0 +1,25 @@
+body
+        section.work--show
+            .container
+                h2.project--name__h2
+                       = @project.name
+                .content
+                    .project-developers__container
+                        .project__container
+                            = image_tag "https://s3.eu-central-1.amazonaws.com/datarockets/preview_images/original/#{@project.preview_image.image_file_name}" , class: "img-responsive" if @project.preview_image.present?
+                        .developers__container
+                            .project--link__container
+                                .project--title
+                                    | Project link:
+                                a href="#" http://someaddress.com
+                            .developers--title
+                               | Developers:
+                            = render partial: 'users/participant', collection: @project.developers
+                    .tools__container
+                        h3.tools--heading__h3
+                            | Tools
+                        .tools
+                            .row
+                                - @project.tags.each do |tag|
+                                 .tool
+                                    = tag.name

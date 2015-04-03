@@ -1,0 +1,47 @@
+section.work {
+	.works-container {
+		@include clearfix();
+		margin: 0 auto;
+		margin-top: 50px;
+		.work-item {
+			font-family: $h-ff;
+			padding-bottom: 50px;
+			box-sizing: border-box;
+			float: left;
+			width: 30%;
+			margin-right: 51px;
+			margin-bottom: 30px;
+			position: relative;
+			&:nth-child(3n) {
+				margin-right: 0;
+				float: right;
+			}
+			.work-image-container {
+				overflow: hidden;
+				max-height: 200px;
+				background: #000;
+				.work-image {
+					max-width: 100%;
+				}
+			}
+			.work-description-container {
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				left: 0;
+				text-align: center;
+				.work-view-link {
+					@include btn();
+					display: block;
+					width: 100%;
+					font-size: 16px;
+					padding: 10px 0;
+					border-top: 2px solid $m1-color;
+					text-transform: uppercase;
+					background: #333;
+					color: $m1-color;
+				}
+			}
+		}
+	}
+}
