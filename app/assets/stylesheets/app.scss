@@ -2,12 +2,14 @@
 @import 'mixins';
 @import '../vendor/socicon/socicon';
 @import '../vendor/icomoon/dist/css/icomoon';
+// = require normalize;
 body {
 	background: $bg-color;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeSpeed;
 	font-family: $p-ff;
 	color: $m2-color;
+    margin: 0 auto;
 	img {
 		image-rendering: -webkit-optimize-contrast;
 		&.img-responsive {
@@ -18,7 +20,7 @@ body {
 	}
 	a {
 		font-weight: bold;
-		color: darken($m1-color, 30%); 
+		color: darken($m1-color, 30%);
 		&:hover {
 			color: darken($m1-color, 40%);
 		}
