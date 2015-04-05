@@ -4,7 +4,14 @@ header {
 		border-bottom: 3px solid lighten($m1-color, 20%);
 		font-family: $h-ff;
 		.company {
-			font-size: 24px;
+            .company__link {
+                font-size: 24px;
+                text-decoration: none;
+                color: $m2-color;
+                &:hover {
+                    color: $m2-color;
+                }
+            }
 			margin-top: 5px;
 			margin-bottom: 5px;
 		}
@@ -52,9 +59,14 @@ header {
 					padding: 0;
 					li {
 						float: left;
-						border-top: 4px solid $m1-color;
+						// border-top: 4px solid $m1-color;
 						&.active {
-							border-top: 4px solid $m2-color;
+							// border-top: 4px solid $m2-color;
+                            // background:$m2-color;
+                            a {
+                                background: $m2-color;
+                                color:#fff;
+                            }
 						}
 						a {
 							font-weight: normal;

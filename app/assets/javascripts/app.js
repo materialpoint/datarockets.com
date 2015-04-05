@@ -1,12 +1,21 @@
 $(function(){
 	// PGW MODAL
-	var joinUsButton = $('.team-body').find('.join-us-button');
+	var joinUsButton = $('.join-us-button');
 	console.log(joinUsButton);
 	joinUsButton.on('click', function(){
 		$.pgwModal({
 			target: '#joinUsModal'
 		});
 	})
+
+    // Sticky Footer
+     var docHeight = $(window).height();
+     var footerHeight = $('#footer').height();
+     var footerTop = $('#footer').position().top + footerHeight;
+     if (footerTop < docHeight) {
+      $('#footer').css('margin-top', 24 + (docHeight - footerTop) + 'px');
+     }
+
 
 
 	//Sticky Menu

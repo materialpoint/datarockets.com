@@ -7,6 +7,7 @@ html lang="en"
     link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,700,900"/
     link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald:400,700"/
     link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700"/
+    = stylesheet_link_tag 'normalize'
     = stylesheet_link_tag 'app'
     title Main
   body
@@ -14,7 +15,8 @@ html lang="en"
       header
         .logotype
           .company
-            | datarockets
+             a.company__link href="/"
+                | datarockets
         .navigation
           .contact
             nav
@@ -43,7 +45,7 @@ html lang="en"
                 li
                   = active_link_to 'Team', team_path, :wrap_tag => :li
     = yield
-    footer
+    footer#footer
       .social-container
         .social
           .item FACEBOOK
@@ -54,4 +56,5 @@ html lang="en"
         .item  datarockets@datarockets.com
         .item  +375 (29) 123 456 7
     = javascript_include_tag 'jquery.min.js'
+    = javascript_include_tag 'pgwmodal.min.js'
     = javascript_include_tag 'app.js'
