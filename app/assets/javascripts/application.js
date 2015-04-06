@@ -4,6 +4,7 @@
 //= require jquery-fileupload/basic
 //= require jquery_nested_form
 //= require_tree .
+//= require pgwmodal.min.js
 
 $(document)
     .on('page:change', function() {
