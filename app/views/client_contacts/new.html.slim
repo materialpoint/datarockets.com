@@ -2,21 +2,22 @@ section.contact
       .container
         h2.contact-h2 Contact Us
         .contact-form-container
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laborum praesenti
+          .contact-form-description-container
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laborum praesenti
           = render 'form'
       .contact-info-container
           .contact-info-item
             .contact-info-title
-              | E-mail
-            .contact-info
-              | datarockets@gmail.com
+              | E-mail:
+            a.contact-info href="mailto:hello@datarockets.com"
+              | hello@datarockets.com
           .contact-info-item
             .contact-info-title
-              | Phone
-            .contact-info
-              | + 375 (29) 123 - 45 - 67
-          .contact-info-item
-            .contact-info-title
-              | Skype
-            .contact-info
+              | Skype:
+            a.contact-info href="skype:?chat&blob=lkmJnvyHYJhFMSAfroQzCdA6KCInukJ3ZSDua53Pxz0G4yacbHye2G9DuDkxtq5tBQnV6yJzPL4BNJg"
               | datarockets
+          .contact-info-item
+            .contact-info-title
+              | Phone:
+            .contact-info
+              | +375 (29) 861 54 34
