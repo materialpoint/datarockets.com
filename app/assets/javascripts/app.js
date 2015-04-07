@@ -1,12 +1,11 @@
 $(function(){
 	// PGW MODAL
-	var joinUsButton = $('.join-us-button');
-	console.log(joinUsButton);
+    var joinUsButton = $('.join-us-button');
 	joinUsButton.on('click', function(){
 		$.pgwModal({
 			target: '#joinUsModal'
 		});
-	})
+	});
 
     // Sticky Footer
      var docHeight = $(window).height();
@@ -16,7 +15,10 @@ $(function(){
       $('#footer').css('margin-top', 24 + (docHeight - footerTop) + 'px');
      }
 
-
+     // Team: Developers Match Heigth
+     var developer = $('.team').find('.developer').not('.join-us');
+     developer.matchHeight();
+     // console.log(developer);
 
 	//Sticky Menu
 	// var navOffset = $('.blog-body .navigation').offset().top;
