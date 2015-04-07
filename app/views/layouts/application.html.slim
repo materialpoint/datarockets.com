@@ -32,16 +32,16 @@ html lang="en"
           .menu
             nav
               ul
-                li.active
-                  = link_to 'Main', root_path
                 li
-                  = link_to 'Work', projects_path
+                  = active_link_to 'Main', root_path, :wrap_tag => :li, :active => [['pages', 'home']]
                 li
-                  = link_to 'Blog', blog_root_path
+                  = active_link_to 'Work', projects_path, :wrap_tag => :li
                 li
-                  = link_to 'Contact', new_client_contact_path
+                  = active_link_to 'Blog', blog_root_path, :wrap_tag => :li
                 li
-                  = link_to 'Team', team_path
+                  = active_link_to 'Contact', new_client_contact_path, :wrap_tag => :li
+                li
+                  = active_link_to 'Team', team_path, :wrap_tag => :li
     = yield
     footer
       .social-container
