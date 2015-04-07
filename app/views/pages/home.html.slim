@@ -45,7 +45,7 @@ section.main
               = Post.last.preview_body
             .post-datetime
               span Date:
-              = Post.last.created_at
+              = Post.last.created_at.to_formatted_s(:long)
             .post-author-container
               .author
                 span Author:

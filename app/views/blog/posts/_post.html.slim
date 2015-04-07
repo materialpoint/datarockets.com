@@ -7,7 +7,7 @@ section.blog
                           = post.preview_body
                         .post-date--tags__container
                             .post-date
-                                = post.created_at
+                                = post.created_at.to_formatted_s(:long)
                             .post-tags
                                 .post-tags--item
                                     | HTML5
