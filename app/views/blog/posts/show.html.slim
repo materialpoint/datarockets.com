@@ -6,7 +6,7 @@ body.blog-body
                         .post-info-title
                             = @post.title
                         .post-content
-                            = @post.body
+                            = sanitize(@post.body)
                                 .post-date
                                     = @post.created_at
                                 .post-tags
