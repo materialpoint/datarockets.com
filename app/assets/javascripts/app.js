@@ -7,18 +7,10 @@ $(function(){
 		});
 	});
 
-    // Sticky Footer
-     var docHeight = $(window).height();
-     var footerHeight = $('#footer').height();
-     var footerTop = $('#footer').position().top + footerHeight;
-     if (footerTop < docHeight) {
-      $('#footer').css('margin-top', 24 + (docHeight - footerTop) + 'px');
-     }
-
-     // Team: Developers Match Heigth
-     var developer = $('.team').find('.developer').not('.join-us');
-     developer.matchHeight();
-     // console.log(developer);
+    // Team: Developers Match Heigth
+    var developer = $('.team').find('.developer').not('.join-us');
+    developer.matchHeight();
+    // console.log(developer);
 
 	//Sticky Menu
 	// var navOffset = $('.blog-body .navigation').offset().top;

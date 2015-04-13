@@ -1,0 +1,17 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+.sticky-footer-wrapper {
+    min-height: 100%;
+    margin-bottom: -283px;
+    &:after {
+        content: "";
+        display: block;
+    }
+}
+#footer,
+.sticky-footer-wrapper:after {
+  height: 283px;
+}
