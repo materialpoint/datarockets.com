@@ -2,15 +2,15 @@ section.main
   .container
     .content
       .about
-        h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, facilis.
+        h2 We are datarockets. We like to solve challenging tasks in area of web development and data science.
         hr/
-        img.img-responsive src="http://www.whiltonlocks.co.uk/images/commercial-pic2.jpg" alt=""/
+        img.img-responsive src="http://cs624028.vk.me/v624028273/25e2a/oV0JkeJOE5U.jpg" alt=""/
         .we-care
           .heading
             .we We
             .care care
           .desc
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos pariatur fugiat quas itaque veniam magnam voluptate, provident labore! Incidunt ea et porro consectetur delectus facilis nemo exercitationem quos, error. Distinctio repellat dignissimos itaque voluptas, delectus dolorem excepturi qui maiores autem? Optio veniam deleniti corrupti possimus quibusdam, fugiat cumque ad obcaecati.
+            p We care about your business trying to realise the most ambitious ideas. We share our own vision, ideas to make you business grow.
       aside
         .aside-services
           .services-title
@@ -18,19 +18,19 @@ section.main
           .services-content
             ul
               li
-                | Lorem ipsum dolor sit amet.
+                | web development
               li
-                | Lorem ipsum dolor sit amet.
+                | data science researches
               li
-                | Lorem ipsum dolor sit amet.
+                | security code review
               li
-                | Lorem ipsum dolor sit amet.
+                | web design
 
         .aside-quality
           .quality-title
             | Quality
           .quality-content
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam molestiae quia quam assumenda, sint dignissimos maxime quaerat error vero laboriosam aperiam cumque autem cum amet ut et consectetur, accusamus minima. Excepturi quaerat, asperiores quidem laborum soluta, officia consequatur consequuntur! At similique quibusdam quod deserunt architecto dolorum autem incidunt, molestiae voluptatem!
+            p End product quality is our main priority. We write clean and robust code, easy to read and maintain. We use a lot of tools to monitor and increase code quality such as: Circle CI, Rollbar, Codeclimate, New Relic.
         .aside-blog
           .blog-title
             | Blog
@@ -45,7 +45,7 @@ section.main
               = Post.last.preview_body
             .post-datetime
               span Date:
-              = Post.last.created_at
+              = Post.last.created_at.to_formatted_s(:long)
             .post-author-container
               .author
                 span Author:
@@ -55,9 +55,9 @@ section.main
               = link_to 'Read more', blog_post_path(Post.last)
       div style="clear: both"
       .works-preview
-        h2 Works
+        h2 Projects
         .works
           = render partial: 'projects/project_landing',
             collection: Project.all.sort_by_order.limit(4),
             as: :project
-        = link_to 'Watch all', projects_path, class: "watch-all-button"
+        = link_to 'See all', projects_path, class: "watch-all-button"

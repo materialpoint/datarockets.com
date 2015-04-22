@@ -1,13 +1,16 @@
 $(function(){
 	// PGW MODAL
-	var joinUsButton = $('.team-body').find('.join-us-button');
-	console.log(joinUsButton);
+    var joinUsButton = $('.join-us-button');
 	joinUsButton.on('click', function(){
 		$.pgwModal({
 			target: '#joinUsModal'
 		});
-	})
+	});
 
+    // Team: Developers Match Heigth
+    var developer = $('.team').find('.developer').not('.join-us');
+    developer.matchHeight();
+    // console.log(developer);
 
 	//Sticky Menu
 	// var navOffset = $('.blog-body .navigation').offset().top;

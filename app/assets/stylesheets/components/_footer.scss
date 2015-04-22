@@ -1,39 +1,41 @@
 footer {
-	background: $m3-color;
-	text-align: center;
-	.social-container {
-		background: $m4-color;
-		.social {
-			@include clearfix ();
-			width: 660px;
-			margin: 0 auto;
-			font-size: 18px;
-			.item {
-				float: left;
-				text-align: center;
-				width: 220px;
-				padding: 55px 0;
-				color: #fff;
-				
-				&:hover {
-					cursor: pointer;
-					background-color: $m1-color;
-					color: $m2-color;
-				}
-			}
-		}
-	}
-	.location {
-		padding: 40px 0;
-		background: #222;
-		text-transform: uppercase;
-		color: #fff;
-		font-size: 14px;
-		.item {
-			margin-bottom: 10px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
+    background: $m3-color;
+    text-align: center;
+    margin: 0;
+    .social-container {
+        background: $m4-color;
+        .social {
+            @include clearfix ();
+            width: 660px;
+            margin: 0 auto;
+            font-size: 18px;
+            .item {
+                text-decoration: none;
+                float: left;
+                text-align: center;
+                width: 220px;
+                padding: 55px 0;
+                color: #fff;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $m1-color;
+                    color: $m2-color;
+                }
+            }
+        }
+    }
+    .location {
+        padding: 40px 0;
+        background: #222;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        .item {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

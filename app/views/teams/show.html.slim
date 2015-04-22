@@ -3,9 +3,35 @@ section.team
         .heading-seo
             .heading
                 h2 Team
-                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores et at quos repudiandae excepturi ratione, nostrum eligendi placeat nobis nihil.
+                p  We’re a team of developers. We write robust code for smart web applications.
             .seos
               = render partial: 'users/seo', collection: @team.seos
         .developers
           = render partial: 'users/developer', collection: @team.developers
+
+          .developer.join-us
+            .question-container
+            .about
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ipsam iste quod, facere, fugiat deserunt quidem doloremque.
+              a.join-us-button href="#" Join Us
+            #joinUsModal
+              h2 Join Us
+              .contact-form-container
+                p Have knowledge in area of our expertise? Interested in self development and experience exchange? Wanna be a datarocker? Fill out the following form and we’ll contact you shortly!
+                form action=""
+                  label for="" Name:
+                  input.error type="text" required="required" /
+                  //span.icon-confirmed
+                  //span.icon-error
+                  label for="" E-mail:
+                  input type="email"/
+                  / span.icon-confirmed
+                  / span.icon-error
+                  label for="" Question:
+                  textarea name="" cols="30" rows="10"
+                  / span.icon-confirmed
+                  / span.icon-error
+                  input type="submit" value="Send Message" /
+
+
 

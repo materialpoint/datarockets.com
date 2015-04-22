@@ -1,0 +1,23 @@
+$height: 275px;
+html,
+body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+}
+.sticky-footer-wrapper {
+    min-height: 100%;
+    margin-bottom: -$height;
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+#footer,
+.sticky-footer-wrapper:after {
+    height: $height;
+}
+#footer {
+    overflow: hidden;
+}
