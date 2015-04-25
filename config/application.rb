@@ -31,5 +31,20 @@ module DatarocketsCom
       g.assets = false
       g.helper = false
     end
+
+    initializer 'setup_asset_pipeline', :group => :all  do |app|
+      # We don't want the default of everything that isn't js or css, because it pulls too many things in
+      app.config.assets.precompile.shift
+
+      # Explicitly register the extensions we are interested in compiling
+      app.config.assets.precompile.push(Proc.new do |path|
+        File.extname(path).in? [
+          '.html', '.erb', '.haml', '.slim',
+          '.png',  '.gif', '.jpg', '.jpeg', '.svg',
+          '.eot',  '.otf', '.svc', '.woff', '.ttf',
+          '.js', '.coffee', '.scss', '.sass',
+        ]
+      end)
+    end
   end
 end
