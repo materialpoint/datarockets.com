@@ -11,7 +11,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, :true
 
 set :scm, 'git'
-set :repo_url, 'https://github.com/datarockets/datarockets.com.git'
+set :repo_url, 'git@github.com:datarockets/datarockets.com.git'
 set :branch, 'v2'
 
 set :format, :pretty
