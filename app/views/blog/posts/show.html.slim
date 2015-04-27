@@ -7,10 +7,11 @@ body.blog-body
                             = @post.title
                         .post-content
                             = sanitize(@post.body)
-                                .post-date
-                                    = @post.created_at
-                                .post-tags
-                                    .post-tags--item
-                                        | HTML5
-                            .post-author__container
-                              = render partial: 'users/author', collection: @post.authors
+                        .post-date--tags__container
+                          .post-date
+                              = @post.created_at.to_formatted_s(:long)
+                          .post-tags
+                              .post-tags--item
+                                  | HTML5
+                        .post-author__container
+                          = render partial: 'users/author', collection: @post.authors
