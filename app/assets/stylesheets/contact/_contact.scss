@@ -37,7 +37,6 @@ section.contact {
             }
             label {
                 display: block;
-                // margin: 5px 0;
                 font-weight: bold;
             }
             input,
@@ -59,10 +58,8 @@ section.contact {
             input[type="submit"] {
                 @include btn();
                 color: #333;
-                // background: #fff;
                 border: none;
                 padding: 10px 0;
-                // border-radius: 0;
             }
             .error-message {
                 font-size: 14px;
@@ -72,7 +69,6 @@ section.contact {
         }
     }
     .contact-info-container {
-
         float: left;
         padding-left: 40px;
         box-sizing: border-box;
@@ -85,6 +81,7 @@ section.contact {
                 color: #333;
             }
             .contact-info {
+                color: #555555;
                 text-decoration: none;
                 font-weight: bold;
                 font-family: $h-ff;
