@@ -10,7 +10,6 @@ section.blog
                                 = post.created_at.to_formatted_s(:long)
                             .post-tags
                                 .post-tags--item
-                                    | HTML5
                         .post-author__container
                             = render partial: 'users/author',
                                 collection: post.authors
